@@ -1597,6 +1597,16 @@ section {
   text-align: center;
 }
 
+.blog .blog-details .content p {
+  line-height: 1.8;
+  text-align: left;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top:5px;
+
+}
+
 .blog .blog-details .content img{
   max-width: 900px;
   max-height: 600px;
@@ -1606,8 +1616,9 @@ section {
 
 .blog .blog-details .content h3 {
   font-size: 22px;
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: bold;
+  text-align: left;
 }
 
 .blog .blog-details .content blockquote {
