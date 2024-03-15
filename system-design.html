@@ -56,21 +56,32 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html"></a>Home</a></li>
+          <li><a href="index.html" class="active">Home</a></li>
           <li><a href="requirements.html">Requirements</a></li>
-          <li class="dropdown"><a href="research.html" class="active"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
+              <li><a href="research.html">Research Overview</a></li>
               <li><a href="nuitka.html">Nuitka Compilation Issues</a></li>
               <li><a href="pyinstaller.html">Pyinstaller Compilation Issues</a></li>
+              <li><a href="pyoxidizer.html">Successful Complilation with PyOxidizer</a></li>
             </ul>
           </li>
           <li><a href="ui-design.html">User Interface Design</a></li>
-          <li><a href="about.html">Services</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="system-design.html">System Design</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a href="testing.html">Testing</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
+          <li class="dropdown"><a href="#"><span>Appendicies</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="manuals.html">User Manual and Deployment Manual</a></li>
+              <li><a href="legal.html">GDPR and Privacy of Data</a></li>
+              <li><a href="blog.html">Development Blog</a></li>
+              <li><a href="videos.html">Monthly Progress Updates</a></li>
+            </ul>
+          </li>
         </ul>
       </nav><!-- .navbar -->
+
 
     </div>
   </header><!-- End Header -->
@@ -234,7 +245,10 @@
                   <h1 class="title">Application Diagram</h1>
                   <h3 style="text-align: center;"><strong>Overview</strong></h3>
                   <p style="text-align: center;">
-                    Anima v3 is designed with simplicity and user-friendliness in mind. It revolves around a home page and three central pages each accessible from each other.
+                    Anima v3 is designed with simplicity and user-friendliness in mind. 
+                    It revolves around a home page and three central pages. 
+                    The three central pages are accessible from one another 
+                    and have a button to return to home page.
                   </p>
 
                   <h3><strong>Home page (AnimaHomePage)</strong></h3>
