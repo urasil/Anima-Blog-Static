@@ -201,6 +201,12 @@
                       <img src="assets/img/pyoxidizer/file6.png" alt="" class="img-fluid">
                     </div>
 
+                    <div class="content">
+                      <p>
+                        The above issue is actually caused by the use of ‘__file__’. Because Python development has historically relied on filesystem-based imports, most developers would use it to locate and load files. However, the existence of ‘__file__’ should not be assumed, which is an optional attribute in Python. This assumption would break the flexibility and utility of the large Python ecosystem.
+                      </p>
+                    </div>
+                    
                     <div class="row">
                       <div class="col-md-4">
                           <img src="assets/img/pyoxidizer/file7.png" alt="" class="img-fluid">
@@ -209,12 +215,6 @@
                           <img src="assets/img/pyoxidizer/file8.png" alt="" class="img-fluid">
                       </div>
                     </div>
-    
-                    <div class="content">
-                      <p>
-                        The above issue is actually caused by the use of ‘__file__’. Because Python development has historically relied on filesystem-based imports, most developers would use it to locate and load files. However, the existence of ‘__file__’ should not be assumed, which is an optional attribute in Python. This assumption would break the flexibility and utility of the large Python ecosystem.
-                      </p>
-                  </div>
 
                     <div class="content">
                         <h3><strong>How We Resolved It</strong></h3>
