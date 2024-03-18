@@ -2257,3 +2257,9 @@ section {
   font-size: 13px;
   color: var(--color-secondary);
 }
+
+/* Add !important to override existing styles */
+.larger-image {
+  width: 150px !important; /* Adjust the width as needed */
+  height: auto !important; /* Maintain aspect ratio */
+}
