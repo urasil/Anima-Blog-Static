@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>System Design</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Nova
+  * Updated: Jan 09 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nova-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="page-blog">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="d-flex align-items-center">Anima v3</h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="requirements.html">Requirements</a></li>
+          <li class="dropdown"><a href="#"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="research.html">Research Overview</a></li>
+              <li><a href="nuitka.html">Nuitka Compilation Issues</a></li>
+              <li><a href="pyinstaller.html">Pyinstaller Compilation Issues</a></li>
+              <li><a href="pyoxidizer.html">Successful Complilation with PyOxidizer</a></li>
+            </ul>
+          </li>
+          <li><a href="ui-design.html">User Interface Design</a></li>
+          <li><a href="system-design.html">System Design</a></li>
+          <li><a href="implementation.html">Implementation</a></li>
+          <li><a href="testing.html">Testing</a></li>
+          <li><a href="evaluation.html">Evaluation</a></li>
+          <li class="dropdown"><a href="#"><span>Appendicies</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="manuals.html">User Manual and Deployment Manual</a></li>
+              <li><a href="legal.html">GDPR and Privacy of Data</a></li>
+              <li><a href="blog.html">Development Blog</a></li>
+              <li><a href="videos.html">Monthly Progress Updates</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/system-design/system-design-header.png');">
+      <div class="container position-relative d-flex flex-column align-items-center">
+
+        <h2>System Design</h2>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>System Design</li>
+        </ol>
+
+      </div>
+    </div><!-- End Breadcrumbs -->
+
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+
+                <!-- <div class="post-img">
+                  <img src="assets/img/system-design/packages.png" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h1 class="title">System Design</h1>
+
+                  <h3 style="text-align: center;"><strong>Contents</strong></h3>
+                  <p style="text-align: center;">
+                    System Architecture Diagram
+                    <br>
+                    Sequence Diagram
+                    <br>
+                    Design Principles
+                    <br>
+                    Application Diagram
+                    <br>
+                    Packages
+                  </p>
+
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+
+              <div class="post-img">
+                <img src="assets/img/system-design/overview.png" alt="" class="img-fluid">
+              </div>
+
+              <div class="content">
+                <h1 class="title">System Architecture Diagram</h1>
+                <h3 style="text-align: center;"><strong>Overview</strong></h3>
+                <p style="text-align: center;">
+                    The design of Anima v3 consists of a frontend, backend, JSON files and a local data folder.
+                </p>
+
+                <h3><strong>Frontend</strong></h3>
+                <p>
+                    The frontend is built on the .NET framework. It serves as the user interface tool where users interact with the system. It provides a user-friendly environment for engaging with the system's features and functionalities, facilitating smooth communication between users and the backend processes.
+                </p>
+                
+                <h3><strong>Backend</strong></h3>
+                <p>
+                    The backend component operates as a subprocess run by the frontend, as an executable compiled from Python. The backend houses the essential logic for text-to-speech, OCR, and animaprofile generation. It operates independently, efficiently processing text and images to synthesize audio while seamlessly integrating with the frontend.
+                </p>  
+                
+                <h3><strong>JSON Files</strong></h3>
+                <p>
+                    The JSON files serve as a communication bridge between the frontend and backend.
+                </p>
+                
+                <h3 style="margin-left: 20px;">Frontend JSON File (frontend.json):</h3>
+                <p style="margin-left: 20px;">
+                    Contains essential information about the current user, such as their name, preferred language, and unique identifiers for audio files. The frontend writes data to this file, while the backend reads from it to determine the current status and perform necessary actions accordingly.
+                </p>
+                
+                <h3 style="margin-left: 20px;">Backend JSON File (backend.json):</h3>
+                <p style="margin-left: 20px;">
+                    Records the success status of various backend operations, including profile creation, file reading, speech synthesis, and more. Additionally, it maintains information about the readiness of the backend system and the length of audio files processed. The frontend writes to this file, while the backend reads from it to report operation outcomes and system readiness.
+                </p>
+                
+                
+
+                <h3><strong>Local Database</strong></h3>
+                <p>
+                    For optimal user privacy, we maintain a local database within an 'animaprofiles' folder. This database stores user data in output.wav files, ensuring that the most recent audio generated is consistently updated and overwritten, aligning with our commitment to safeguarding user information.
+                </p> 
+
+            </article><!-- End blog post -->
+          </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+
+                <div class="post-img">
+                  <img src="assets/img/system-design/sequence.png" alt="" class="img-fluid">
+                </div>
+  
+                <div class="content">
+                  <h1 class="title">Sequence Diagram</h1>
+                  <h3 style="text-align: center;"><strong>Overview</strong></h3>
+                  <p style="text-align: center;">
+                      This diagram shows how the different components of Anima v3 interacts with each other, in different actions the user can take.
+                  </p>
+  
+                  <h3><strong>1. User opens application</strong></h3>
+                  <p>
+                    Upon opening the application, the backend triggers the frontend's execution. The frontend then notifies the backend that it is ready. Simultaneously, the homepage appears, and the backend loads any existing profiles.
+                  </p>
+                  
+                  <h3><strong>2. User records their voice</strong></h3>
+                  <p>
+                    Voice recording for voice banking is initiated. The frontend records the voice data and updates the JSON file with information about the new profile. Subsequently, the backend receives notification of the new recording and proceeds to generate the animaprofile, saving it to the designated folder.
+                  </p>  
+                  
+                  <h3><strong>3. User inputs some text</strong></h3>
+                  <p>
+                    When the user types text, it's stored in a JSON file and read by the backend. The backend then generates audio based on the text, overwriting the output.wav file. Subsequently, the frontend plays the audio, allowing the user to listen to the generated content.
+                  </p>
+                  
+                  <h3><strong>4. User changes their profile</strong></h3>
+                  <p>
+                    When the user modifies their profile, the changes are written to a JSON file.
+                  </p>
+                  
+                  <h3><strong>5. User uploads an image or PDF</strong></h3>
+                  <p>
+                    When the user uploads an image, the OCR (Optical Character Recognition) process extracts text from the image or PDF. The recognized text is then used to generate an audio file, overwriting the existing output.wav. Subsequently, the frontend plays the audio, allowing the user to listen to the extracted content.
+                  </p>
+
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+
+                <!-- <div class="post-img">
+                  <img src="assets/img/system-design/app-map.png" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h1 class="title">Design Principles (TODO:)</h1>
+                  <h3 style="text-align: center;"><strong>Overview</strong></h3>
+                  <p style="text-align: center;">
+                    We adopted some good software development practices to develop Anima v3.
+                  </p>
+
+                  <h3><strong>Model-View-Controller</strong></h3>
+                  <p>
+                    This is where the user starts using Anima v3.
+                  </p>
+
+                  <h3><strong>Text to speech page (TextToSpeechWindow)</strong></h3>
+                  <p>
+                    This is the main page where user spends most time on, where the user types or imports images or PDFs to speak with their voice.
+                  </p>
+                  
+                  <h3><strong>Voice banking page (BankVoiceWindow)</strong></h3>
+                  <p>
+                    This is where the user records their own voice and creates a new animaprofile. The user can listen to their own recording and choose to restart at any time.
+                  </p>  
+                  
+                  <h3><strong>Manage voices page (ManageVoicesWindow)</strong></h3>
+                  <p>
+                    This is where the user can change and delete profiles. They can also import a .wav file to create a profile with.
+                  </p>
+
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+
+                <div class="post-img">
+                  <img src="assets/img/system-design/app-map.png" alt="" class="img-fluid">
+                </div>
+  
+                <div class="content">
+                  <h1 class="title">Application Diagram</h1>
+                  <h3 style="text-align: center;"><strong>Overview</strong></h3>
+                  <p style="text-align: center;">
+                    Anima v3 is designed with simplicity and user-friendliness in mind. 
+                    It revolves around a home page and three central pages. 
+                    The three central pages are accessible from one another 
+                    and have a button to return to home page.
+                  </p>
+
+                  <h3><strong>Home page (AnimaHomePage)</strong></h3>
+                  <p>
+                    This is where the user starts using Anima v3.
+                  </p>
+
+                  <h3><strong>Text to speech page (TextToSpeechWindow)</strong></h3>
+                  <p>
+                    This is the main page where user spends most time on, where the user types or imports images or PDFs to speak with their voice.
+                  </p>
+                  
+                  <h3><strong>Voice banking page (BankVoiceWindow)</strong></h3>
+                  <p>
+                    This is where the user records their own voice and creates a new animaprofile. The user can listen to their own recording and choose to restart at any time.
+                  </p>  
+                  
+                  <h3><strong>Manage voices page (ManageVoicesWindow)</strong></h3>
+                  <p>
+                    This is where the user can change and delete profiles. They can also import a .wav file to create a profile with.
+                  </p>
+
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+
+                <div class="post-img">
+                  <img src="assets/img/system-design/packages.png" alt="" class="img-fluid">
+                </div>
+  
+                <div class="content">
+                  <h1 class="title">Packages</h1>
+                  <h3 style="text-align: center;"><strong>Overview</strong></h3>
+                  <p style="text-align: center;">
+                    A lot of Python libraries used in the backend of Anima V3, they are key in the functionalities of Anima v3. 
+                    We selected these packages due to their open-source nature, 
+                    aligning with our commitment to provide Anima v3 free of charge to all users.
+                  </p>
+
+                  <h3><strong>Coqui TTS</strong></h3>
+                  <p>
+                    <a href="https://github.com/coqui-ai/TTS">Public GitHub Repository</a>
+                    <br>
+                    <a href="https://docs.coqui.ai/en/latest/">Documentation</a>
+                    <br>
+                    Coqui TTS is a Python library for text-to-speech (TTS) synthesis, 
+                    utilized for high-quality speech generation.
+                    It offers TTS models for English, French and Portuguese, 
+                    matching our requirement of supporting multiple languages.
+                  </p>
+
+                  <h3><strong>EasyOCR</strong></h3>
+                  <p>
+                    <a href="https://github.com/JaidedAI/EasyOCR">Public GitHub Repository</a>
+                    <br>
+                    <a href="https://www.jaided.ai/easyocr/documentation/">Documentation</a>
+                    <br>
+                    EasyOCR is a Python library designed for optical character recognition (OCR) tasks, 
+                    enabling the extraction of text from images and PDFs. 
+                    We used EasyOCR for its multi-language support, 
+                    including English, French, Portuguese which suits the needs of Anima v3.
+                  </p>
+                  
+                  <h3><strong>PyOxidizer</strong></h3>
+                  <p>
+                    <a href="https://github.com/indygreg/PyOxidizer">Public GitHub Repository</a>
+                    <br>
+                    <a href="https://pyoxidizer.readthedocs.io/en/stable/">Documentation</a>
+                    <br>
+                    PyOxidizer is a Python library and packaging tool that creates standalone executables, 
+                    simplifying deployment for Anima v3. 
+                    It was the key component of the complilation of the backend of Anima v3 which was written in Python.
+                    <br>
+                    More details on how and why we used PyOxidizer in our Research section <a href="pyoxidizer.html">here</a>.
+                  </p>  
+
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+    </section><!-- End Blog Details Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-5 col-md-12 footer-info">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span>Anima v3</span>
+            </a>
+            <p>A software that preserves the person's voice so that even when their natural voice is lost, their sense of self is not.</p>
+            <div class="social-links d-flex  mt-3">
+              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-dash"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bi bi-dash"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              Gower St. <br>
+              London<br>
+              United Kingdom <br><br>
+              <strong>Phone:</strong> +44 5589 55488 55<br>
+              <strong>Email:</strong> zasdfasf@ucl.ac.uk<br>
+            </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Anima v3</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nova-bootstrap-business-template/ -->
+          Designed by <p>Team 12</p>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer --><!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
