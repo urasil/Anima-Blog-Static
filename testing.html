@@ -190,7 +190,7 @@
                   </p>
 
                   <h3>How was this test conducted?</h3>
-                  <p>Used virtual machine to simulate different version of windows system. We chose Windows XP, Windows 7, Windows 8.1, Windows 10 and Windows 11 as the target test environment. Original system images (iso) were downloaded from the official Microsoft website (except for Windows 11 as we already had access to it). 
+                  <p>We used a virtual machine to simulate different version of windows system. We chose Windows XP, Windows 7, Windows 8.1, Windows 10 and Windows 11 as the target test environment. Original system images (iso) were downloaded from the official Microsoft website (except for Windows 11 as we already had access to it). 
                     Since the support of Windows XP and Windows 7 has been ended, these two system images were downloaded from third-party archive websites. All system images used are original to simulate new installed system environment, making sure that no extra library is already in the system.
                     Usually, if a library is not installed but required to run the software, the relevant debug message will be told to install it. By following these system messages, required libraries were figured out in different system</p>
                     <div class="col-lg-4 col-md-6">
@@ -268,261 +268,43 @@
                 <article class="blog-details">
                     <div class="content">
                         <h3><strong>User Testing</strong></h3>
-                          <p>
-                              Show previous designs vs New design
-                              <br>
-                              The colors contrast nicely and pop out from the background:
-                              <br>
-                              <div style="display: inline-block; background-color: #fcf7e4; padding: 50px;">
-                                  <span style="display: inline-block; width: 50px; height: 50px; background-color: #214edf; margin-right: 5px;"></span>
-                                  <span style="display: inline-block; width: 50px; height: 50px; background-color: #10c605; margin-right: 5px;"></span>
-                                  <span style="display: inline-block; width: 50px; height: 50px; background-color: #f40205; margin-right: 0px;"></span>
-                              </div>
-                          </p>
+                        <p>User testing is essential as it provides invaluable insights into how real users interact with the product. By observing users as they navigated through the application, 
+                          we gained valuable insight about our design choices, figured out bugs, found areas for improvement that might not be apparent as well as figured out what we have done right.</p>
+                        <h3>How was this test conducted?</h3>
+                        <p>As we are instructed not to approach people with MND and people from the NHS, we have conducted user testing through pseudo-users,
+                          friends and TA's. We have asked their opinoin on the design and functionality of the application. We have also asked them to perform certain tasks and observed their interaction with the application.
+                          We have gathered the main points from their feedback and the following is how our design has evolved around user feedback.
+                        </p>
+                        <div class="col-lg-4 col-md-6">
+                          <img src="assets/img/yine.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
+                      </div><!-- End Portfolio Item --> 
+                      <h3>The Initial Design</h3>
+                      <p>With this finished design, we got really good feedback. Most users feedback were positive, especially on aesthetics on ease of navigation. They have also
+                        mentioned that the functionalities of the application are clear and work as intended. However, when we asked them to perform certain tasks, such as banking another voice,
+                        importing a new voice while they are in the bank a voice window, they have struggled to find their way through. Hence, we have realized that the design should be highlighting 
+                        3 main windows of the application, which are bank a voice, manage voicebanks and text to speech and make the transitions between them easier. Therefore we added
+                        buttons on the top-right corner of each window the remind users of the other windows and make the transitions between them seamless.
+                      </p>
+                      <div class="col-lg-4 col-md-6">
+                        <img src="assets/img/yeni.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
+                    </div><!-- End Portfolio Item --> 
+                    <h3>The Improvement</h3>
+                    <p>We have seen that the new design was much easier for our users to navigate however this time many of our users were fixated on the color palette that we 
+                      have chosen for our application. They have said that the colors were too bright and the lack of contrast between the background and buttons make them seem ugly.
+                      They have also reported a bug where if you bank a voice with a username that is already taken, the application crashes. Hence, we have added a failsafe that 
+                      checks all names before the user can bank a voice and informs the user if the name is already taken. We have also changed our color palette to darker colors as well
+                      as making the font weight of the text on the buttons bolder to increase the contrast between the background and the buttons.
+                    </p>
+                    <div class="col-lg-4 col-md-6">
+                      <img src="assets/img/yeniden.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
+                  </div><!-- End Portfolio Item --> 
+                  <h3>The Final Design</h3>
+                  <p>With the final design, we haven't heard compilaints so far. We are very happy with how AnimaV3 turned out and we hope that it satisfies our real users!</p>                    
                       </div>
                   </article><!-- End blog post -->
               </div>
           </div>
       </div>
-    
-      <div class="container" data-aos="fade-up">
-        <div class="row g-5">
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <article class="blog-details">
-                    <div class="content">
-                        <h3><strong>Error Handling and Prevention</strong></h3>
-                        <p>
-                            Anima v3 provides informative error pop-up windows. 
-                            This informs the user of what user errors are encountered.
-                            <div class="row">
-                                <div class="col-lg-4 col-md-6">
-                                    <img src="assets/img/ui-design/error/wrong-name.png" class="img-fluid" alt="" style="max-height: 200px;">
-                                    <div class="portfolio-info">
-                                        <h3>Name already taken</h3>
-                                        <p>This is the pop-up if the user enters a name that has already been taken when creating a new voice profile.</p>
-                                        <a href="assets/img/ui-design/error/wrong-name.png" title="This is the pop-up if the user enters a name that has already been taken when creating a new voice profile." data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div><!-- End Portfolio Item -->  
-                                <div class="col-lg-4 col-md-6">
-                                    <img src="assets/img/ui-design/error/not-wav.png" class="img-fluid" alt="" style="max-height: 200px;">
-                                    <div class="portfolio-info">
-                                        <h3>Invalid file type</h3>
-                                        <p>This is the pop-up if the user a file that is not .wav to create a new voice profile.</p>
-                                        <a href="assets/img/ui-design/error/not-wav.png" title="This is the pop-up if the user a file that is not .wav to create a new voice profile." data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div><!-- End Portfolio Item -->  
-                            </div><!-- End row -->
-                        </p>
-                    </div>
-                </article><!-- End blog post -->
-            </div>
-        </div>
-    </div>
-    
-
-      <div class="container" data-aos="fade-up">
-        <div class="row g-5">
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-              <article class="blog-details">
-  
-                <div class="content">
-
-                  <h3 style="text-align: center;"><strong>Design Images</strong></h3>
-
-                  <p style="text-align: center;">
-                    Checkout our designs from different stages of development here!
-                  </p>
-
-              </article><!-- End blog post -->
-            </div>
-        </div>
-      </div>
-
-      <section id="portfolio" class="portfolio">
-        <div class="container" data-aos="fade-up">
-
-          <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
-
-            <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-sketch">Sketches</li>
-              <li data-filter=".filter-first-prototype">First Prototype</li>
-              <li data-filter=".filter-improved-prototype">Improved Prototype</li>
-              <li data-filter=".filter-final">Final UI Design</li>
-            </ul><!-- End Portfolio Filters -->
-
-            <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="300">
-
-              <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-                  <img src="assets/img/ui-design/sketch/sketch1.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Sketch 1 (not adopted)</h4>
-                    <p>One of the proposed sketches for UI design</p>
-                    <a href="assets/img/ui-design/sketch/sketch1.png" title="One of the proposed sketches for UI design" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->            
-                
-                <div class="col-lg-4 col-md-6 portfolio-item filter-sketch">
-                  <img src="assets/img/ui-design/sketch/sketch2.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Sketch 2 (adopted)</h4>
-                    <p>One of the proposed sketches for UI design</p>
-                    <a href="assets/img/ui-design/sketch/sketch2.png" title="One of the proposed sketches for UI design" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-first-prototype">
-                  <img src="assets/img/ui-design/first-prototype/menu.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Main Menu</h4>
-                    <p>Main menu page of the first prototype</p>
-                    <a href="assets/img/ui-design/first-prototype/menu.png" title="Main menu page of the first prototype" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-first-prototype">
-                  <img src="assets/img/ui-design/first-prototype/bank-your-voice.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Bank Your Voice</h4>
-                    <p>Voice banking page of the first prototype</p>
-                    <a href="assets/img/ui-design/first-prototype/bank-your-voice.png" title="Voice banking page of the first prototype" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-first-prototype">
-                  <img src="assets/img/ui-design/first-prototype/manage-voicebanks.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Manage Voicebanks</h4>
-                    <p>Voicebank managing page of the first prototype</p>
-                    <a href="assets/img/ui-design/first-prototype/manage-voicebanks.png" title="Voicebank managing page of the first prototype" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-first-prototype">
-                  <img src="assets/img/ui-design/first-prototype/tts.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Text To Speech</h4>
-                    <p>Text to speech page of the first prototype</p>
-                    <a href="assets/img/ui-design/first-prototype/tts.png" title="Text to speech page of the first prototype" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-improved-prototype">
-                  <img src="assets/img/ui-design/improved-prototype/menu.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Main Menu</h4>
-                    <p>Main menu page of the improved prototype</p>
-                    <a href="assets/img/ui-design/improved-prototype/menu.png" title="Main menu page of the improved prototype" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-improved-prototype">
-                  <img src="assets/img/ui-design/improved-prototype/menu-setup.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Main Menu for first-time users</h4>
-                    <p>Main menu page of the improved prototype for first-time users</p>
-                    <a href="assets/img/ui-design/improved-prototype/menu-setup.png" title="Main menu page of the improved prototype for first-time users" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-improved-prototype">
-                  <img src="assets/img/ui-design/improved-prototype/manage-voicebanks.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Manage Voicebanks</h4>
-                    <p>Voicebank managing page of the improved prototype</p>
-                    <a href="assets/img/ui-design/improved-prototype/manage-voicebanks.png" title="Voicebank managing page of the improved prototype" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-improved-prototype">
-                  <img src="assets/img/ui-design/improved-prototype/tts.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Text To Speech</h4>
-                    <p>Text to speech page of the improved prototype</p>
-                    <a href="assets/img/ui-design/improved-prototype/tts.png" title="Text to speech page of the improved prototype" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-improved-prototype">
-                  <img src="assets/img/ui-design/improved-prototype/setup-recording.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Setting Up Your Voice</h4>
-                    <p>First step of setting up your voice</p>
-                    <a href="assets/img/ui-design/improved-prototype/setup-recording.png" title="First step of setting up your voice" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-improved-prototype">
-                  <img src="assets/img/ui-design/improved-prototype/setup-while-recording.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Recording Your Voice</h4>
-                    <p>Read texts to record your voice</p>
-                    <a href="assets/img/ui-design/improved-prototype/setup-while-recording.png" title="Read texts to record your voice" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-improved-prototype">
-                  <img src="assets/img/ui-design/improved-prototype/setup-recording-finished.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>After Recording Your Voice</h4>
-                    <p>Review your recording and proceed to the next step</p>
-                    <a href="assets/img/ui-design/improved-prototype/setup-recording-finished.png" title="Review your recording and proceed to the next step" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-final">
-                  <img src="assets/img/ui-design/final/home.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Main Menu</h4>
-                    <p>Main menu page of the final design</p>
-                    <a href="assets/img/ui-design/final/home.png" title="Main menu page of the final design" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-final">
-                  <img src="assets/img/ui-design/final/manage.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Manage Voicebanks</h4>
-                    <p>Voicebank managing page of the final design</p>
-                    <a href="assets/img/ui-design/final/manage.png" title="Voicebank managing page of the final design" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-final">
-                  <img src="assets/img/ui-design/final/tts.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Text To Speech</h4>
-                    <p>Text to speech page of the final design</p>
-                    <a href="assets/img/ui-design/final/tts.png" title="Text to speech page of the final design" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->   
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-final">
-                  <img src="assets/img/ui-design/final/read.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>Recording Your Voice</h4>
-                    <p>Read texts to record your voice</p>
-                    <a href="assets/img/ui-design/final/read.png" title="Read texts to record your voice" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item -->  
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-final">
-                  <img src="assets/img/ui-design/final/name.png" class="img-fluid" alt="">
-                  <div class="portfolio-info">
-                    <h4>After Recording Your Voice</h4>
-                    <p>Review your recording and proceed to the next step</p>
-                    <a href="assets/img/ui-design/final/name.png" title="Review your recording and proceed to the next step" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  </div>
-                </div><!-- End Portfolio Item --> 
-
-            </div><!-- End Portfolio Container -->
-
-          </div>
-
-        </div>
-      </section><!-- End Portfolio Section -->
-    <!-- ======= Portfolio Section ======= -->
 
   </main><!-- End #main -->
 
