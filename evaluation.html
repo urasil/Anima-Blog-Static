@@ -124,7 +124,7 @@
                   <p>
                     AnimaV3 is a voicebanking application at it's core therefore the most important functionality of the application is a seamless way of users to bank their voice as well as to 
                     speaked with that banked voice. We have conducted rigorous unit and integration testing for these funtionalities, and ensured that they are working as intended.
-                    We have also provided additional functionalities such as the ability to read jpeg, png and pdf files (OCR) and speak the text in them, as well as the ability import .wav files and register an digital voice file (.animaprofile).
+                    We have also provided additional functionalities such as the ability to read jpeg, png and pdf files (optical character recognition - OCR) and speak the text in them, as well as the ability import .wav files and register an digital voice file (.animaprofile).
                     OCR technology was already included in AnimaV2 however it was inaccurate and unreliable. We have switched the OCR library to easyocr in AnimaV3 and made it more accurate and reliable.
                     <br><br>Moreover, AnimaV3 many failsafe technologies to ensure that the application is robust and reliable. For example, the user always has the option to opt of out the text-to-speech process. This is very crucial as the user might accidentally select the 
                     wrong file when speaking from a file or enter a wrong text when speaking from text. We have also added a management system for the user's voicebank, giving the user control and customizability over their voicebank.
@@ -134,11 +134,51 @@
 
                   <h3><strong>Accessibility</strong></h3>
                   <p>
-                    Getting rid of Docker, adding language support for the app as well as OCR
+                    Our application is giving the ability to speak with their unique voice to people who can no longer do so on their own. It is an accessibility app that makes speech accessible to people with 
+                    motor neuron diseases. Therefore, it is crucial that the application is accessible to as many people as possible. Hence the following are the steps we took to ensure that AnimaV3 reaches as many people as it possibly can.
+                    Firstly, the predecessor of AnimaV3 used a Docker container to run the application. This was a huge barrier for many users as Docker is not easy to use for people who are not familiar with it or computers. We have removed Docker from AnimaV3 and 
+                    made it a standalone application that can be installed and run on any Windows operating system after Windows 8. This makes AnimaV3 much more accessible to people who are not coming from technology backgrounds.
+                    <br><br>
+                    Moreover, we added additional language support. The multi-language model we are currently using supports English, French and Portugese languages and we have included all these languages in AnimaV3. We have also insured that files
+                    in these languages can also be read with OCR and spoken with text-to-speech. This means AnimaV3 is much more accessible than it's competitors who are only tailoring to the English speaking audience as that is the biggest audience for voice-banking.
+                    AnimaV3 is completely free doesn't need any financial incentive make it accessible to non-English speakers. With the upcoming Anima versions, we believe that many more languages can be added and Anima can be accessible to a much wider audience.
+                    <br><br>
+                    Furthermore, from our predecessors, we know that AnimaV3 has a bias towards American accents for English. We have also noticed that for French the bias is for the Parisian accent and for Portugese the bias is for the Brazilian accent.
+                    We want all accents to be represented by AnimaV3 to preserve our user's unique voice and identity. As we didn't have the time to implement a new model, we have done the next best thing. We have picked texts that are long and diverse enough third-party
+                    the model can represent the user's accent well enough. Although this is not permanent solution and slightly increases the time for banking a voice, we believe that it is a good solution for representing one's accent. 
+                    <br><br>
+                    Overall, we believe that AnimaV3 is a huge success in terms of accessibility. It is much more accessible than it's predecessor and it's paid competitors. It is free, easy to set-up and use, supports multiple languages and accents. 
+                    AnimaV3 is one of the most accessible voice-banking applications out there and we are very proud of this achievement.
                   </p><br>
 
-                  <h3><strong>Performance</strong></h3>
+                  <h3><strong>Stability</strong></h3>
+                    <p>
+                        AnimaV3 is a standalone application that can be installed and run on any Windows operating system after Windows 8. We have conducted rigorous compatability testing to ensure that AnimaV3 is compatible with all Windows operating systems after Windows 8.
+                        The details of the compatability testing counducted can be found under the Testing page. We have also conducted performance/stress testing to ensure that AnimaV3 is stable under different loads. We have tried using the application with different lengths of text and different types of text and have found that AnimaV3 is stable under different loads.
+                        <br><br>
+                        We have also tested the edge cases of AnimaV3 to make the application more stable. We have tried to bank a voice with a username that is already taken, speak from a file that is not supported, saying the same text over and over again, reading the same file and many more.
+                        Some of the edge cases were not considered during initial development and they were promptly fixed as they were discovered. We have then ensured the stability of our application bu conducting user testing and let the pseudo-users use the application as they please
+                        to see if there were any other bugs or edge cases that we have missed. We are confident AnimaV3 is a hard-to-break and very stable application.
+                    </p><br>
 
+                  <h3><strong>Compatability</strong></h3>
+                    <p>
+                        AnimaV3 is a standalone application with a .NET frontend and Python backend. It uses Python 3.9.11 and .NET 4.7.2. Since AnimaV3 is using .NET, it is only compatible with Windows OS, meaning that users with other operating systems such as MacOS or Linux cannot use AnimaV3.
+                        It also means that AnimaV3 is not compatible with any Windows operating system before Windows 7 as Python 3.9.11 is not supported on these operating systems. We have still conducted compatability testing to ensure that AnimaV3 does not work with Windows XP and Windows 7 and works with Windows 8.1, Windows 10 and Windows 11. 
+                        The details of the compatability testing counducted can be found under the Testing page.
+                    </p><br>
+
+                    <h3><strong>Maintainability</strong></h3>
+                    <p>
+                        AnimaV3 is designed with maintainability in mind adhering to the modular design and code structure principle. It has a clear separation of concerns between the frontend and backend. The code documentation is clear and concise, and the code is well structured. The documentation and the code structure can be improved
+                        upon to make it even easier for future developers to understand and maintain the code. 
+                    </p><br>
+
+                    <h3><strong>Project Management</strong></h3>
+                    <p>
+                        AnimaV3 is designed with maintainability in mind adhering to the modular design and code structure principle. It has a clear separation of concerns between the frontend and backend. The code documentation is clear and concise, and the code is well structured. The documentation and the code structure can be improved
+                        upon to make it even easier for future developers to understand and maintain the code. 
+                    </p><br>
               </article><!-- End blog post -->
             </div>
         </div>
