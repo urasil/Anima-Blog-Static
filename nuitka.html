@@ -102,46 +102,100 @@
 
     <!-- ======= Blog Details Section ======= -->
     <section id="blog" class="blog">
+
       <div class="container" data-aos="fade-up">
-
         <div class="row g-5">
-
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
 
-            <article class="blog-details">
+                <div class="post-img">
+                  <img src="assets/img/compilation2.jpeg" alt="" class="img-fluid">
+                </div>
+  
+                <div class="content">
+                  <h1 class="title"></h1>
 
-              <div class="post-img">
-                <img src="assets/img/compilation2.jpeg" alt="" class="img-fluid">
-              </div>
+                  <h3 style="text-align: center;"><strong>Every Problem Faced With Nuitka</strong></h3>
+                  <p style="text-align: center;">
+                    Pyinstaller is a bundler that bundles the python code and all its dependencies in the project to an executable rather than compiling it. We decided to use it because it converts python code directly to an executable without the C-code generation Nuitka deals with.
+                  </p>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
 
-              <div class="content">
-                <h1 class="title" style="color:blue">Every Problem Faced With Nuitka</h1>
-                <h3><strong>Overview</strong></h3>
-                <p>
-                  Nuitka is a source-to-source compiler which compiles Python code to C source code. The below screenshot shows the core of the compilation problem with Nuitka. The neural network based TTS model (Coqui) that we have chosen is build on libraries like pynndescent, pytorch, librosa that depend on a just-in-time compiler library called Numba. 
-                </p>
-                <img src="assets/img/nuitka2.png" style="max-width: 700px; max-height: 300px; border-radius: 20px;" class=img-fluid alt="">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
 
-                <h3><strong>Numba-Nuitka Incompatibility</strong></h3>
-                <p>
-                  TTS is the core library used by Anima V2 project, and Librosa is a dependency of this library. Meanwhile, librosa also depends on Numba, which is an open-source compiler translating Python and Numpy into machine code. However, there exists an incompatibility between Nuitka and Numba. In June 2023, a Github user opened an issue that is similar to our issue on Nuitka Github repository. When using Nuitka to compile a Python project including Numba, a warning, “Numba is not yet working with Nuitka standalone”, is printed in the terminal. Nuitka author, kayhayen in June 2023, replied that the compatibility issue between Nuitka and Numba cannot be resolved for now. Kayhayen has not managed to find a good way to compile Numba source code.                </p>
-                <img src="assets/img/nuitka3.png" style="max-width: 800px; max-height: 400px; border-radius: 20px;" class=img-fluid alt="">
-                <h3><strong>Possible solutions for the fundamental incompatibility issue</strong></h3>
-                <style>
-                  .reduce-text-size p {
-                    font-size: 16px !important;
-                    font-style: normal !important;
-                  }
-                </style>
-                <blockquote class="reduce-text-size">
+                <!-- <div class="post-img">
+                  <img src="assets/img/compilation2.jpeg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h1 class="title"></h1>
+
+                  <h3 style="text-align: center;"><strong>Overview</strong></h3>
+                  <p style="text-align: center;">
+                    Nuitka is a source-to-source compiler which compiles Python code to C source code. The below screenshot shows the core of the compilation problem with Nuitka. The neural network based TTS model (Coqui) that we have chosen is build on libraries like pynndescent, pytorch, librosa that depend on a just-in-time compiler library called Numba. 
+                  </p>
+
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+
+                <div class="post-img">
+                  <img src="assets/img/nuitka2.png" alt="" class="img-fluid">
+                </div>
+  
+                <div class="content">
+                  <h1 class="title"></h1>
+
+                  <h3 style="text-align: center;"><strong>Numba-Nuitka Incompatibility</strong></h3>
+                  <p style="text-align: center;">
+                    Nuitka is a source-to-source compiler which compiles Python code to C source code. The below screenshot shows the core of the compilation problem with Nuitka. The neural network based TTS model (Coqui) that we have chosen is build on libraries like pynndescent, pytorch, librosa that depend on a just-in-time compiler library called Numba. 
+                  </p>
+
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+
+                <div class="post-img">
+                  <img src="assets/img/nuitka3.png" alt="" class="img-fluid">
+                </div>
+  
+                <div class="content">
+                  <h1 class="title"></h1>
+
+                  <h3 style="text-align: center;"><strong>Possible solutions for the fundamental incompatibility issue</strong></h3>
+                  <blockquote class="reduce-text-size">
                     <h4><strong>1. Compile functions using Numba-Ahead of Time (AOT)</strong></h4><br>
                     <p>
                       
                       The first solution is compiling all functions in the source code of the libraries into a file and use the compiled version of the functions whenever the function is called. The problem with this approach is very evident. It is a great undertaking for us to get every import correctly, make sure there is no circular import considering we would import the function to compile and then import the compiled function back to the source code to use. Moreover, we would have to determine every function that utilizes the Numba functions and correctly implement the compiled function into the code without breaking it. After speaking with our advisors, they have said that this would take more than the allocated time for the project and agreed that this is not a viable approach and suggested we move on with the second approach, which is getting rid of all Numba code in the source libraries.
                       <br>
-                    </p>
+                    </p>  
                   </blockquote>
-                  <img src="assets/img/nuitka4.png" style="max-width: 800px; max-height: 400px; border-radius: 20px;" class=img-fluid alt="">
+                  <div class="post-img">
+                    <img src="assets/img/nuitka4.png" alt="" class="img-fluid">
+                  </div>
                   <blockquote class="reduce-text-size">
                     <h4><strong>2. Remove Numba from library source codes</strong></h4><br>
                     <p>
@@ -168,24 +222,35 @@
                 <p><strong>TTS library</strong></p>
                 <img src="assets/img/nuitka12.png" style="max-width: 700px; max-height: 400px; border-radius: 20px;" class=img-fluid alt="">
 
-                <blockquote>
-                    <p>
-                      <strong>The problem we could not fix</strong><br>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+
+                <!-- <div class="post-img">
+                  <img src="assets/img/nuitka2.png" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h1 class="title"></h1>
+
+                  <h3 style="text-align: center;"><strong>The problem we could not fix</strong></h3>
+                  <p style="text-align: center;">
                       The code is looking for vits_config.py file under the encoder.configs, vocoder.configs and tts.configs directories and it only exists under tts.configs. print statements do not print anything in library source code even when we clear cache so we are not sure as to how to troubleshoot. We have added the vits_config.py file to both vocoder.configs and encoder.configs but that did not solve the issue. We are stuck and this is likely not the last error. Frankly, we do not think solving all these errors manually by either dragging files or changing the source code of libraries will solve this issue for us. As we have spent a very long time just trying to compile this project using Nuitka we are willing to try alternatives which might be easier such as pyinstaller.                    </p>
                     <img src="assets/img/nuitka13.png" style="max-width: 700px; max-height: 500px; border-radius: 20px;" class=img-fluid alt="">
-                </blockquote>
-                
-              </div><!-- End post content -->
 
-              <div class="meta-bottom"></div>
-                <i class="bi bi-tags"></i>
-                <ul class="tags">
-                  <li><a href="#">Voice-banking</a></li>
-                </ul>
-              </div><!-- End meta bottom -->
-
-            </article><!-- End blog post -->
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
       </div>
+
     </section><!-- End Blog Details Section -->
 
   </main><!-- End #main -->
