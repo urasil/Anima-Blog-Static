@@ -89,7 +89,7 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/testing2.png');">
+    <div class="breadcrumbs d-flex align-items-center" style="background-image: url('assets/img/eval.png');">
       <div class="container position-relative d-flex flex-column align-items-center">
         
         <h2>Evaluation</h2>
@@ -102,6 +102,28 @@
     </div><!-- End Breadcrumbs -->
 
     <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+  
+                <div class="content" style="margin-left: 25px; margin-right: 25px;">
+                  <h2 style="text-align: center;"><strong>Client Feedback</strong></h2><br>
+                  <p>Our client for AnimaV3 is the NHS. However we were told by Professor Mohammedally that our point of contact was him directly, as it could have been sentence
+                    as inappropriate for us to contact the NHS directly. We have had regular meetings with Professor Mohammedally to discuss the progress of the project and to get feedback on our work.
+                    He has added and removed requirements from the project as needed, as well as providing us with tools that we needed to succeed in this project. He has told us numerous times that we have
+                    done a great job with Anima and told us he is very proud of the compilation achievement made with pyoxidizer which enables Anima to be a standalone application. We are also very proud of 
+                    AnimaV3 as we feel it is significant improvement from its predecassor with a more functionalitie, a modern user-friendly interface and a standalone backend executable.
+                  </p>
+
+
+                </div> 
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
@@ -162,6 +184,12 @@
                         to see if there were any other bugs or edge cases that we have missed. We are confident AnimaV3 is a hard-to-break and very stable application.
                     </p><br>
 
+                    <h3><strong>Efficency</strong></h3>
+                    <p>
+                        With AnimaV3 efficency of our application has been greatly improved. By removing Docker from AnimaV3, we have made the application much more efficent as Docker is a resource-heavy application that always had to be running in the background for AnimaV2.
+                        We have also made the application more efficient by adding a management system for the user's voicebank, making the voice-banking experience much easier and efficient. Lastly, we optimized the codebase by removing unnecessary checks for language and users in the Anima API.
+                    </p><br>
+
                   <h3><strong>Compatability</strong></h3>
                     <p>
                         AnimaV3 is a standalone application with a .NET frontend and Python backend. It uses Python 3.9.11 and .NET 4.7.2. Since AnimaV3 is using .NET, it is only compatible with Windows OS, meaning that users with other operating systems such as MacOS or Linux cannot use AnimaV3.
@@ -177,8 +205,8 @@
 
                     <h3><strong>Project Management</strong></h3>
                     <p>
-                        AnimaV3 is designed with maintainability in mind adhering to the modular design and code structure principle. It has a clear separation of concerns between the frontend and backend. The code documentation is clear and concise, and the code is well structured. The documentation and the code structure can be improved
-                        upon to make it even easier for future developers to understand and maintain the code. 
+                      The project has been managed relatively well, with each team member taking responsibility for different aspects of the project. We had regular team meetings, closely followed our Gantt chart, as well as weekly client meetings on Tuesdays to ensure we were on track to finish what we needed.
+                      The team has been good at communication and collaboration, keeping each other on track and helping each other out when needed. We have also been good at keeping our client informed of our progress and any issues we have encountered.
                     </p><br>
               </article><!-- End blog post -->
             </div>
@@ -187,177 +215,568 @@
 
       <div class="container" data-aos="fade-up">
         <div class="row g-5">
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <article class="blog-details">
-                    <div class="content">
-                        <h3><strong>Unit and Integration Testing</strong></h3>
-                        <p>
-                            Unit and integration testing ensures that every individual functionality of AnimaV3 is functioning as intended and are working together successfully. 
-                            <h3><strong>How was this test conducted?</strong></h3>
-                            <div class="row">
-                                <p>This test is done through a python script written for pytest. AnimaV3 works by changing the content of the frontend.json file, hence the test is conducted
-                                    by running the test script and the backend simultaneously and ensuring the correct success message is returned on backend.json.</p>
-                                <div class="col-lg-4 col-md-6">
-                                    <img src="assets/img/unit1.png" class="img-fluid" alt="" style="max-height: 200px; max-width: 400px;">
-                                    <div class="portfolio-info">
-                                        <h3>Pytest Success</h3>
-                                        <p>AnimaV3 has successfully passed all test cases. All functionalities are working as intended</p>
-                                        <a href="assets/img/unit1.png" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div><!-- End Portfolio Item -->  
-                                <div class="col-lg-4 col-md-6">
-                                    <img src="assets/img/unit3.png" class="img-fluid" alt="" style="max-height: 200px; max-width: 500px;">
-                                    <div class="portfolio-info">
-                                        <h3>Functionalities Being Tested</h3>
-                                        <p>These are all the functionalities being tested - every single functionality that AnimaV3 offers. </p>
-                                        <a href="assets/img/unit3.png" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div><!-- End Portfolio Item -->  
-                                <div class="col-lg-4 col-md-6">
-                                    <img src="assets/img/unit2.png" class="img-fluid" alt="" style="max-height: 200px; max-width: 400px;">
-                                    <div class="portfolio-info">
-                                        <h3>Example Test For OCR - Read and Speak Functionality</h3>
-                                        <p>The general structure for a test case.</p>
-                                        <a href="assets/img/unit2.png" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                    </div>
-                                </div><!-- End Portfolio Item -->  
-                            </div><!-- End row -->
-                        </p>
-                    </div>
-                </article><!-- End blog post -->
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+          
+              <div class="content">
+                <h1 class="title">Revisiting the MoSCoW Requirement List</h1>
+
+                <blockquote>
+                    <h2 class="title">Functional List</h2>
+                    <br>
+                    <table style="border-collapse: collapse; width: 100%;">
+                      <thead>
+                        <tr>
+                          <th style="border: 1px solid #ddd; padding: 8px; width: 100px;">Priority</th>
+                          <th style="border: 1px solid #ddd; padding: 8px; width: 350px;">Requirement Description</th>
+                          <th style="border: 1px solid #ddd; padding: 8px; width: 100px;">Completion</th>
+                          <th style="border: 1px solid #ddd; padding: 8px; width: 100px;">Contributors</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Must Haves</strong></td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>We must allow users to record their voice</li><br>
+                              <li>We must have a voice profile for each recorded voice</li><br>
+                              <li>We must be able to process a piece of text and play it out loud</li><br>
+                              <li>We must allow users to type what they want to say</li><br>
+                              <li>We must support multiple languages</li><br>
+                              <li>We must have a local file storage</li><br>
+                              <li>We must have a single backend executable</li><br>
+                              <li>We must have a user-friendly interface that is easy to navigate for users</li>
+                            </ol>
+                          </td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>Completed</li><br>
+                              <li>Completed</li><br>
+                              <li>Completed</li><br>
+                              <li>Completed</li><br>
+                              <li>Completed</li><br>
+                              <li>Completed</li><br>
+                              <li>Completed</li><br>
+                              <li>Completed</li>
+                            </ol>
+                          </td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>Uras, Zikang, Dash</li><br>
+                              <li>Uras, Zikang, Dash</li><br>
+                              <li>Uras, Zikang</li><br>
+                              <li>Uras, Zikang</li><br>
+                              <li>Uras, Zikang, Dash</li><br>
+                              <li>Uras, Zikang, Dash</li><br>
+                              <li>Uras, Zikang</li><br>
+                              <li>Uras, Zikang</li>
+                            </ol>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Should Haves</strong></td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>We should aim to develop software that meets the requirements for the Microsoft Store and is ready for publication.</li><br>
+                              <li>We should implement support for accents and dialects</li>
+                            </ol>
+                          </td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>Completed</li><br>
+                              <li>Completed</li>
+                            </ol>
+                          </td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>Uras, Zikang, Dash</li><br>
+                              <li>Uras, Zikang, Dash</li>
+                            </ol>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Could Haves</strong></td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>We could let users highlight specific parts of text to read out loud</li>
+                            </ol>
+                          </td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>Semi-Completed (Highligh Feature)</li>
+                            </ol>
+                          </td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>Dash</li>
+                            </ol>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="border: 1px solid #ddd; padding: 8px;"><strong>Won't Haves</strong></td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>We won't have an app that uses paid higher-quality TTS engines</li>
+                            </ol>
+                          </td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>N/A</li>
+                            </ol>
+                          </td>
+                          <td style="border: 1px solid #ddd; padding: 8px;">
+                            <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                              <li>N/A</li>
+                            </ol>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    
+                    
+                </blockquote>
+              
+                <blockquote>
+                  <h2 class="title">Non-Functional List</h2>
+                  <br>
+                  <table style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                      <tr>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 100px;">Priority</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 350px;">Requirement Description</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 100px;">Completion</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 100px;">Contributors</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px;"><strong>Must Haves</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>We must ensure that the software is usable offline</li><br>
+                            <li>We must ensure the privacy of personal information of users</li><br>
+                            <li>We must have an easy to use and simple user interface</li>
+                          </ol>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>Completed</li><br>
+                            <li>Completed</li><br>
+                            <li>Completed</li>
+                          </ol>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>Uras, Zikang, Dash</li><br>
+                            <li>Uras, Zikang</li><br>
+                            <li>Uras, Zikang, Dash</li>
+                          </ol>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px;"><strong>Should Haves</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>We should be able to guide users with an intuitive user interface</li><br>
+                            <li>We should conduct user, unit and integration and compatability testing</li>
+                          </ol>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>Uras, Zikang, Dash</li><br>
+                            <li>Uras, Zikang</li>
+                          </ol>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>Completed</li><br>
+                            <li>Completed</li>
+                          </ol>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px;"><strong>Could Haves</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>We could allow usage of other text-to-speech engines in future versions</li>
+                          </ol>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>Semi-Completed (Possible but not trivial - requires changing Anima API)</li>
+                          </ol>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>Uras, Zikang</li>
+                          </ol>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px;"><strong>Won't Haves</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>We won’t have an app available for any other platforms than Windows</li>
+                          </ol>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>N/A</li>
+                          </ul>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
+                            <li>N/A</li>
+                          </ol>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </blockquote>
+              </div>
+            </article><!-- End blog post -->
+          </div>
+      </div>
+
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+          <article class="blog-details">
+        
+            <div class="content">
+              <h1 class="title">Individual Contribution</h1>
+
+              <p style="text-align: center;">
+
+                <blockquote>
+                  <table style="border-collapse: collapse; width: 100%;">
+                    <thead>
+                      <tr>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 200px; text-align: center;">Project Component</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 200px; text-align: center;">Uras</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 200px; text-align: center;">Zikang</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 200px; text-align: center;">Dash</th>
+                        <th style="border: 1px solid #ddd; padding: 8px; width: 200px; text-align: center;">Shafeeq</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Client Liason</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">30%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">20%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">30%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">20%</p>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>HCI</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Requirement Analysis</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Backend Compilation</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">40%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">50%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">10%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>.NET frontend</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">50%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">40%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">10%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Python Backend</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">50%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">50%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Github Management</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">33%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">34%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">33%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Testing</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">50%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">50%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Video Editing</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">100%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+                      
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Blog</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">100%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>User Manual</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">100%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Deployment Manual</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">100%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Project Website</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">25%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">70%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">5%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Code Cleanup & Documentation</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">20%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">60%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">20%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal;">0%</p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Overall</strong></td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal; font-weight: bold;">32.5%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal; font-weight: bold;">32.5%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal; font-weight: bold;">25%</p>
+                        </td>
+                        <td style="border: 1px solid #ddd; padding: 8px;">
+                          <p style="text-align: center; font-size: large; font-style: normal; font-weight: bold;">10%</p>
+                        </td>
+                      </tr>
+
+                    </tbody>
+                  </table>
+                  
+                  
+              </blockquote>
+
+              </p>
             </div>
+          </article><!-- End blog post -->
         </div>
     </div>
 
-      <div class="container" data-aos="fade-up">
-        <div class="row g-5">
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-              <article class="blog-details">
-  
-                <div class="content">
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
 
-                  <h3><strong>Compatability Testing</strong></h3>
-
-                  <p>Compatability testing informs the users of the platforms suitable to run AnimaV3. As AnimaV3 is a Windows desktop application
-                    build with .NET framework (WPF - Windows Presentation Foundation), it is only compatible with Windows OS. Hence, different versions of Windows OS were tested to ensure compatability.
-                  </p>
-
-                  <h3>How was this test conducted?</h3>
-                  <p>We used a virtual machine to simulate different version of windows system. We chose Windows XP, Windows 7, Windows 8.1, Windows 10 and Windows 11 as the target test environment. Original system images (iso) were downloaded from the official Microsoft website (except for Windows 11 as we already had access to it). 
-                    Since the support of Windows XP and Windows 7 has been ended, these two system images were downloaded from third-party archive websites. All system images used are original to simulate new installed system environment, making sure that no extra library is already in the system.
-                    Usually, if a library is not installed but required to run the software, the relevant debug message will be told to install it. By following these system messages, required libraries were figured out in different system</p>
-                    <div class="col-lg-4 col-md-6">
-                        <img src="assets/img/windows_version.jpeg" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
-                    </div><!-- End Portfolio Item -->  
-                    <h3 style="text-align: center;">Example Environment - Windows 8</h3>
-                    <p>The results are as follows:</p>
-                    <p style="text-align: left;">
-                        <span style="font-weight: bold;">Windows XP:</span> Not Supported<br>
-                        <span style="font-weight: bold;">Windows 7:</span> Not Supported<br>
-                        <span style="font-weight: bold;">Windows 8.1:</span> Supported,<span style="font-weight: bold;"> Requirements:</span> Microsoft Visual C++ Redistributable and .NET Framework 4.7.2<br>
-                        <span style="font-weight: bold;">Windows 10:</span> Supported,<span style="font-weight: bold;"> Requirements:</span> Microsoft Visual C++ Redistributable<br>
-                        <span style="font-weight: bold;">Windows 11:</span> Supported,<span style="font-weight: bold;"> Requirements:</span> Microsoft Visual C++ Redistributable
-                    </p>
-                    <a href="assets/img/windows_version.jpeg" data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                </div>
-              </article><!-- End blog post -->
-            </div>
-        </div>
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <div class="row g-5">
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-              <article class="blog-details">
-  
-                <div class="content">
-
-                  <h3><strong>Performance/Stress Testing</strong></h3>
-                  <p>Stress testing is required to know the bounds of our application. We need to identify the inputs that don't work with our application
-                    so that we can inform the users about it. We also need to know performance of the application under different loads. Hence we are testing for these 
-                    conditions here.
-                  </p>
-                  <h3>How was the test for checking input types conducted?</h3>
-                  <p>In the Text-to-Speech section, a commonly used 104-key keyboard is used to test text input. Each key on the keyboard was typed 
-                    into textfield, and then TTS was run by clicking the SPEAK button to see if there is any unsupported character error on backend output. 
-                    </p>
-                  <div class="col-lg-4 col-md-6">
-                    <img src="assets/img/stress1.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
-                  </div><!-- End Portfolio Item -->  
-                  <h3 style="text-align: center; margin-right: 40px;">Stress Test Demonstration with Special Characters and Numbers</h3>
-                  <p style="text-align: left;">The results are as follows: </p>
-                  <p style="text-align: left;">
-                    <span style="font-weight: bold;">Not supported: </span>/@#%£^=*&{}+<br>
-                    <span style="font-weight: bold;">Not supported: </span>1234567890<br>
-                    <span style="font-weight: bold;">Not supported: </span>Any Non-alphabet letters<br>
-                    <span style="font-weight: bold;">Supported: </span>a-zA-Z<br>
-                    <span style="font-weight: bold;">Supported: </span>[Enter key]!,.?;:'"<br>
-                  </p>
-
-                  <h3>How was the test for checking peformance under different loads conducted?</h3>
-                  <p>In the Text-to-Speech section, texts with varying number of words were tested to see how long it takes for AnimaV3 to create speech.
-                    To increase the length of text, the same sentence was repeated multiple times. The sentece being "The sun sets, painting the sky in hues of orange.' was duplicated for increasing the word count."
-                    The test was conducted by running the TTS for the same sentence with increasing word count and recording the time taken for the TTS to complete.
-                  </p>
-                  <div class="col-lg-4 col-md-6">
-                    <img src="assets/img/stress2.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
-                </div><!-- End Portfolio Item --> 
-                <h3 style="text-align: center; margin-right: 40px;">Stress Test Demonstration with Different Lengths of Text</h3>
-                <p style="text-align: left;">The results are as follows: </p>
-                <div class="col-lg-4 col-md-6">
-                    <img src="assets/img/stress3.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
-                </div><!-- End Portfolio Item --> 
-                <p>As seen rom the graph, the cost of converting text to speech increases almost linearly as the number of words that needs to be spoken increases.
-                    This is expected as the time taken to convert text to speech should be directly proportional to the number of words in the text.
-                </p>
-              </article><!-- End blog post -->
-            </div>
-        </div>
-      </div>
-
-      <div class="container" data-aos="fade-up">
-        <div class="row g-5">
-            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-                <article class="blog-details">
-                    <div class="content">
-                        <h3><strong>User Testing</strong></h3>
-                        <p>User testing is essential as it provides invaluable insights into how real users interact with the product. By observing users as they navigated through the application, 
-                          we gained valuable insight about our design choices, figured out bugs, found areas for improvement that might not be apparent as well as figured out what we have done right.</p>
-                        <h3>How was this test conducted?</h3>
-                        <p>As we are instructed not to approach people with MND and people from the NHS, we have conducted user testing through pseudo-users,
-                          friends and TA's. We have asked their opinoin on the design and functionality of the application. We have also asked them to perform certain tasks and observed their interaction with the application.
-                          We have gathered the main points from their feedback and the following is how our design has evolved around user feedback.
-                        </p>
-                        <div class="col-lg-4 col-md-6">
-                          <img src="assets/img/yine.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
-                      </div><!-- End Portfolio Item --> 
-                      <h3>The Initial Design</h3>
-                      <p>With this finished design, we got really good feedback. Most users feedback were positive, especially on aesthetics on ease of navigation. They have also
-                        mentioned that the functionalities of the application are clear and work as intended. However, when we asked them to perform certain tasks, such as banking another voice,
-                        importing a new voice while they are in the bank a voice window, they have struggled to find their way through. Hence, we have realized that the design should be highlighting 
-                        3 main windows of the application, which are bank a voice, manage voicebanks and text to speech and make the transitions between them easier. Therefore we added
-                        buttons on the top-right corner of each window the remind users of the other windows and make the transitions between them seamless.
-                      </p>
-                      <div class="col-lg-4 col-md-6">
-                        <img src="assets/img/yeni.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
-                    </div><!-- End Portfolio Item --> 
-                    <h3>The Improvement</h3>
-                    <p>We have seen that the new design was much easier for our users to navigate however this time many of our users were fixated on the color palette that we 
-                      have chosen for our application. They have said that the colors were too bright and the lack of contrast between the background and buttons make them seem ugly.
-                      They have also reported a bug where if you bank a voice with a username that is already taken, the application crashes. Hence, we have added a failsafe that 
-                      checks all names before the user can bank a voice and informs the user if the name is already taken. We have also changed our color palette to darker colors as well
-                      as making the font weight of the text on the buttons bolder to increase the contrast between the background and the buttons.
-                    </p>
-                    <div class="col-lg-4 col-md-6">
-                      <img src="assets/img/yeniden.png" class="img-fluid" alt="" style="max-height: 600px; max-width: 900px; margin-left: 170px;">
-                  </div><!-- End Portfolio Item --> 
-                  <h3>The Final Design</h3>
-                  <p>With the final design, we haven't heard compilaints so far. We are very happy with how AnimaV3 turned out and we hope that it satisfies our real users!</p>                    
-                      </div>
-                  </article><!-- End blog post -->
-              </div>
+              <div class="content" style="margin-left: 25px; margin-right: 25px;">
+                <h1 class="title">Known List of Bugs</h2><br>
+                <table style="border-collapse: collapse; width: 100%;">
+                  <thead>
+                    <tr>
+                      <th style="border: 1px solid #ddd; padding: 8px; width: 600px; text-align: center;">Bug Description</th>
+                      <th style="border: 1px solid #ddd; padding: 8px; width: 200px; text-align: center;">Priority</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="border: 1px solid #ddd; padding: 8px;">
+                        <p style="text-align: center; font-size: large; font-style: normal;">On the Text-to-Speech window, when the computer is speaking the SPEAK button becomes the STOP button to help users stop 
+                        the sound if they no longer want to say that sentence. Clicking on this button as fast as possible will rarely disable the stopping functionality.</p>
+                      </td>
+                      <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Low</strong></td>
+                    </tr>
+                    <tr>
+                      <td style="border: 1px solid #ddd; padding: 8px;">
+                        <p style="text-align: center; font-size: large; font-style: normal;">Manually deleting .animaprofile files will leave the usernames of profiles in profileLanguages.json.
+                        This will crash the application if the user creates an animaprofile.with the deleted profile's name.</p>
+                      </td>
+                      <td style="border: 1px solid #ddd; padding: 8px; font-style: italic;"><strong>Low - We do not expect users to manually delete files. An option to delete profiles
+                        already provided.
+                      </strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div> 
+            </article><!-- End blog post -->
           </div>
       </div>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+
+              <div class="content" style="margin-left: 25px; margin-right: 25px;">
+                <h2 style="text-align: center;"><strong>Future Work</strong></h2><br>
+                <p>AnimaV3 has been a huge step forward. We believe the work done with AnimaV3 can change the lives of many people for the better. We are also aware that voice-banking is a very serious issue
+                  and there is still improvements to be amde. Here are some of the future work that can be done to improve AnimaV3:</p>
+                </p>
+
+                <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic; text-align: left;">
+                  <li>We are currently using a multi-language model from CoquiTTS engine. For a better sound quality, a different model for each language can be used/trained. Or the text-to-speech engine
+                    can be changed to another open-source engine with a better sound quality.</li><br>
+                  <li>Additional dialect and language support can be added. Currently this is problem is being tackled through diverse voice-banking texts curated for users however the banked voices are still
+                  biased towards the American accent and need a better solution.</li><br>
+                  <li>When banking a voice, highlight the text the user is reading to enhance the voice-banking experience</li><br>
+                  <li>Record each page separately and create the animaprofile from the recordings from all pages. Also let the user know when the recording starts and stops clearly.</li><br>
+                  <li>Make the sepeartion between windows more clear. Highlight the window the user is currently on and grey out the other two to enhance user-friendliness.</li>
+                </ol>
+              </div> 
+            </article><!-- End blog post -->
+          </div>
+      </div>
+    </div>
 
   </main><!-- End #main -->
 
