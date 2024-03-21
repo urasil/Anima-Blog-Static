@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Anima v3 - Research</title>
+  <title>Anima v3 - Technology Review</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -61,13 +61,13 @@
         <li class="dropdown"><a href="#" class="active"><span>Research</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
           <ul>
             <li><a href="related.html">Related Projects Review</a></li>
-            <li><a href="technology.html">Technology Review</a></li>
+            <li><a href="technology.html" class="active">Technology Review</a></li>
             <li><a href="nuitka.html">Nuitka Compilation Issues</a></li>
             <li><a href="pyinstaller.html">Pyinstaller Compilation Issues</a></li>
             <li><a href="pyoxidizer.html">Successful Complilation with PyOxidizer</a></li>
           </ul>
         </li>
-        <li><a href="ui-design.html">User Interface Design</a></li>
+        <li><a href="ui-design.html">UI Design</a></li>
         <li><a href="system-design.html">System Design</a></li>
         <li><a href="implementation.html">Implementation</a></li>
         <li><a href="testing.html">Testing</a></li>
@@ -108,6 +108,302 @@
 
     <!-- ======= Blog Details Section ======= -->
     <section id="blog" class="blog">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div>
+  
+                <div class="content">
+                  <h1 class="title">Overview</h1>
+
+                  <h3 style="text-align: center;"><strong></strong></h3>
+                  <p>
+                    Our main task is to develop a voice banking app using text-to-speech (TTS) technology, with a connected frontend and backend, 
+                    along with optical character recognition functionality. The backend has to be complied into a executable.
+                    <br>
+                    Therefore, research was done on 5 components: 
+                  </p>
+                  <ul style="text-align: left;">
+                    <li>
+                      <strong>Backend Language: </strong>Python vs Java
+                    </li>
+                    <li>
+                      <strong>Frontend Framework: </strong>MFC vs .NET
+                    </li>
+                    <li>
+                      <strong>TTS Engine: </strong>Coqui TTS vs Mary TTS
+                    </li>
+                    <li>
+                      <strong>OCR Engine: </strong>Tesseract vs EasyOCR
+                    </li>
+                    <li>
+                      <strong>Backend Compiler: </strong>Nuitka vs PyInstaller vs Py2Exe vs PyOxidizer
+                    </li>
+                  </ul>  
+                  <p>
+                    To pick a technology for further development, we considered different <strong>points of comparison</strong> for each section. 
+                    We will discover, evaluate and analyse the benefits and drawbacks of using different technologies and the reasons behind our final choices.
+                  </p>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <!-- <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h2><strong>Backend Language</strong></h2>
+
+                  <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
+
+                  <h3><strong>Existing Codebase / Development Time Cost</strong></h3>
+                  <p>
+                    This is the most important factor, as we are working with Anima v2's backend codebase which was written in Python. 
+                    <br>
+                    Choosing Java will involve re-writing the entire backend, including finding alternatives to every library that is used. 
+                    We decided that the time needed for this change is too much.
+                  </p>
+
+                  <h3><strong>Performance / Scale of Software</strong></h3>
+                  <p>
+                    Anima v3 is designed to be small scale which runs locally on the user's device. A main reason to choose Java over Python is for its performance, 
+                    Java is a compliled language with static typing, Python is a interpreted language with dynamic typing. 
+                    This means Java is faster as the bytecode is transformed into native machine code before execution <sup>[1]</sup>.
+                    <br>
+                    However, we decided that this boost in performance is not neccessary, as we are working with small scale software. 
+                    We don't need to consider scaling the software to large scales, which is where this performance boost is needed <sup>[2]</sup>.
+                  </p>
+
+                  <h3><strong>Team Expertise / Development Time Cost</strong></h3>
+                  <p>
+                    Python aims to provide clean and concise syntax, making it easier to read and write for developers. 
+                    In comparison, Java has more verbose syntax, which can lead to longer lines of code <sup>[3]</sup>.
+                    <br>
+                    Even though we are proficient in both languages <sup>[4]</sup>, 
+                    we are more comfortable with continuing developing in Python than in Java.
+                  </p>
+
+                  <blockquote>
+                    <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
+                    <h3><strong>Our choice: Python</strong></h3>
+                    <p>
+                      Although Java is a faster language, we chose Python since there is already a solid backend codebase in Python, 
+                      and there is no need to re-write the entire backend for the higher performance.
+                    </p>
+                    <img src="assets/img/python.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt="">
+                  </blockquote>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <!-- <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h2><strong>Frontend Framework</strong></h2>
+
+                  <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
+
+                  <h3><strong>Client Request</strong></h3>
+                  <p>
+                    This is the most important factor, as satisfying our clients' requirements is our top priority. 
+                    <br>
+                    We had a meeting with our primary contact, Prof. Mohamedally in November 2023. 
+                    He instructed us to work on Anima v3 using the .NET framework as an upgrade from Anima v2 which uses the MFC framework <sup>[5]</sup>.
+                  </p>
+
+                  <h3><strong>Software Timeliness</strong></h3>
+                  <p>
+                    MFC is a C++ wrapper for Win32 developed in 1992. MFC still gets minor updates today from Microsoft <sup>[6]</sup>. 
+                    MFC lacks native support for modern UI frameworks like WPF and advanced communication protocols like WCF <sup>[7]</sup>.
+                    <br>
+                    In comparison, .NET framework provides built-in support for modern technologies like WPF (Windows Presentation Foundation), 
+                    WCF (Windows Communication Foundation), and ASP.NET for web development <sup>[7]</sup>.
+                    <br>
+                  </p>
+                  
+                  <h3><strong>Aesthetic Appeal</strong></h3>
+                  <p>
+                    One of our key requirements is to design a clean, simple and good-looking user interface. 
+                    The following is more of a subjective analysis, 
+                    but we believe this is justified since subjective opinions plays a important part for this key requirement.
+                    <br>
+                    We have looked for how software using each framework looks like. These are examples using MFC <sup>[8]</sup> <sup>[9]</sup>:
+                  </p>
+                  <div style="display: flex;">
+                    <div style="flex: 1;">
+                      <img src="assets/img/ui-eg-mfc.png" alt="Image 1" style="width: 100%;">
+                    </div>
+                    <div style="flex: 1;">
+                      <img src="assets/img/ui-eg-mfc-2.png" alt="Image 2" style="width: 100%;">
+                    </div>
+                  </div>
+                  <p>
+                    These are examples using .NET <sup>[10]</sup>:
+                  </p>
+                  <div style="display: flex;">
+                    <div style="flex: 1;">
+                      <img src="assets/img/ui-eg-net.avif" alt="Image 1" style="width: 100%;">
+                    </div>
+                    <div style="flex: 1;">
+                      <img src="assets/img/ui-eg-net-2.avif" alt="Image 2" style="width: 100%;">
+                    </div>
+                  </div>
+                  <p>
+                    We believe the differences are very apparent.
+                  </p>
+                  <p>
+                  <blockquote>
+                    <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
+                    <h3><strong>Our choice: .NET</strong></h3>
+                    <p>
+                      This was an easy decision due to our clients' requirements. However we also did our own research to further justify this choice, 
+                      which was to choose the more up-to-date and visually-appealing framework - .NET.
+                    </p>
+                    <img src="assets/img/net.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt="">
+                  </blockquote>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <!-- <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h2><strong>TTS Engine</strong></h2>
+
+                  <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
+
+                  <h3><strong>Language Compatibility</strong></h3>
+                  <p>
+                    This is the most important factor, as we are working with Anima v2's backend codebase which was written in Python. 
+                    <br>
+                    Choosing Java will involve re-writing the entire backend, including finding alternatives to every library that is used. 
+                    We decided that the time needed for this change is too much.
+                  </p>
+
+                  <blockquote>
+                    <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
+                    <h3><strong>Our choice: Coqui TTS</strong></h3>
+                    <p>
+                      Although Java is a faster language, we chose Python since there is already a solid backend codebase in Python, 
+                      and there is no need to re-write the entire backend for the higher performance.
+                    </p>
+                    <img src="assets/img/coqui.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt="">
+                  </blockquote>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <!-- <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h2><strong>OCR Engine</strong></h2>
+
+                  <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
+
+                  <h3><strong>Language Compatibility</strong></h3>
+                  <p>
+                    This is the most important factor, as we are working with Anima v2's backend codebase which was written in Python. 
+                    <br>
+                    Choosing Java will involve re-writing the entire backend, including finding alternatives to every library that is used. 
+                    We decided that the time needed for this change is too much.
+                  </p>
+
+                  <blockquote>
+                    <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
+                    <h3><strong>Our choice: EasyOCR</strong></h3>
+                    <p>
+                      Although Java is a faster language, we chose Python since there is already a solid backend codebase in Python, 
+                      and there is no need to re-write the entire backend for the higher performance.
+                    </p>
+                    <!-- <img src="assets/img/easyocr.jpg" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt=""> -->
+                  </blockquote>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <!-- <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h2><strong>Backend Compiler</strong></h2>
+
+                  <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
+
+                  <h3><strong>Compliation Outcome</strong></h3>
+                  <p>
+                    This is the most important and only factor, as it determines whether the complier works for Anima v3 or not.
+                    <br>
+                    We have done extensive efforts and reserach in trying each of the compilers, so we have dedicated sections for our findings:
+                  </p>
+                  <ul style="text-align: left;">
+                    <li>
+                      <a href="nuitka.html">Nuitka</a> 
+                    </li>
+                    <li>
+                      <a href="pyinstaller.html">PyInstaller and Py2Exe</a> 
+                    </li>
+                    <li>
+                      <a href="pyoxidizer.html">PyOxidizer</a> 
+                    </li>
+                  </ul>  
+
+                  <blockquote>
+                    <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
+                    <h3><strong>Our choice: PyOxidizer</strong></h3>
+                    <p>
+                      PyOxidizer is the only complier that was successful in compliing the Python backend to an executable, as there were issues that were either beyond our expertise, 
+                      or are not feasible to be resolved. Please check our individual pages for more information.
+                    </p>
+                    <!-- <img src="assets/img/python.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt=""> -->
+                  </blockquote>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
       <div class="container" data-aos="fade-up">
 
         <div class="row g-5">
@@ -116,43 +412,7 @@
 
             <article class="blog-details">
 
-              <div class="post-img">
-                <img src="assets/img/researching.jpg" alt="" class="img-fluid">
-              </div>
 
-              <div class="content">
-                <h1 class="title" style="color:blue">Project Background</h1>
-                <h3><strong>Overview</strong></h3>
-                <p>
-                  As our main task is to develop a voice banking app using TTS software and a working connected front end, it is intuitive to think of the languages Python or Java for the backend and to use an MFC or .NET C++ front end framework considering the aim to get the app to the windows store. TTS software we could use include; COQUI, Real-Time-Voice-Cloning and Mary TTS.
-                  <br><br>
-                  To pick a language or framework for further development, we need to consider what would be best to use for implementation of our software. We need to consider multiple aspects including but not limited to, performance, accessibility and language tools.
-                  <br><br>
-                  This article aims to discover, evaluate and analyse the benefits and drawbacks of using different TTS software and using Python vs Java for our project before attempting to argue that Python and COQUI will be the most suitable choice.
-                </p>
-
-                <h1 class="title" style="color:blue">Technical Research</h1>
-                <h3><strong>Languages</strong></h3>
-                <p>
-                  First and foremost, we need to pick a reliable language for our project. Choosing an optimal language would provide us with reliable code, guarantee simplicity and performance. As such, we will compare the benefits of using Python or Java for this project.
-                </p>
-                <p><strong><i class="bi bi-filetype-py"></i>Python: </strong>Simple and consistent- Due to the complexity associated with machine learning and AI, python allows developers to write concise and readable code allowing the developer to put most their time and effort into solving complex problems rather than being fixated on the nuances on the language.
-                  Extensive selection of libraries and frameworks- Python has an extensive amount of libraries and frameworks then can make implementing complex algorithms more time efficient (1).
-                  Flexibility- The language is very flexible. It offers a choice of using object-oriented programming or scripting. Developers can see changes quickly as there is no need to re compile. This also decreases the possibility of errors as programmers can work in a comfortable environment and check results quickly (2).
-                </p>
-                <p><strong><i class="bi bi-filetype-java"></i>Java: </strong>Simplicity- Java is a very popular language, which is used a lot in the programming world. It is object-oriented which allows the code to be readable and organised. This is helpful for developers and java can be less complex to learn than other languages such as C++.
-                  Security- Java is safer than many other languages as it doesn’t use pointers. Pointers can cause serious harm by allowing unauthorised memory access. Java provides a security management feature and overall has a secure framework (3). 
-                </p>
-
-
-                <blockquote>
-                    <p>
-                      <strong>Language Comparison</strong><br>
-                      There are numerous similarities between both Python and Java. They are both popular languages with strong communities and a good amount of libraries. However, in general most developers prefer to use Python for AI and machine learning due to its simple nature, accessibility and ease of use. Java may have a better performance than Python but Python is easier to code with, especially for beginners, it’s easily adaptable and is better suited for quick prototyping.
-                      Given these reasons, as a team we have decided to use Python over Java for implementing our software.
-                    </p>
-                    <img src="assets/img/python.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt="">
-                </blockquote>
                   
                 <h3><strong>Text-to-Speech Software</strong></h3>
                 <p>
@@ -174,26 +434,48 @@
                     <img src="assets/img/coqui.png" style="max-width: 400px; max-height: 160px; border-radius: 20px;" class=img-fluid alt="">
                 </blockquote>
                   
-                <h1 class="title" style="color:blue">Front-End</h1>
-                <p>
-                  <strong>CAN CHANGE</strong>
-                  As a result of our clients request, we will use an MFC framework for the front end of the application. In addition to this, our project is part of the Motion Input group at UCL and all these apps are made with an MFC framework, thus this is what our team will use.
-                  The MFC framework is based on a few major classes and several Visual C++ tools. It provides an object-oriented wrapper over much of the Win32 and COM APIs (8). It can be used to create simple desktop applications as well as being very helpful in creating more complex applications. This makes it a useful tool for our application. Another benefit of using this framework is that it is compatible with older windows computers. This is helpful for our project as people who would be using our application are likely to be older, less technically proficient and potentially own older devices.
-                </p>
 
 
                 
 
-              </div><!-- End post content -->
-
-              <div class="meta-bottom"></div>
-                <i class="bi bi-tags"></i>
-                <ul class="tags">
-                  <li><a href="#">Voice-banking</a></li>
-                </ul>
-              </div><!-- End meta bottom -->
-
-            </article><!-- End blog post -->
+        <div class="container" data-aos="fade-up">
+          <div class="row g-5">
+            <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <div class="content">
+                  <h1 class="title"></h1>
+              
+                  <h3><strong>References</strong></h3>
+                  <p>
+                    [1] SteelKiwi. "Python for AI and Machine Learning." [Online]. Available: <a href="https://steelkiwi.com/blog/python-for-ai-and-machine-learning/">https://steelkiwi.com/blog/python-for-ai-and-machine-learning/</a>.
+                  </p>
+                  <p>
+                    [2] Django Stars. "Why Python is Good for Artificial Intelligence and Machine Learning." [Online]. Available: <a href="https://djangostars.com/blog/why-python-is-good-for-artificial-intelligence-and-machine-learning/">https://djangostars.com/blog/why-python-is-good-for-artificial-intelligence-and-machine-learning/</a>.
+                  </p>
+                  <p>
+                    [3] We Are Developers. "6 Reasons to Use Java for Your Next AI Project." [Online]. Available: <a href="https://www.wearedevelopers.com/magazine/6-reasons-to-use-java-for-your-next-ai-project">https://www.wearedevelopers.com/magazine/6-reasons-to-use-java-for-your-next-ai-project</a>.
+                  </p>
+                  <p>
+                    [4] StackShare. "Coqui TTS." [Online]. Available: <a href="https://stackshare.io/coqui-tts">https://stackshare.io/coqui-tts</a>.
+                  </p>
+                  <p>
+                    [5] iMyFone. "Voice Cloning Software." [Online]. Available: <a href="https://filme.imyfone.com/text-to-speech/voice-cloning-software/">https://filme.imyfone.com/text-to-speech/voice-cloning-software/</a>.
+                  </p>
+                  <p>
+                    [6] 3Play Media. "Pros & Cons of Synthesized Speech Audio Description." [Online]. Available: <a href="https://www.3playmedia.com/blog/pros-cons-synthesized-speech-audio-description/">https://www.3playmedia.com/blog/pros-cons-synthesized-speech-audio-description/</a>.
+                  </p>
+                  <p>
+                    [7] Meta-Guide. "MARYTTS." [Online]. Available: <a href="https://meta-guide.com/speech-synthesis/marytts">https://meta-guide.com/speech-synthesis/marytts</a>.
+                  </p>
+                  <p>
+                    [8] Microsoft. "MFC Desktop Applications." [Online]. Available: <a href="https://learn.microsoft.com/en-us/cpp/mfc/mfc-desktop-applications?view=msvc-170">https://learn.microsoft.com/en-us/cpp/mfc/mfc-desktop-applications?view=msvc-170</a>.
+                  </p>
+                </div>
+              </article><!-- End blog post -->
+              
+              </div>
+          </div>
+        </div>
       </div>
     </section><!-- End Blog Details Section -->
 
