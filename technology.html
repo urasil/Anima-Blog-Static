@@ -123,7 +123,9 @@
                   <h3 style="text-align: center;"><strong></strong></h3>
                   <p>
                     Our main task is to develop a voice banking app using text-to-speech (TTS) technology, with a connected frontend and backend, 
-                    along with optical character recognition functionality. Therefore, research was done on 4 components: 
+                    along with optical character recognition functionality. The backend has to be complied into a executable.
+                    <br>
+                    Therefore, research was done on 5 components: 
                   </p>
                   <ul style="text-align: left;">
                     <li>
@@ -137,6 +139,9 @@
                     </li>
                     <li>
                       <strong>OCR Engine: </strong>Tesseract vs EasyOCR
+                    </li>
+                    <li>
+                      <strong>Backend Compiler: </strong>Nuitka vs PyInstaller vs Py2Exe vs PyOxidizer
                     </li>
                   </ul>  
                   <p>
@@ -274,6 +279,124 @@
                       which was to choose the more up-to-date and visually-appealing framework - .NET.
                     </p>
                     <img src="assets/img/net.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt="">
+                  </blockquote>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <!-- <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h2><strong>TTS Engine</strong></h2>
+
+                  <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
+
+                  <h3><strong>Language Compatibility</strong></h3>
+                  <p>
+                    This is the most important factor, as we are working with Anima v2's backend codebase which was written in Python. 
+                    <br>
+                    Choosing Java will involve re-writing the entire backend, including finding alternatives to every library that is used. 
+                    We decided that the time needed for this change is too much.
+                  </p>
+
+                  <blockquote>
+                    <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
+                    <h3><strong>Our choice: Coqui TTS</strong></h3>
+                    <p>
+                      Although Java is a faster language, we chose Python since there is already a solid backend codebase in Python, 
+                      and there is no need to re-write the entire backend for the higher performance.
+                    </p>
+                    <img src="assets/img/coqui.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt="">
+                  </blockquote>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <!-- <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h2><strong>OCR Engine</strong></h2>
+
+                  <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
+
+                  <h3><strong>Language Compatibility</strong></h3>
+                  <p>
+                    This is the most important factor, as we are working with Anima v2's backend codebase which was written in Python. 
+                    <br>
+                    Choosing Java will involve re-writing the entire backend, including finding alternatives to every library that is used. 
+                    We decided that the time needed for this change is too much.
+                  </p>
+
+                  <blockquote>
+                    <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
+                    <h3><strong>Our choice: EasyOCR</strong></h3>
+                    <p>
+                      Although Java is a faster language, we chose Python since there is already a solid backend codebase in Python, 
+                      and there is no need to re-write the entire backend for the higher performance.
+                    </p>
+                    <!-- <img src="assets/img/easyocr.jpg" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt=""> -->
+                  </blockquote>
+                </div>
+              </article><!-- End blog post -->
+            </div>
+        </div>
+      </div>
+
+      <div class="container" data-aos="fade-up">
+        <div class="row g-5">
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+              <article class="blog-details">
+                <!-- <div class="post-img">
+                  <img src="assets/img/researching.jpg" alt="" class="img-fluid">
+                </div> -->
+  
+                <div class="content">
+                  <h2><strong>Backend Compiler</strong></h2>
+
+                  <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
+
+                  <h3><strong>Compliation Outcome</strong></h3>
+                  <p>
+                    This is the most important and only factor, as it determines whether the complier works for Anima v3 or not.
+                    <br>
+                    We have done extensive efforts and reserach in trying each of the compilers, so we have dedicated sections for our findings:
+                  </p>
+                  <ul style="text-align: left;">
+                    <li>
+                      <a href="nuitka.html">Nuitka</a> 
+                    </li>
+                    <li>
+                      <a href="pyinstaller.html">PyInstaller and Py2Exe</a> 
+                    </li>
+                    <li>
+                      <a href="pyoxidizer.html">PyOxidizer</a> 
+                    </li>
+                  </ul>  
+
+                  <blockquote>
+                    <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
+                    <h3><strong>Our choice: PyOxidizer</strong></h3>
+                    <p>
+                      PyOxidizer is the only complier that was successful in compliing the Python backend to an executable, as there were issues that were either beyond our expertise, 
+                      or are not feasible to be resolved. Please check our individual pages for more information.
+                    </p>
+                    <!-- <img src="assets/img/python.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt=""> -->
                   </blockquote>
                 </div>
               </article><!-- End blog post -->
