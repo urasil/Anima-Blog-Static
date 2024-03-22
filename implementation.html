@@ -157,36 +157,20 @@
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
               <article class="blog-details">
                  <div class="content">
-                   <h5 style="text-align: center;"><strong>Overall Implementation</strong></h5>
+                   <h1 style="text-align: center;"><strong>Overall Implementation</strong></h1>
                    <p style="text-align: center;">
-                    To implement Anima, we used the following technologies:
-                  <br>
-                  <br>
-                  <strong>Back End</strong>
-                    <ol>
-                      <li>Coqui TTS(Python-based)</li>
-                      <li>PyOxidizer</li>
-                      <li>EasyOCR</li>
-                    </ol>
-                  <strong>Front End</strong>
-                    <ol>
-                      <li>.NET framework</li>
-                    </ol>
+                    The following are the technologies used for building Anima v3:<br>
+                  <h3 style="text-align: center;"><strong>Back End</strong></h3>
+                      <p style="text-align: center;">Coqui TTS(Python-based)</p>
+                      <p style="text-align: center;">PyOxidizer</p>
+                      <p style="text-align: center;">EasyOCR</p>
+                    <h3 style="text-align: center;"><strong>Front End</strong></h3>
+                    <p style="text-align: center;">.NET framework</p>
                   </p>
                </article><!-- End blog post -->
             </div>
         </div>
       </div>
-      <br>
-
-
-
-
-      <h5 style="text-align: center;"><strong>Back-end</strong></h5>
-      <br>
-
-
-
 
       <div class="container" data-aos="fade-up">
           <div class="row g-5">
@@ -194,26 +178,36 @@
                 <article class="blog-details">
   
                   <div class="content">
-                     <h3 style="text-align: center;"><strong>Brief Summary of Technologies</strong></h3>
-                    <p style="text-align: center;">
-                       <h4 style="text-align: center;">Coqui TTS</h4>
+                     <h2 style="text-align: center;"><strong>Brief Summary of Backend Technologies</strong></h2>
+                    <p style="text-align: left;">
+                       <h4 style="text-align: center;"><strong>Coqui TTS</strong></h4>
+                       <div class="post-img">
+                        <img src="assets/img/coqui_logo.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
+                       </div>
                        <br>
                        Coqui TTS is an open-source, Python-based text-to-speech (TTS) engine. It allows the conversion of text into speech with natural-sounding voices. This technology is built on machine learning algorithms and can be trained on various datasets to produce voices in different languages and accents. As an open-source application, Coqui TTS provides us with the flexibility to customise the code for specific needs, like voice cloning, and enables us to offer Anima for free, thereby enhancing accessibility and reaching a wider audience.
                        <br>
                        <br>
-                       <h4 style="text-align: center;">PyOxidizer</h4>
+                       <h4 style="text-align: center;"><strong>PyOxidizer</strong></h4>
+                        <div class="post-img" style="display: flex; justify-content: center; align-items: center;">
+                          <img src="assets/img/pyoxidizer_logo.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
+                        </div>
                        <br>
-
-
                        PyOxidizer is a tool used to package Python applications into standalone executables. Given Python's prominence in AI, including text-to-speech technologies, many high-quality, open-source TTS engines are written in Python. For our project, Anima, we needed to convert our Python-based application into a Windows desktop executable to meet our deployment requirements. We evaluated bothNuitka and PyOxidizer for this purpose. Despite initial attempts with Nuitka, we encountered several issues and ultimately found success with PyOxidizer, which proved to be more reliable for packaging our Python code into an executable format suitable for a Windows environment.
                        <br>
                        <br>
-                       <h4 style="text-align: center;">EasyOCR</h4>
+                       <h4 style="text-align: center;"><strong>EasyOCR</strong></h4>
+                       <div class="post-img">
+                        <img src="assets/img/easyocr.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
+                       </div>
                        <br>
                        EasyOCR is a tool designed for optical character recognition (OCR), capable of converting images of text into editable and searchable text. It's known for its simplicity and support for multiple languages, making it a versatile choice for OCR needs. We incorporated EasyOCR into our app, Anima, to enhance its ease of use and versatility. This addition also means users don’t have to manually copy text from PDFs to read a book; instead, they can simply upload the PDF, and EasyOCR facilitates the text extraction. By integrating OCR technology, we aimed to streamline the user experience.
                        <br>
                        <br>
-                       <h4 style="text-align: center;">.NET</h4>
+                       <h4 style="text-align: center;"><strong>.NET</strong></h4>
+                       <div class="post-img">
+                        <img src="assets/img/net_logo.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
+                       </div>
                        <br>
                        The .NET framework is a comprehensive development platform used for building and running applications on Windows. Key advantages of the .NET framework over the Microsoft Foundation Classes (MFC) include improved development speed due to its extensive library of pre-coded solutions and .NET offers easier integration with other Microsoft technologies, making it a more versatile and modern choice for developing Windows applications. Read more about our research about .NET vs MFC here.
                   
@@ -223,28 +217,18 @@
           </div>
         </div>
 
-
-        <br>
-
-
-
-
-      <h5 style="text-align: center;"><strong>Explaining Implementation</strong></h5>
-      <br>
-
-
       <div class="container" data-aos="fade-up">
        <div class="row g-5">
          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
              <article class="blog-details">
                <div class="content">
+                <h2 style="text-align: center;"><strong>The Structure of the Explanation for Implementation</strong></h2>
                  <p style="text-align: center;">
                    To best explain how we implemented Anima, we will use the following approach for each <strong>key feature</strong>:
-                   <ol type="a">
-                       <li>Display and explain the front-end in .NET</li>
-                       <li>Descripton of user interaction</li>
-                       <li>Backend implementation of feature with complete explanation</li>
-                   </ol>
+                       <p style="font-weight: 700; font-style: italic; text-align: center;">a) Explain the the design and implementation of the .NET frontend</p>
+                       <p style="font-weight: 700; font-style: italic; text-align: center;">b) Describe the json communication between Python backend and the .NET frontend</p>
+                       <p style="font-weight: 700; font-style: italic; text-align: center;">c) Explain the principle and implementation of the Python backend</p>
+    
                   
                    <img src="assets/img/Explain_Imp.png" alt="Description of the image">
 
