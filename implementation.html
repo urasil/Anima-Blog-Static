@@ -179,13 +179,13 @@
   
                   <div class="content">
                      <h2 style="text-align: center;"><strong>Brief Summary of Backend Technologies</strong></h2>
-                    <p style="text-align: left;">
                        <h4 style="text-align: center;"><strong>Coqui TTS</strong></h4>
                        <div class="post-img">
                         <img src="assets/img/coqui_logo.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
                        </div>
                        <br>
-                       Coqui TTS is an open-source, Python-based text-to-speech (TTS) engine. It allows the conversion of text into speech with natural-sounding voices. This technology is built on machine learning algorithms and can be trained on various datasets to produce voices in different languages and accents. As an open-source application, Coqui TTS provides us with the flexibility to customise the code for specific needs, like voice cloning, and enables us to offer Anima for free, thereby enhancing accessibility and reaching a wider audience.
+                       <p style="text-align: left;">
+                       Coqui TTS is an open-source, Python-based text-to-speech (TTS) engine. It allows the conversion of text into speech with natural-sounding voices. This technology is built on machine learning algorithms and can be trained on various datasets to produce voices in different languages and accents. As an open-source application, Coqui TTS provides us with the flexibility to customise the code for specific needs, like voice cloning, and enables us to offer Anima for free, thereby enhancing accessibility and reaching a wider audience.</p>
                        <br>
                        <br>
                        <h4 style="text-align: center;"><strong>PyOxidizer</strong></h4>
@@ -193,7 +193,8 @@
                           <img src="assets/img/pyoxidizer_logo.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
                         </div>
                        <br>
-                       PyOxidizer is a tool used to package Python applications into standalone executables. Given Python's prominence in AI, including text-to-speech technologies, many high-quality, open-source TTS engines are written in Python. For our project, Anima, we needed to convert our Python-based application into a Windows desktop executable to meet our deployment requirements. We evaluated bothNuitka and PyOxidizer for this purpose. Despite initial attempts with Nuitka, we encountered several issues and ultimately found success with PyOxidizer, which proved to be more reliable for packaging our Python code into an executable format suitable for a Windows environment.
+                       <p style="text-align: left;">
+                       PyOxidizer is a tool used to package Python applications into standalone executables. Given Python's prominence in AI, including text-to-speech technologies, many high-quality, open-source TTS engines are written in Python. For our project, Anima, we needed to convert our Python-based application into a Windows desktop executable to meet our deployment requirements. We evaluated bothNuitka and PyOxidizer for this purpose. Despite initial attempts with Nuitka, we encountered several issues and ultimately found success with PyOxidizer, which proved to be more reliable for packaging our Python code into an executable format suitable for a Windows environment.</p>
                        <br>
                        <br>
                        <h4 style="text-align: center;"><strong>EasyOCR</strong></h4>
@@ -201,7 +202,8 @@
                         <img src="assets/img/easyocr.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
                        </div>
                        <br>
-                       EasyOCR is a tool designed for optical character recognition (OCR), capable of converting images of text into editable and searchable text. It's known for its simplicity and support for multiple languages, making it a versatile choice for OCR needs. We incorporated EasyOCR into our app, Anima, to enhance its ease of use and versatility. This addition also means users don’t have to manually copy text from PDFs to read a book; instead, they can simply upload the PDF, and EasyOCR facilitates the text extraction. By integrating OCR technology, we aimed to streamline the user experience.
+                       <p style="text-align: left;">
+                       EasyOCR is a tool designed for optical character recognition (OCR), capable of converting images of text into editable and searchable text. It's known for its simplicity and support for multiple languages, making it a versatile choice for OCR needs. We incorporated EasyOCR into our app, Anima, to enhance its ease of use and versatility. This addition also means users don’t have to manually copy text from PDFs to read a book; instead, they can simply upload the PDF, and EasyOCR facilitates the text extraction. By integrating OCR technology, we aimed to streamline the user experience.</p>
                        <br>
                        <br>
                        <h4 style="text-align: center;"><strong>.NET</strong></h4>
@@ -209,7 +211,8 @@
                         <img src="assets/img/net_logo.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
                        </div>
                        <br>
-                       The .NET framework is a comprehensive development platform used for building and running applications on Windows. Key advantages of the .NET framework over the Microsoft Foundation Classes (MFC) include improved development speed due to its extensive library of pre-coded solutions and .NET offers easier integration with other Microsoft technologies, making it a more versatile and modern choice for developing Windows applications. Read more about our research about .NET vs MFC here.
+                       <p style="text-align: left;">
+                       The .NET framework is a comprehensive development platform used for building and running applications on Windows. Key advantages of the .NET framework over the Microsoft Foundation Classes (MFC) include improved development speed due to its extensive library of pre-coded solutions and .NET offers easier integration with other Microsoft technologies, making it a more versatile and modern choice for developing Windows applications. Read more about our research about .NET vs MFC here.</p>
                   
                      </p>
                 </article><!-- End blog post -->
@@ -246,9 +249,9 @@
               <div class="content">
                <h2 style="text-align: center;"><strong>The Frontend Design</strong></h2>
                <h3 style="text-align: left;">First Time User and Existing User Pathways</h3>
-                <p style="text-align: center;">
+                <p style="text-align: left;">
                   The frontend of Anima was designed with ease of use, intuitiveness, and accessibility in mind. The user interface was created using the .NET framework, which is known for its user-friendly design and compatibility with Windows applications. 
-                  The frontend design includes two pathways for users: First time user and existing user pathways.
+                  The frontend design includes two pathways for users: First time user and existing user pathways.</p>
                   <h3 style="text-align: center;">First Time User</h3>
                   <div>
                     <img src="assets/img/ui-design/final/home.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
@@ -263,18 +266,50 @@
                     <img src="assets/img/arrow-right.svg" alt="">
                     <img src="assets/img/ui-design/final/tts.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
                   </div><br>
-                 </p>
-                <h3 style="text-align: left;">3 Window Design</h3>
-                <p style="text-align: center;">
-                  AnimaV3 has been designed with 3 main windows in mind. These windows are the Text-to-Speech Window, Bank Voice Window, and Manage Voicebank Window. 
-                  
-                  The Text-to-Speech Window is the main window where the user can input text and listen to the output. 
-                  
-                  The Bank Voice Window is where the user can record their voice and save it to the voicebank. 
-                  
-                  The Manage Voicebank Window is where the user can manage their voicebank, including deleting and playing back voices.
-                
+
+                <h3 style="text-align: left;">The 3 Window Design</h3>
+                <p style="text-align: left;">
+                  AnimaV3 has been designed with 3 main windows in mind. These windows are the Text-to-Speech Window, Bank Voice Window, and Manage Voicebank Window. To make the 3 window approach as clear and user-friendly as possible, we have designed the windows to be easily navigable through the window navigation buttons at the top right corner of each window.
                 </p>
+                  <div class="post-img">
+                    <img src="assets/img/three_window.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 550px;">
+                  </div>
+                  <h4 style="text-align: center;">Text-to-Speech Window</h4>
+                  <p style="text-align: left;">
+                  The Text-to-Speech Window is the main window where the user can input text and speak with their digital voice that they have created.
+                  Text-to-Speech window also includes the option to read from a PDF or image (jpeg/png) file.  
+                  </p>
+                  <div class="post-img">
+                    <img src="assets/img/ui-design/final/tts.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
+                  </div><br>
+                
+                  <h4 style="text-align: center;">Bank Voice Window</h4>
+                  <p style="text-align: left;">
+                  The Bank Voice Window is where the user can record their voice and save it to the voicebank. In this window, the user can also choose the language of the voice they want to record. The voicebanking text changes according to the language selected and the model becomes 
+                  biased towards the intonations of the language.</p>
+                  <div class="post-img">
+                    <img src="assets/img/ui-design/final/read.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
+                  </div><br>
+
+                  <h4 style="text-align: center;">Manage Voicebank Window</h4>
+                  <p style="text-align: left;">
+                   The Manage Voicebank Window is where the user can manage their voicebank. This includes the ability to import a voice in the user's selected language, deleting a voice profile and selecting another voice profile to be their digital voice.</p>
+                  <div class="post-img">
+                    <img src="assets/img/ui-design/final/manage.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
+                  </div><br>
+                </p>
+
+            </article><!-- End blog post -->
+          </div>
+      </div>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+              <div class="content">
+               <h2 style="text-align: center;"><strong>The Implementation of the Frontend</strong></h2>
 
             </article><!-- End blog post -->
           </div>
