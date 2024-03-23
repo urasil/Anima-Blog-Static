@@ -112,8 +112,8 @@
                   <p>
                     Our clients for AnimaV3 are UCL, GOSH/ROCHE, and the International Alliance of ALS/MND Associations. Our main point of contact 
                     was Professor Dean Mohammedally, who facilitated the communication and gathered requirements from these stakeholders. Throughout 
-                    the project, the professor refined our project’s objectives and he has provided us with essential resources including contact 
-                    with prominent researchers from Intel and UCL. The professor particularly commended our achievement in <a href="https://students.cs.ucl.ac.uk/2023/group12/pyoxidizer.html">compiling 
+                    the project, Professor Mohammedally refined our project’s objectives and he has provided us with essential resources including contact 
+                    with prominent researchers from Intel and UCL. Professor Mohammedally particularly commended our achievement in <a href="pyoxidizer.html">compiling 
                     the backend using PyOxidizer</a>, allowing Anima to function as a standalone application. We are equally proud of AnimaV3’s significant improvement 
                     from its predecessor as it now has a wealth of additional functionalities, a modern UI and the ability to run as a standalone application.
                   </p>
@@ -139,17 +139,17 @@
         
                     <br>
                     <br>
-                    Initially, in the <a href= "https://students.cs.ucl.ac.uk/2023/group12/ui-design.html">Human-Computer Interaction (HCI) phase</a>, we drew two sketches and developed an initial prototype, subsequently iterating again to create a final prototype design in Figma. 
+                    Initially, in the <a href= "ui-design.html">Human-Computer Interaction (HCI) phase</a>, we drew two sketches and developed an initial prototype, subsequently iterating again to create a final prototype design in Figma. 
                     This iterative design process, enriched by continuous user feedback, allowed us to make progressive enhancements to the user experience. 
                     <br>
                     <br>
                     The transition from the Microsoft Foundation Class (MFC) to .NET for the front-end was a strategic decision. MFC, while robust, often results in outdated and complex interfaces. 
-                    By adopting .NET, we capitalised on its modern framework capabilities to craft a more contemporary and intuitive user interface. This move to .NET not only facilitated the development 
-                    of an aesthetically pleasing design but also streamlined the development process, making it more efficient due to .NET’s IDE and comprehensive libraries which simplified coding and testing.
+                    By adopting .NET, we capitalised on its modern framework capabilities to craft a more modern and intuitive user interface. This move to .NET not only facilitated the development 
+                    of an aesthetically pleasing design but also streamlined the development process, making it more efficient due to .NET’s intuitive markup language, XAML, and comprehensive libraries which simplified coding and testing.
                     <br>
                     <br>
-                    After implementing the .NET design, feedback was solicited from Teaching Assistants (TAs) and Dr. Yun Fu. The initial colour palette, noted for its brightness, was critiqued for lacking professionalism by
-                    the TA and pseudo-users. Dr. Yun Fu, as a first-time user, highlighted navigational difficulties across the three main windows. Responding to these insights, we conducted additional design iterations, selecting
+                    After implementing the .NET design, we asked feedback from our Teaching Assistant (TAs) and Dr. Yun Fu. The initial colour palette, noted for its brightness, was critiques due to the incompatability with the tan background by 
+                    the TA and Dr. Yun Fu. Moreover, Dr. Yun Fu as a first-time user, highlighted navigational difficulties across the three main windows. Responding to these insights, we conducted additional design iterations, selecting
                      more subdued colours and integrating navigational buttons to quickly transition between the main windows.
                      <br>
                      <br>
@@ -163,14 +163,14 @@
                   <p>
 
                     AnimaV3 is designed with two core functionalities: setting up the user’s voice and converting text to speech using this personalised voice. To ensure these features operate seamlessly, we implemented comprehensive 
-                    <a href= "https://students.cs.ucl.ac.uk/2023/group12/testing.html">unit and integration testing</a>. Additionally, AnimaV3 includes advanced functions like optical character recognition (OCR) for reading from image files and PDFs, and the capability to import .wav files for creating 
+                    <a href= "testing.html">unit and integration testing</a>. Additionally, AnimaV3 includes advanced functions like optical character recognition (OCR) for reading from image files and PDFs, and the capability to import .wav files for creating 
                     a new digital voice from existing recordings.
                     <br>
                     <br>
                     In Anima v2, OCR technology was present but suffered from accuracy and reliability issues. In response, we transitioned to EasyOCR in AnimaV3, significantly enhancing its precision and dependability.
                     <br>
                     <br>
-                    To bolster the robustness and reliability of AnimaV3, we integrated numerous failsafe mechanisms. For instance, users can opt out of the text-to-speech process at any time, a critical feature that protects against accidental
+                    To support the robustness and reliability of AnimaV3, we integrated numerous failsafe mechanisms. For instance, users can opt out of the text-to-speech process at any time, a critical feature that protects against accidental
                     misselection of files or incorrect text entries. Additionally, we introduced a voicebank management system, empowering users with greater control and customisation over their voicebanks (voice selection, deletion etc.)
                     <br>
                     <br>
@@ -206,12 +206,9 @@
                       Firstly, in terms of error handling, we found 2 key errors when creating a voice profile and when importing a voice. Anima provides the user with timely and meaningful error messages 
                       and notifications without the loss of their recorded voice allowing them to rename or reselect the imported voice. 
                       <br><br>
-                      Secondly, to ensure that the performance is consistent under a high load, Anima has been rigorously <a href= "https://students.cs.ucl.ac.uk/2023/group12/testing.html">stress-tested</a>. To do this we tested the TTS window with varying lengths of 
+                      Secondly, to ensure that the performance is consistent under a high load, Anima has been rigorously <a href= "testing.html">stress-tested</a>. To do this we tested the TTS window with varying lengths of 
                       text and the time taken to complete was directly proportional to the length of the text. We also confirmed which operating systems Anima is compatible with, confirming that it is compatible 
                       with all Windows devices with Windows 8+.
-                      <br><br>
-                      AnimaV3 depends on established technologies like Coqui TTS, EasyOCR, PyOxidizer, and .NET. These dependencies have undergone extensive testing by their developers, ensuring reliability and 
-                      stability. We conscientiously selected only the most stable versions of these technologies, thereby enhancing AnimaV3’s robustness.
                       <br><br>
                       In terms of general application stability, we conducted comprehensive testing, including edge case scenarios, to validate AnimaV3's stability. Examples of this include banking a voice with 
                       an already existing username, attempting to speak from unsupported file types, saying the same text over and over again, reading the same file and many more. Any issues uncovered during these 
