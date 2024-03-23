@@ -310,54 +310,103 @@
             <article class="blog-details">
               <div class="content">
                <h2 style="text-align: center;"><strong>The Implementation of the Frontend</strong></h2>
+                <h3 style="text-align: left;">The Utilization of .NET Framework</h3>
+                <p style="text-align: left;">The .NET framework works through the combination of the C# programming language and the XAML markup language. In this sense it is very similar to JavaScript and HTML, however it is much easier to use. XAML is extremely easy to use, from the toolbox you can drag and drop the button, textboxes, images and more and move them around the window by dragging them around. This makes designing the contents of a window very user-friendly and efficient.</p>
+                <div class="post-img">
+                  <img src="assets/img/toolbox.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 500px;">
+                </div>
+                <p style="text-align: left;">Moreover, tools come with many properties that can be edited with C#. Via the 'Name' property, each tool is identified and then anything about the tool can be changed with C# such as its visibility, content, position and more. It is also possible to define the functionality of a tool by attaching a function to the 'Click' property of a tool (for Button tools, for TextBox, it is the TextChanged property). Through the extensive use of the explained methods, the frontend of AnimaV3 was designed and the functionalities implemented.</p>
+                <div>
+                  <img src="assets/img/xamlex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
+                  <img src="assets/img/csharpex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
+                  <img src="assets/img/csharpnameex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
+                </div>
+                <h3 style="text-align: left;">The Implementation of the Main Functionalities</h3>
+                <p style="text-align: left;">The main functionalities of AnimaV3 include banking a your voice to register an animprofile and creating a digital voice (voice cloning), speaking with your digital voice (registered animaprofile), reading from a file using your digital voice, and importing a .wav file to register an animaprofile.</p>
+                <h4 style="text-align: center;">Creating a Digital Voice - Voice Cloning</h4>
+                <p style="text-align: left;">The users bank their voice by reading through a 10 page voice-banking text (10 + 1 clicks as the last click is for stopping the recording). The recording is done in the frontend, with the help of a .NET library, NAudio. When the users finish reading the text, their voice is stored in a output.wav file, ready for processing by the Anima API to be converted into an .animaprofile file. The actual processing happens on the backend, the frontend simply writes to the frontend.json, which is an instruction picked up by the backend. </p>
+                <div>
+                  <img src="assets/img/profile_registeration.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 600px;">
+                  <img src="assets/img/play_end_recording.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 600px;">
+                </div>
+                <p style="text-align: left;">Here, it's also possible to see one of the failsafe's implemented for keeping the application from crashing.
+                The voice creation button is disabled after the frontend.json is changed and the instruction has been send to the backend. In this case, since we are counting the clicks to send instructions to backend, the application wouldn't crash, but would give the user the wrong idea about the success of the voice cloning. This also increases the maintainability and improveability of the codeabase as the click counting architechture can be changed and the code would continue to work without problems.</p><br>
+                
+                <h4 style="text-align: center;">Speaking with your Digital Voice</h4>
+                <p style="text-align: left;">The user can speak with their digital voice by typing in the text box in the Text-to-Speech window and clicking the speak button. The content of the text box is then sent to the backend, where it is processed by the Anima API to speak with the digital voice of the user.
+                </p>
+                <div class="post-img">
+                  <img src="assets/img/speak.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 600px;">
+                </div>
+                <p style="text-align: left;">Again, there is multiple precautions here to make sure that the application is working as intended. Since the backend recognizes instructions through the changes in the frontend.json file, giving the same content multiple times is not natively recognized as there will be no change in the json file. Hence, we have introduced UUID's (unique identifiers) to recognizes that there is another speak attempt by the user even if the content is the same. We have also ensured that the backend has stopped processing the instruction through asynchronous functions that check the success messages. Lastly, this functions also includes a failsafe for the user which is the inital 'if statement' in the code. If the user has already clicked speak and the computer is speaking with the user's digital voice, the user can hit the same button again to stop the speech.</p><br>
+
+                <h4 style="text-align: center;">Reading from a File (PDF, PNG, JPG) Using OCR</h4>
+                <p style="text-align: left;">In the frontend, the read from image functionality works with the same principle as the other functionalities.The file path and the UUID of the file is written to frontend.json and an asynchronous functions waits the response of the backend. For this functionalitiy the Windows API is used selecting a file. Through a dialog box, which is basically the file explorer in Windows, the user is allowed to choose any file they want.</p>
+
+                <div class="post-img">
+                  <img src="assets/img/read_from_image.png" class="img-fluid" alt="" style="max-width: 900px; max-height: 600px;">
+                </div>
+
+                <p style="text-align: left;">If the speak functionalitiy fails, there is two possible reasons, either the file is of the right format (PNG, JPG, PDF) and the quality is not good enough for backend figure out the text on the file, or the file format is incorrect. We let the user know through a message box via the Windows API.</p>
+
+                <h4 style="text-align: center;">Importing a Voice to Create a Digital Voice</h4>
+
+                <p style="text-align: left;">The import voice functionality is in the Manage Voicebank window and is almost identical to read from image in terms of the Windows dialog and the error we get when a file of type different than .wav is selected. The only difference is when the import is successful, there needs to be the created and usable voice profile on the Manage Voicebank window.</p>
+
+                <div class="post-img">
+                  <img src="assets/img/import_voice.png" class="img-fluid" alt="" style="max-width: 900px; max-height: 600px;">
+                </div>
+
+                <p style="text-align: left;">In the code, to achieve this, we are removing all the radio buttons displayed in the Manage Voicebank window (except the selected voice because it's component is permanent in the XAML and only changes visibility - never removed or added) and then updating the window with all the radio buttons after the successful voice profile creation with the imported voice.</p>
+
+
+              
+            </article><!-- End blog post -->
+          </div>
+      </div>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+              <div class="content">
+               <h2 style="text-align: center;"><strong>The Implementation of Communication between Frontend and Backend</strong></h2>
+               <h3 sytle="text-align: left;">How does communication between frontend and backend work?</h3>
+               <p style="text-align: left;">The idea behind the json communication is incredibly simple. The frontend write to a json file, frontend.json.The backend has an observer class that observes this file and detects the changes. The json key of the value that has changed correspond to a certain action of tha backend API. When that action has been performed, the backend decides whether it has been a success or failure. It then writes it's feedback on a json file, backend.json. This file is read by the frontend to let it know what to display to the user.</p>
+                <h3 style="text-align: left;">The Structure of the JSON Files</h3>
+               <div>
+                <img src="assets/img/frontendjson.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+                <img src="assets/img/backendjson.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+               </div>
+              
+               <p style="text-align: left;">Above are the two json files mentioned. This is the state of the json files before the application is used. The json keys change according to the actions the user takes in the frontend.</p>
+              
+               <h3 style="text-align: left;">Basic Communication Example</h3>
+               <div>
+                <img src="assets/img/frontendjsonafter.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+                <img src="assets/img/backendjsonafter.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+               </div>
+
+                <p style="text-align: left;">Above are the two json files after the application is used. The application was used to create a voice profile with the name 'Uras' and then speak the words 'Hello, how are you?'. In the frontend.json, profile creation is done through the change in the 'speakerName' key in the json file. When a new profile is created, the 'nameOfCurrentUser' key is automatically updated to be the newly created profile. Because the profile creation was successful, the 'profileCreationSuccess' key in the backend.json is set to true. This key has not reset it's value here because of before the instruction of creating a new profile is sent to the backend, this value is automatically set to false.<br>
+                
+                Computer speaking with the user's voice facilitated throught he change in the 'content' key of frontend.json. The 'speakID' is to make sure that the instruction is recognized by the backend, even if the content has stayed the same. Again, the 'speakSuccess' key in the backend.json is set to true because the instruction was successful. Just like 'profileCreationSuccess', it will be reset before the next instruction of speaking with the digital voice.</p>
+            </article><!-- End blog post -->
+          </div>
+      </div>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+              <div class="content">
+               <h2 style="text-align: center;"><strong>The Implementation of the Backend</strong></h2>
 
             </article><!-- End blog post -->
           </div>
       </div>
     </div>
-  
-
-
-     <br>
-     <h5 style="text-align: center;"><strong>Key Features</strong></h5>
-      <br>
-
-
-     <div class="container" data-aos="fade-up">
-       <div class="row g-5">
-         <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-             <article class="blog-details">
-               <div class="content">
-                 <p style="text-align: center;">
-                   The key features of Anima can be split into 2 sections:
-                   <h4 style="text-align: center;">Voice Setup</h4>
-                   <ol>
-                       <li>Record Voice </li>
-                       <li>Recorded Voice Playback </li>
-                       <li>Restart Voice Recording </li>
-                       <li>Choose Language </li>
-                   </ol>
-                   <br>
-                   <br>
-                   <h4 style="text-align: center;">Text to Speech</h4>
-                   <ol>
-                       <li>Read from textbox </li>
-                       <li>Read from PDF/image </li>
-                       <li>Select Voice</li>
-                       <li>Import Voice</li>
-                       <li>Redo Voice</li>
-                   </ol>
-                  </p>
-             </article><!-- End blog post -->
-           </div>
-       </div>
-     </div>
-
-
-
-
-
-
        
         </section><!-- End Portfolio Section -->
       <!-- ======= Portfolio Section ======= -->
