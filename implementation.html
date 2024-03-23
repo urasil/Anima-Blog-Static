@@ -402,7 +402,23 @@
             <article class="blog-details">
               <div class="content">
                <h2 style="text-align: center;"><strong>The Implementation of the Backend</strong></h2>
+               <p style="text-align: left;">
+                The backend of AnimaV3 has been built upon the idea of responding to the changes in frontend.json and performing the relevant action using
+                using the Anima API. The Anima API is an encapsulation of the CoquiTTS functions that are being used to produce sounds, or registering a profile.
+                First and most importantly, the backend detects changes through an observer class. Here is the implementation:
+               </p>
 
+              <div class="post-img">
+                <img src="assets/img/observer.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+              </div>
+
+              <p style="text-align: left;">
+                The observer class works via the detectChanges method. In this method, it keeps reloading the frontend.json and checks whether there has been a change in the file by comparing against the not-reloaded verison of the json file. If there has been a change, then it calls the determineChanges method to figure out what has changed, and returns the changed key-value pairings.
+              </p>
+              <br><br>
+              <p style="text-align: left;">
+              It is now obvious how the changes are detected in the frontend.json file. However, how we constantly check the frontend.json file is still not clear. This is done through within in the entry point of the Python backend. 
+              </p>
             </article><!-- End blog post -->
           </div>
       </div>
