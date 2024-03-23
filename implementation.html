@@ -269,7 +269,7 @@
 
                 <h3 style="text-align: left;">The 3 Window Design</h3>
                 <p style="text-align: left;">
-                  AnimaV3 has been designed with 3 main windows in mind. These windows are the Text-to-Speech Window, Bank Voice Window, and Manage Voicebank Window. To make the 3 window approach as clear and user-friendly as possible, we have designed the windows to be easily navigable through the window navigation buttons at the top right corner of each window.
+                  Anima V3 has been designed with 3 main windows in mind. These windows are the Text-to-Speech Window, Bank Voice Window, and Manage Voicebank Window. To make the 3 window approach as clear and user-friendly as possible, we have designed the windows to be easily navigable through the window navigation buttons at the top right corner of each window.
                 </p>
                   <div class="post-img">
                     <img src="assets/img/three_window.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 550px;">
@@ -315,14 +315,14 @@
                 <div class="post-img">
                   <img src="assets/img/toolbox.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 500px;">
                 </div>
-                <p style="text-align: left;">Moreover, tools come with many properties that can be edited with C#. Via the 'Name' property, each tool is identified and then anything about the tool can be changed with C# such as its visibility, content, position and more. It is also possible to define the functionality of a tool by attaching a function to the 'Click' property of a tool (for Button tools, for TextBox, it is the TextChanged property). Through the extensive use of the explained methods, the frontend of AnimaV3 was designed and the functionalities implemented.</p>
+                <p style="text-align: left;">Moreover, tools come with many properties that can be edited with C#. Via the 'Name' property, each tool is identified and then anything about the tool can be changed with C# such as its visibility, content, position and more. It is also possible to define the functionality of a tool by attaching a function to the 'Click' property of a tool (for Button tools, for TextBox, it is the TextChanged property). Through the extensive use of the explained methods, the frontend of Anima V3 was designed and the functionalities implemented.</p>
                 <div>
                   <img src="assets/img/xamlex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
                   <img src="assets/img/csharpex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
                   <img src="assets/img/csharpnameex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
                 </div>
                 <h3 style="text-align: left;">The Implementation of the Main Functionalities</h3>
-                <p style="text-align: left;">The main functionalities of AnimaV3 include banking a your voice to register an animprofile and creating a digital voice (voice cloning), speaking with your digital voice (registered animaprofile), reading from a file using your digital voice, and importing a .wav file to register an animaprofile.</p>
+                <p style="text-align: left;">The main functionalities of Anima V3 include banking a your voice to register an animprofile and creating a digital voice (voice cloning), speaking with your digital voice (registered animaprofile), reading from a file using your digital voice, and importing a .wav file to register an animaprofile.</p>
                 <h4 style="text-align: center;">Creating a Digital Voice - Voice Cloning</h4>
                 <p style="text-align: left;">The users bank their voice by reading through a 10 page voice-banking text (10 + 1 clicks as the last click is for stopping the recording). The recording is done in the frontend, with the help of a .NET library, NAudio. When the users finish reading the text, their voice is stored in a output.wav file, ready for processing by the Anima API to be converted into an .animaprofile file. The actual processing happens on the backend, the frontend simply writes to the frontend.json, which is an instruction picked up by the backend. </p>
                 <div>

@@ -162,7 +162,8 @@
                 
                 <h3><strong>JSON Files</strong></h3>
                 <p>
-                    The JSON files serve as a communication bridge between the frontend and backend.
+                    The JSON files serve as a communication bridge between the frontend and backend. 
+                    Details on the key-value pairs of the JSON files can be found in our Implementation page <a href="implementation.html">here</a>.
                 </p>
                 
                 <h3 style="margin-left: 20px;">Frontend JSON File (frontend.json):</h3>
@@ -172,16 +173,28 @@
                 
                 <h3 style="margin-left: 20px;">Backend JSON File (backend.json):</h3>
                 <p style="margin-left: 20px;">
-                    Records the success status of various backend operations, including profile creation, file reading, speech synthesis, and more. Additionally, it maintains information about the readiness of the backend system and the length of audio files processed. The frontend writes to this file, while the backend reads from it to report operation outcomes and system readiness.
+                    Records the success status of various backend operations, including profile creation, file reading, speech synthesis, and more. Additionally, it maintains information about the readiness of the backend system and the length of audio files processed. The backend writes to this file, while the frontend reads from it to report operation outcomes and system readiness.
                 </p>
-                
-                
+
+                <h3 style="margin-left: 20px;">Languages JSON File (profileLanguages.json):</h3>
+                <p style="margin-left: 20px;">
+                    Contains information about what language each animaprofile is in. 
+                    When a new animaprofile is created under a certain language, the backend updates this JSON file.
+                </p>
 
                 <h3><strong>Local Database</strong></h3>
                 <p>
-                    For optimal user privacy, we maintain a local database within an 'animaprofiles' folder. This database stores user data in output.wav files, ensuring that the most recent audio generated is consistently updated and overwritten, aligning with our commitment to safeguarding user information.
+                    For optimal user privacy, we maintain a local database, aligning with our commitment to safeguarding user information.
                 </p> 
 
+                <h3 style="margin-left: 20px;">animaProfiles directory:</h3>
+                <p style="margin-left: 20px;">
+                    Stores the .animaprofile files generated.
+                </p>
+                <h3 style="margin-left: 20px;">output.wav:</h3>
+                <p style="margin-left: 20px;">
+                    The most recent audio generated is consistently written into this .wav file and updated, which is then played by the frontend to the user.
+                </p>
             </article><!-- End blog post -->
           </div>
         </div>
