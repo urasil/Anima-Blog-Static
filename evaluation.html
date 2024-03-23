@@ -47,7 +47,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="d-flex align-items-center">Anima v3</h1>
+        <h1 class="d-flex align-items-center">AnimaV3</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -110,11 +110,11 @@
                 <div class="content" style="margin-left: 25px; margin-right: 25px;">
                   <h2 style="text-align: center;"><strong>Client Feedback</strong></h2><br>
                   <p>
-                    Our clients for Anima v3 are UCL, GOSH/ROCHE, and the International Alliance of ALS/MND Associations. Our main point of contact 
+                    Our clients for AnimaV3 are UCL, GOSH/ROCHE, and the International Alliance of ALS/MND Associations. Our main point of contact 
                     was Professor Dean Mohammedally, who facilitated the communication and gathered requirements from these stakeholders. Throughout 
                     the project, the professor refined our project’s objectives and he has provided us with essential resources including contact 
                     with prominent researchers from Intel and UCL. The professor particularly commended our achievement in compiling the backend 
-                    using PyOxidizer, allowing Anima to function as a standalone application. We are equally proud of Anima v3’s significant improvement 
+                    using PyOxidizer, allowing Anima to function as a standalone application. We are equally proud of AnimaV3’s significant improvement 
                     from its predecessor as it now has a wealth of additional functionalities, a modern UI and the ability to run as a standalone application.
                   </p>
                 </div> 
@@ -161,14 +161,21 @@
                   <h3><strong>Functionality</strong></h3>
                     
                   <p>
-                    Anima V3 is a voicebanking application at it's core therefore the most important functionality of the application is a seamless way of users to bank their voice as well as to 
-                    speaked with that banked voice. We have conducted rigorous unit and integration testing for these funtionalities, and ensured that they are working as intended.
-                    We have also provided additional functionalities such as the ability to read jpeg, png and pdf files (optical character recognition - OCR) and speak the text in them, as well as the ability import .wav files and register an digital voice file (.animaprofile).
-                    OCR technology was already included in AnimaV2 however it was inaccurate and unreliable. We have switched the OCR library to easyocr in Anima V3 and made it more accurate and reliable.
-                    <br><br>Moreover, Anima V3 many failsafe technologies to ensure that the application is robust and reliable. For example, the user always has the option to opt of out the text-to-speech process. This is very crucial as the user might accidentally select the 
-                    wrong file when speaking from a file or enter a wrong text when speaking from text. We have also added a management system for the user's voicebank, giving the user control and customizability over their voicebank.
-                    Overall, we believe that Anima V3 provides it's users with a robust and reliable set of functionalities that are easy to use and understand. It's very easy to navigate and the functionalities are clear and easy to use. Hence, we think that Anima V3
-                    is a huge success in terms of functionalitiy.
+
+                    AnimaV3 is designed with two core functionalities: setting up the user’s voice and converting text to speech using this personalised voice. To ensure these features operate seamlessly, we implemented comprehensive 
+                    unit and integration testing[LINK]. Additionally, AnimaV3 includes advanced functions like optical character recognition (OCR) for reading from image files and PDFs, and the capability to import .wav files for creating 
+                    a new digital voice from existing recordings.
+                    <br>
+                    <br>
+                    In Anima v2, OCR technology was present but suffered from accuracy and reliability issues. In response, we transitioned to EasyOCR in AnimaV3, significantly enhancing its precision and dependability.
+                    <br>
+                    <br>
+                    To bolster the robustness and reliability of AnimaV3, we integrated numerous failsafe mechanisms. For instance, users can opt out of the text-to-speech process at any time, a critical feature that protects against accidental
+                    misselection of files or incorrect text entries. Additionally, we introduced a voicebank management system, empowering users with greater control and customisation over their voicebanks (voice selection, deletion etc.)
+                    <br>
+                    <br>
+                    AnimaV3 is characterised by its user-friendly design, ensuring that navigation and functionality are straightforward and intuitive. The enhancements from its predecessor are substantial, offering not merely additional features 
+                    but truly valuable functionalities that substantially improve the user experience. Overall, AnimaV3 stands out as a robust, reliable, and sophisticated tool. 
                   </p><br>
 
                   <h3><strong>Accessibility</strong></h3>
@@ -194,18 +201,28 @@
 
                   <h3><strong>Stability</strong></h3>
                     <p>
-                        Anima V3 is a standalone application that can be installed and run on any Windows operating system after Windows 8. We have conducted rigorous compatability testing to ensure that Anima V3 is compatible with all Windows operating systems after Windows 8.
-                        The details of the compatability testing counducted can be found under the Testing page. We have also conducted performance/stress testing to ensure that Anima V3 is stable under different loads. We have tried using the application with different lengths of text and different types of text and have found that Anima V3 is stable under different loads.
-                        <br><br>
-                        We have also tested the edge cases of Anima V3 to make the application more stable. We have tried to bank a voice with a username that is already taken, speak from a file that is not supported, saying the same text over and over again, reading the same file and many more.
-                        Some of the edge cases were not considered during initial development and they were promptly fixed as they were discovered. We have then ensured the stability of our application bu conducting user testing and let the pseudo-users use the application as they please
-                        to see if there were any other bugs or edge cases that we have missed. We are confident Anima V3 is a hard-to-break and very stable application.
+                      To evaluate stability, we will consider the following: error handling and management, performance under load, compatibility tests, dependency stability and general application stability. 
+                      <br><br>
+                      Firstly, in terms of error handling [TO COMPLETE: not sure what error handling is present, but this is necessary to discuss for stability. How the application handles unexpected conditions 
+                      and errors.The presence of meaningful error messages and notifications to users. The ability to recover from errors without crashing or data loss]
+                      <br><br>
+                      Secondly, to ensure that the performance is consistent under a high load, Anima has been rigorously stress-tested [HYPERLINK]. To do this we tested the TTS window with varying lengths of 
+                      text and the time taken to complete was directly proportional to the length of the text. We also confirmed which operating systems Anima is compatible with, confirming that it is compatible 
+                      with all Windows devices with Windows 8+.
+                      <br><br>
+                      AnimaV3 depends on established technologies like Coqui TTS, EasyOCR, PyOxidizer, and .NET. These dependencies have undergone extensive testing by their developers, ensuring reliability and 
+                      stability. We conscientiously selected only the most stable versions of these technologies, thereby enhancing AnimaV3’s robustness.
+                      <br><br>
+                      In terms of general application stability, we conducted comprehensive testing, including edge case scenarios, to validate AnimaV3's stability. Examples of this include banking a voice with 
+                      an already existing username, attempting to speak from unsupported file types, saying the same text over and over again, reading the same file and many more. Any issues uncovered during these 
+                      phases were promptly addressed. Furthermore, extensive user testing was performed, allowing pseudo-users to interact freely with the application to identify any overlooked bugs or edge cases. 
+                      These efforts have fortified AnimaV3's resilience, making it a highly reliable and stable application. 
                     </p><br>
 
                     <h3><strong>Efficency</strong></h3>
                     <p>
-                        With Anima V3 efficency of our application has been greatly improved. By removing Docker from Anima V3, we have made the application much more efficent as Docker is a resource-heavy application that always had to be running in the background for AnimaV2.
-                        We have also made the application more efficient by adding a management system for the user's voicebank, making the voice-banking experience much easier and efficient. Lastly, we optimized the codebase by removing unnecessary checks for language and users in the Anima API.
+                        With AnimaV3 efficency of our application has been greatly improved. By removing Docker from AnimaV3, we have made the application much more efficent as Docker is a resource-heavy application that always had to be running in the background for AnimaV2.
+                        We have also made the application more efficient by adding a management system for the user's voicebank, making the voice-banking experience much easier and efficient. Lastly, we optimised the codebase by removing unnecessary checks for language and users in the Anima API.
                     </p><br>
 
                   <h3><strong>Compatability</strong></h3>
@@ -805,7 +822,7 @@
                   biased towards the American accent and need a better solution.</li><br>
                   <li>When banking a voice, highlight the text the user is reading to enhance the voice-banking experience</li><br>
                   <li>Record each page separately and create the animaprofile from the recordings from all pages. Also let the user know when the recording starts and stops clearly.</li><br>
-                  <li>Make the sepeartion between windows more clear. Highlight the window the user is currently on and grey out the other two to enhance user-friendliness.</li>
+                  <li>Make the separation between windows clearer. Highlight the window the user is currently on and grey out the other two to enhance user-friendliness. Perhaps also consider integrating a collapsible menu on the side too.</li>
                 </ol>
               </div> 
             </article><!-- End blog post -->
@@ -823,11 +840,11 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span>Anima v3</span>
+              <span>AnimaV3</span>
             </a>
             <p>A software that preserves the person's voice so that even when their natural voice is lost, their sense of self is not.</p>
             <br>
-            <p>This is our project website for Anima v3.</p>
+            <p>This is our project website for AnimaV3.</p>
             <br>
           </div>
         </div>
