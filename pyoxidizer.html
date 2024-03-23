@@ -146,7 +146,7 @@
 
                 <h3><strong>The Issue</strong></h3>
                 <p>
-                  When we tried to package required dependencies, dependencies had to be installed again via PyOxidizer then packaged. However, some modules needed memory loading, which caused this error. 
+                  When we tried to package the required dependencies, dependencies had to be installed again via PyOxidizer and then packaged. However, some modules needed memory loading, which caused this error. 
                 </p>
               </div>
 
@@ -157,7 +157,7 @@
               <div class="content">
                 <h3><strong>How We Resolved It</strong></h3>
                 <p>
-                  This error could be resolved by simply enabling the PyOxidizer setting of including distribution resources.
+                  This error could be resolved by simply enabling the PyOxidizer setting to include distribution resources.
                 </p>
                 
               </div>
@@ -220,7 +220,7 @@
                     <div class="content">
                         <h3><strong>How We Resolved It</strong></h3>
                         <p>
-                          By looking at a bunch of github issues, it is noticed that many developers also reflect the similar issues of ‘__file__’. In 2020, the author provided a new file mode for packaging complex libraries like NumPy, and the issue was resolved.
+                          By looking at a bunch of Github issues, it is noticed that many developers also reflect similar issues of ‘__file__’. In 2020, the author provided a new file mode for packaging complex libraries like NumPy, and the issue was resolved.
                         </p>
                     </div>
                 </article><!-- End blog post -->
@@ -238,7 +238,7 @@
 
               <h3><strong>The Issue</strong></h3>
               <p>
-                The compilation in the Unix system had no problem, and the executable file works normally. However, while trying to do the same compilation in the Windows system,  the DLL load error occurred. This is because PyOxidizer did not copy all DLL dependencies from libraries, which is a bug of PyOxidizer.
+                The compilation in the Unix system had no problem, and the executable file worked normally. However, while trying to do the same compilation in the Windows system,  the DLL load error occurred. This is because PyOxidizer did not copy all DLL dependencies from libraries, which is a bug of PyOxidizer.
               </p>
             </div>
 

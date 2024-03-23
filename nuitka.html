@@ -137,7 +137,7 @@
 
                   <h3 style="text-align: center;"><strong>Overview</strong></h3>
                   <p style="text-align: center;">
-                    Nuitka is a source-to-source compiler which compiles Python code to C source code. The below screenshot shows the core of the compilation problem with Nuitka. The neural network based TTS model (Coqui) that we have chosen is build on libraries like pynndescent, pytorch, librosa that depend on a just-in-time compiler library called Numba. 
+                    Nuitka is a source-to-source compiler which compiles Python code to C source code. The below screenshot shows the core of the compilation problem with Nuitka. The neural network based TTS model (Coqui) that we have chosen is built on libraries like pynndescent, pytorch, librosa that depend on a just-in-time compiler library called Numba. 
                   </p>
 
                 </div>
@@ -187,7 +187,7 @@
                     <h4><strong>1. Compile functions using Numba-Ahead of Time (AOT)</strong></h4><br>
                     <p>
                       
-                      The first solution is compiling all functions in the source code of the libraries into a file and use the compiled version of the functions whenever the function is called. The problem with this approach is very evident. It is a great undertaking for us to get every import correctly, make sure there is no circular import considering we would import the function to compile and then import the compiled function back to the source code to use. Moreover, we would have to determine every function that utilizes the Numba functions and correctly implement the compiled function into the code without breaking it. After speaking with our advisors, they have said that this would take more than the allocated time for the project and agreed that this is not a viable approach and suggested we move on with the second approach, which is getting rid of all Numba code in the source libraries.
+                      The first solution is compiling all functions in the source code of the libraries into a file and using the compiled version of the functions whenever the function is called. The problem with this approach is very evident. It is a great undertaking for us to get every import correctly, and make sure there is no circular import considering we would import the function to compile and then import the compiled function back to the source code to use. Moreover, we would have to determine every function that utilizes the Numba functions and correctly implement the compiled function into the code without breaking it. After speaking with our advisors, they have said that this would take more than the allocated time for the project and agreed that this is not a viable approach and suggested we move on with the second approach, which is getting rid of all Numba code in the source libraries.
                       <br>
                     </p>  
                   </blockquote>
@@ -197,7 +197,7 @@
                   <blockquote class="reduce-text-size">
                     <h4><strong>2. Remove Numba from library source codes</strong></h4><br>
                     <p>
-                      The second option is removing all Numba code from the library source codes. This is much more viable and this is the approach we took. All Numba decorators that enable just in time compilation are gotten rid of. For most libraries Numba data types are also used outside of decorators so we replaced those with appropriate numpy or Python data types. This will certainly slow-down the software considerably however our primary goal is to just make it work, and as can be seen on the next page, even getting rid of all Numba code in source libraries does not solve all of our problems. We think that there might be better tools for this job than Nuitka therefore we will also explore pyintsaller which bundles everything into an executable without compiling them into C.
+                      The second option is removing all Numba code from the library source codes. This is much more viable and this is the approach we took. All Numba decorators that enable just-in-time compilation are gotten rid of. For most libraries, Numba data types are also used outside of decorators so we replaced those with appropriate numpy or Python data types. This will certainly slow down the software considerably however our primary goal is to just make it work, and as can be seen on the next page, even getting rid of all Numba code in source libraries does not solve all of our problems. We think that there might be better tools for this job than Nuitka therefore we will also explore pyintsaller which bundles everything into an executable without compiling them into C.
                     </p>
                     <br>
                 </blockquote>
@@ -240,7 +240,7 @@
 
                   <h3 style="text-align: center;"><strong>The problem we could not fix</strong></h3>
                   <p style="text-align: center;">
-                      The code is looking for vits_config.py file under the encoder.configs, vocoder.configs and tts.configs directories and it only exists under tts.configs. print statements do not print anything in library source code even when we clear cache so we are not sure as to how to troubleshoot. We have added the vits_config.py file to both vocoder.configs and encoder.configs but that did not solve the issue. We are stuck and this is likely not the last error. Frankly, we do not think solving all these errors manually by either dragging files or changing the source code of libraries will solve this issue for us. As we have spent a very long time just trying to compile this project using Nuitka we are willing to try alternatives which might be easier such as pyinstaller.                    </p>
+                      The code is looking for vits_config.py file under the encoder.configs, vocoder.configs and tts.configs directories and it only exists under tts.configs. print statements do not print anything in the library source code even when we clear cache so we are not sure how to troubleshoot. We have added the vits_config.py file to both vocoder.configs and encoder.configs but that did not solve the issue. We are stuck and this is likely not the last error. Frankly, we do not think solving all these errors manually by either dragging files or changing the source code of libraries will solve this issue for us. As we have spent a very long time just trying to compile this project using Nuitka we are willing to try alternatives which might be easier such as pyinstaller.                    </p>
                     <img src="assets/img/nuitka13.png" style="max-width: 700px; max-height: 500px; border-radius: 20px;" class=img-fluid alt="">
 
                 </div>
