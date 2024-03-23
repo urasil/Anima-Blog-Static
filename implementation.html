@@ -417,8 +417,35 @@
               </p>
               <br><br>
               <p style="text-align: left;">
-              It is now obvious how the changes are detected in the frontend.json file. However, how we constantly check the frontend.json file is still not clear. This is done through within in the entry point of the Python backend. 
+              It is now obvious how the changes are detected in the frontend.json file. However, how we constantly check the frontend.json file is still not clear. This is done through within the entry point of the Python backend. The enrtry point is the main function that contains a while True loop that checks the frontend.json file every 0.5 seconds (detect period). 
               </p>
+
+              <div>
+                <img src="assets/img/mainloop1.png" class="img-fluid" alt="main_loop_start" style="max-width: 600px; max-height: 500px;">
+                <img src="assets/img/mainloop3.png" class="img-fluid" alt="main_loop_end" style="max-width: 600px; max-height: 500px;">
+              </div>
+              <p style="text-align: left;">
+              In the while True loop, the code checks which keys have been subjected to change through the button clicks in the frontend. According to the changes, the backend performs a different action as seen in the above code. Also notice that the main loop is wrapped in a try-except block. In this case, the only errors not caught are the KeyboardInterrupt or the closing the application. This means that the application runs indefinitely until the user decides to close it. Now, we will see how the backend works with an example. Consider the case where in the frontend the user has written some text and pressed the SPEAK button to speak with their unique digital voice. The frontend.json has been changed accordingly, how does the backend work to make the computer speak?
+              </p>
+
+              <h3 style="text-align: left;">The SPEAK example</h3>
+              <p style="text-align: left;">The speak functionality depends on the frontend.json keys "speakID" and "content". It depends on two keys becuase of one single fact: The user might want to say the same sentence twice. In this case, the "content" of their speech wouldn't change therefore there wouldn't be anything for our observer class to pick-up. We ensure everytime the user hits the SPEAK button is picked up through the instruction of UUID's, in this case "speakerID". UUID is Universially Unique Identifier, which is an always unique 128 bit identifier that helps backend pick-up each instruction from the frontend.</p>
+              <div class="post-img">
+                <img src="assets/img/speakfunc.png" class="img-fluid" alt="speak_example" style="max-width: 800px; max-height: 600px;">
+              </div>
+
+              <p style="text-align: left;">
+              In the above code, we initially check if "speakID" is within changes, if yes, this means that the user has pressed the SPEAK button and is trying to speak with their digital voice. We then check whether the "content" key has been changed. If it has been changed, we want to make the computer speak with new content, and if not, we make the computer speak with the same content as the last time. We then call the computerSpeak function which is a function that encapsulates the Anima API for creating speech.
+              </p>
+
+              <div class=post-img>
+                <img src="assets/img/computerspeak.png" class="img-fluid" alt="computerspeak" style="max-width: 800px; max-height: 600px;">
+              </div>
+
+              <p style="text-align: left;">
+              
+              </p>
+              
             </article><!-- End blog post -->
           </div>
       </div>
