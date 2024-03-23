@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Nova Bootstrap Template - User Interface Design</title>
+  <title>Evaluation</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -109,14 +109,14 @@
   
                 <div class="content" style="margin-left: 25px; margin-right: 25px;">
                   <h2 style="text-align: center;"><strong>Client Feedback</strong></h2><br>
-                  <p>Our client for AnimaV3 is the NHS. However we were told by Professor Mohammedally that our point of contact was him directly, as it could have been sentence
-                    as inappropriate for us to contact the NHS directly. We have had regular meetings with Professor Mohammedally to discuss the progress of the project and to get feedback on our work.
-                    He has added and removed requirements from the project as needed, as well as providing us with tools that we needed to succeed in this project. He has told us numerous times that we have
-                    done a great job with Anima and told us he is very proud of the compilation achievement made with pyoxidizer which enables Anima to be a standalone application. We are also very proud of 
-                    AnimaV3 as we feel it is significant improvement from its predecassor with a more functionalitie, a modern user-friendly interface and a standalone backend executable.
+                  <p>
+                    Our clients for Anima v3 are UCL, GOSH/ROCHE, and the International Alliance of ALS/MND Associations. Our main point of contact 
+                    was Professor Dean Mohammedally, who facilitated the communication and gathered requirements from these stakeholders. Throughout 
+                    the project, the professor refined our project’s objectives and he has provided us with essential resources including contact 
+                    with prominent researchers from Intel and UCL. The professor particularly commended our achievement in compiling the backend 
+                    using PyOxidizer, allowing Anima to function as a standalone application. We are equally proud of Anima v3’s significant improvement 
+                    from its predecessor as it now has a wealth of additional functionalities, a modern UI and the ability to run as a standalone application.
                   </p>
-
-
                 </div> 
               </article><!-- End blog post -->
             </div>
@@ -135,11 +135,27 @@
                   <h3><strong>User Experience</strong></h3>
                     
                   <p>
-                    One of our main objectives for this project was to enhance the user experience for voicebanking therefore user experience was a main priority for us.
-                    By switching to .NET from MFC, we have managed to create a more modern and user-friendly interface. 
-                    We have also made sure that the application is easy to navigate and the functionalities are clear and easy to use.
-                    We conducted user testing with pseudo-users, friends and TA's and have gathered feedback on the design and functionality of the application. We have changed our design before, during and after development to ensure that 
-                    we accomodate to the user's needs as much as possible. We believe that our efforts in this area has been a real success, and the feedback we have received from Dr. Yun Fu and our clients supports our conclusion.
+                    In this project, enhancing the user experience for offline voice banking was paramount. Our design process was thorough, involving multiple stages of development and user feedback to refine the user interface.
+        
+                    <br>
+                    <br>
+                    Initially, in the Human-Computer Interaction (HCI) phase, we drew two sketches and developed an initial prototype, subsequently iterating again to create a final prototype design in Figma. 
+                    This iterative design process, enriched by continuous user feedback, allowed us to make progressive enhancements to the user experience. 
+                    <br>
+                    <br>
+                    The transition from the Microsoft Foundation Class (MFC) to .NET for the front-end was a strategic decision. MFC, while robust, often results in outdated and complex interfaces. 
+                    By adopting .NET, we capitalised on its modern framework capabilities to craft a more contemporary and intuitive user interface. This move to .NET not only facilitated the development 
+                    of an aesthetically pleasing design but also streamlined the development process, making it more efficient due to .NET’s IDE and comprehensive libraries which simplified coding and testing.
+                    <br>
+                    <br>
+                    After implementing the .NET design, feedback was solicited from Teaching Assistants (TAs) and Dr. Yun Fu. The initial colour palette, noted for its brightness, was critiqued for lacking professionalism by
+                    the TA and pseudo-users. Dr. Yun Fu, as a first-time user, highlighted navigational difficulties across the three main windows. Responding to these insights, we conducted additional design iterations, selecting
+                     more subdued colours and integrating navigational buttons to quickly transition between the main windows.
+                     <br>
+                     <br>
+                    Our design process for the user interface (UI) was comprehensive at each stage, yet there remains room for improvement, as no design is flawless. For instance, replacing the buttons with a closable side menu
+                    could streamline navigation to the main windows and reduce clutter to enhance the overall aesthetic and functionality of the interface.
+
                   </p><br>
 
                   <h3><strong>Functionality</strong></h3>
@@ -157,21 +173,23 @@
 
                   <h3><strong>Accessibility</strong></h3>
                   <p>
-                    Our application is giving the ability to speak with their unique voice to people who can no longer do so on their own. It is an accessibility app that makes speech accessible to people with 
-                    motor neuron diseases. Therefore, it is crucial that the application is accessible to as many people as possible. Hence the following are the steps we took to ensure that AnimaV3 reaches as many people as it possibly can.
-                    Firstly, the predecessor of AnimaV3 used a Docker container to run the application. This was a huge barrier for many users as Docker is not easy to use for people who are not familiar with it or computers. We have removed Docker from AnimaV3 and 
-                    made it a standalone application that can be installed and run on any Windows operating system after Windows 8. This makes AnimaV3 much more accessible to people who are not coming from technology backgrounds.
+                    AnimaV3's primary goal is to enable individuals with motor neuron diseases (MND) to communicate using their own voice, making accessibility a central aspect of the application's design. To enhance accessibility, we have undertaken significant steps 
+                    to simplify the deployment process and broaden language support, while also improving the accuracy of dialect representation.
                     <br><br>
-                    Moreover, we added additional language support. The multi-language model we are currently using supports English, French and Portugese languages and we have included all these languages in AnimaV3. We have also insured that files
-                    in these languages can also be read with OCR and spoken with text-to-speech. This means AnimaV3 is much more accessible than it's competitors who are only tailoring to the English speaking audience as that is the biggest audience for voice-banking.
-                    AnimaV3 is completely free doesn't need any financial incentive make it accessible to non-English speakers. With the upcoming Anima versions, we believe that many more languages can be added and Anima can be accessible to a much wider audience.
+                    Initially, the use of Docker in AnimaV2 presented a substantial obstacle for users not accustomed to technological complexities. Recognising this, we removed Docker in AnimaV3, transforming it into a standalone application compatible with any Windows 8+ 
+                    device. This change significantly eases the installation process, making the application as user-friendly as downloading and using an app from the app store.
                     <br><br>
-                    Furthermore, from our predecessors, we know that AnimaV3 has a bias towards American accents for English. We have also noticed that for French the bias is for the Parisian accent and for Portugese the bias is for the Brazilian accent.
-                    We want all accents to be represented by AnimaV3 to preserve our user's unique voice and identity. As we didn't have the time to implement a new model, we have done the next best thing. We have picked texts that are long and diverse enough third-party
-                    the model can represent the user's accent well enough. Although this is not permanent solution and slightly increases the time for banking a voice, we believe that it is a good solution for representing one's accent. 
+                    In addition to technical improvements, AnimaV3 now supports multiple languages, specifically Portuguese and French alongside English. This expansion is complemented by specialised texts for voice capture, tailored to each language, facilitating a more 
+                    authentic and inclusive voice banking experience.
                     <br><br>
-                    Overall, we believe that AnimaV3 is a huge success in terms of accessibility. It is much more accessible than it's predecessor and it's paid competitors. It is free, easy to set-up and use, supports multiple languages and accents. 
-                    AnimaV3 is one of the most accessible voice-banking applications out there and we are very proud of this achievement.
+                    The introduction of EasyOCR technology in AnimaV3 has been a game-changer, allowing for seamless conversion of printed text to speech and eliminating the need for manual text entry. For example, if the user would like to read a PDF book, all they have 
+                    to do is upload the file rather than copy and paste the entire text. 
+                    <br><br>
+                    Our acknowledgement of accent bias in the previous versions led to a thoughtful approach in AnimaV3. Although replacing the Coqui TTS model was beyond our project's timeframe, we opted for a solution that involved using longer and more diverse texts to 
+                    capture the voice profile of the user. This method aims to better capture the unique accents and dialects of users, despite being a temporary measure that slightly extends the time it takes to set up your voice. 
+                    <br><br>
+                    In summary, AnimaV3 represents a major stride towards creating a more accessible voice banking application. It stands out for being free, easy to set up, supporting multiple languages, and accommodating various accents. Although there is always room for 
+                    enhancement, such as extending compatibility to more operating systems, adding additional languages, and refining the TTS model, AnimaV3 has undoubtedly set a new standard in the field of accessible offline voice-banking applications.
                   </p><br>
 
                   <h3><strong>Stability</strong></h3>
