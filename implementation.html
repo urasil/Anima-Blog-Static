@@ -405,6 +405,10 @@
                <p style="text-align: left;">
                 The backend of AnimaV3 has been built upon the idea of responding to the changes in frontend.json and performing the relevant action using
                 using the Anima API. The Anima API is an encapsulation of the CoquiTTS functions that are being used to produce sounds, or registering a profile.
+                </p><br>
+
+                <h3 style="text-align: left;">The Observer Class</h3>
+                <p style="text-align: left;">
                 First and most importantly, the backend detects changes through an observer class. Here is the implementation:
                </p>
 
@@ -414,8 +418,9 @@
 
               <p style="text-align: left;">
                 The observer class works via the detectChanges method. In this method, it keeps reloading the frontend.json and checks whether there has been a change in the file by comparing against the not-reloaded verison of the json file. If there has been a change, then it calls the determineChanges method to figure out what has changed, and returns the changed key-value pairings.
-              </p>
-              <br><br>
+              </p><br>
+            
+              <h3 style="text-align: left;">Main loop</h3>
               <p style="text-align: left;">
               It is now obvious how the changes are detected in the frontend.json file. However, how we constantly check the frontend.json file is still not clear. This is done through within the entry point of the Python backend. The enrtry point is the main function that contains a while True loop that checks the frontend.json file every 0.5 seconds (detect period). 
               </p>
@@ -426,7 +431,7 @@
               </div>
               <p style="text-align: left;">
               In the while True loop, the code checks which keys have been subjected to change through the button clicks in the frontend. According to the changes, the backend performs a different action as seen in the above code. Also notice that the main loop is wrapped in a try-except block. In this case, the only errors not caught are the KeyboardInterrupt or the closing the application. This means that the application runs indefinitely until the user decides to close it. Now, we will see how the backend works with an example. Consider the case where in the frontend the user has written some text and pressed the SPEAK button to speak with their unique digital voice. The frontend.json has been changed accordingly, how does the backend work to make the computer speak?
-              </p>
+              </p><br>
 
               <h3 style="text-align: left;">The SPEAK example</h3>
               <p style="text-align: left;">The speak functionality depends on the frontend.json keys "speakID" and "content". It depends on two keys becuase of one single fact: The user might want to say the same sentence twice. In this case, the "content" of their speech wouldn't change therefore there wouldn't be anything for our observer class to pick-up. We ensure everytime the user hits the SPEAK button is picked up through the instruction of UUID's, in this case "speakerID". UUID is Universially Unique Identifier, which is an always unique 128 bit identifier that helps backend pick-up each instruction from the frontend.</p>
@@ -436,16 +441,75 @@
 
               <p style="text-align: left;">
               In the above code, we initially check if "speakID" is within changes, if yes, this means that the user has pressed the SPEAK button and is trying to speak with their digital voice. We then check whether the "content" key has been changed. If it has been changed, we want to make the computer speak with new content, and if not, we make the computer speak with the same content as the last time. We then call the computerSpeak function which is a function that encapsulates the Anima API for creating speech.
-              </p>
-
+              </p><br>
+              <h3 style="text-align: left;">The computerSpeak function</h3>
               <div class=post-img>
                 <img src="assets/img/computerspeak.png" class="img-fluid" alt="computerspeak" style="max-width: 800px; max-height: 600px;">
               </div>
 
               <p style="text-align: left;">
+                In the computerSpeak method, we parse the content of the speech which basically getting rid of extra space characters, send the parsed content to Anima API to be processed with the digital voice created for the user and return the waveforms created of the audio. Then we play the waveforms for the user, which is the speech that the user created with their unique digital voice.
+              </p><br>
+
+              <h3 style="text-align: left;">The Anima API - Speak Functionality</h3>
               
+              <div class=post-img>
+                <img src="assets/img/wavfromprofile.png" class="img-fluid" alt="wav_from_profile" style="max-width: 800px; max-height: 600px;">
+              </div>
+              <p style="text-align: left;">
+                Anima API includes functions that are encapsulations of the CoquiTTS functions for specific use with the voicebanking solution. The wav_from_profile method is one of these functions that takes the content of the speech and the profile of the user and returns the waveforms of the speech. The waveforms are then played to the user through the computerSpeak method. However, we have created a custom synthesizer from the synthesizer class in the CoquiTTS library to make the speech sound more natural. So, the last step of the backend is to call the ttsFromProfile method of the custom synthesizer.
+              </p><br>
+
+              <h3 style="text-align: left;">The Custom Synthesizer and ttsFromProfile</h3>
+              
+              <p style="text-align: left;">
+                The last stage of the SPEAK functionality is the ttsFromProfile method of the custom synthesizer. This method utilizes the synthesisFromProfile method, which is basically a CoquiTTS method that synthesize the speech from the profile of the user. The CoquiTTS function works by loading the pre-trained TTS model (registered profile) and converting the text into a sequence of token IDs and then into a Torch tensor. Then the text tensor is passed through the neural network model which is the .animaprofile file of the user.   
               </p>
+
+              <div class=post-img>
+                <img src="assets/img/ttsfromprofile.png" class="img-fluid" alt="ttsFromProfile" style="max-width: 800px; max-height: 600px;">
+              </div>
+              <p style="text-align: left;">
+                The ttsFromProfile method functions by taking the content of the speech and the profile of the user and splitting the content of the speech into sentences. For each sentence in the content of the speech, we get the output waveforms returned by the synthesisFromProfile method. We process the synthesized output including denormalization, normalization and resampling based on vocoder and TTS audio configurations selected. We have also chose to enable trim silence in the TTS config and decided that the audio the computer is better with this setting on. We haven’t touched the CoquiTTS code and therefore after this step, we start returning the waveforms, until it can be played at the backend entry point by the user’s computer.
+              </p><br>
+
+              <h3 style="text-align: left;">Feedback from Backend</h3>
+              <p>
+                The backend writes to the backend.json file after each instruction has been processed. The frontend reads the backend.json file to know whether the instruction has been successful or not. The following are the images of the main loop of the backend entry point writing to the backend.json and the frontend reading from the backend.json.
+              </p>
+                <div>
+                  <img src="assets/img/writingtobackendjson.png" class="img-fluid" alt="backendJSONafter" style="max-width: 800px; max-height: 600px;">
+                  <img src="assets/img/speakfrontend.png" class="img-fluid" alt="backendJSONafter" style="max-width: 800px; max-height: 600px;">
+                </div>
               
+                <p style="text-align: left;">
+                  In the above left image, the speak functionalitiy code of the backend is seen. After the backend performs it's operation, the "speechSuccess" message is written to the backend.json file as a success message. And in the above right image, the frontend code that processes the success message is seen. The frontend waits until the success message is written to the backend.json file using the asynchronous WaitSpeech method. Once backend writes to backend.json, speech is either a success or not. If it's a success, there is no need to notify the user since they will be hearing their digital voice through the computer. However, if the speech has failed, we let ther user know through a message box pop-up.</p>
+
+            </article><!-- End blog post -->
+          </div>
+      </div>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+              <div class="content">
+                <h2 style="text-align: center;">Generalization - Does all backend functionality work this way?</h2>
+                <p style="text-align: left;">
+                  All the main functionalities of AnimaV3 work with same/similar steps.
+                </p>
+                  <ul>
+                    <li>Frontend writes to frontend.json</li>
+                    <li>Backend detects changes in frontend.json through the observer class</li>
+                    <li>Backend performs the relevant action with the Anima API</li>
+                    <li>Backend writes to backend.json</li>
+                    <li>Frontend reads from backend.json</li>
+                  </ul> 
+                <p style="text-align: left;">
+                  Each step encapsulates the actions of CoquiTTS, the engine that does the voice-cloning and speech. With these encapsulations we were able to produce an application that adheres important software development principles such as the Single Responsibility Principle, Open/Closed Principle and the Abstraction Principle.  
+                </p>
+              </div>
             </article><!-- End blog post -->
           </div>
       </div>
