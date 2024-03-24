@@ -148,8 +148,8 @@
                     of an aesthetically pleasing design but also streamlined the development process, making it more efficient due to .NET’s intuitive markup language, XAML, and comprehensive libraries which simplified coding and testing.
                     <br>
                     <br>
-                    After implementing the .NET design, we asked feedback from our Teaching Assistant (TAs) and Dr. Yun Fu. The initial colour palette, noted for its brightness, was critiques due to the incompatability with the tan background by 
-                    the TA and Dr. Yun Fu. Moreover, Dr. Yun Fu as a first-time user, highlighted navigational difficulties across the three main windows. Responding to these insights, we conducted additional design iterations, selecting
+                    After implementing the .NET design, we asked feedback from our Teaching Assistant (TAs) and Dr. Yun Fu. The initial colour palette, noted for its brightness, was criticised due to the incompatibility with the tan background by 
+                    the TA and Dr. Yun Fu. Moreover, Dr. Yun Fu, as a first-time user, highlighted navigational difficulties across the three main windows. Responding to these insights, we conducted additional design iterations, selecting
                      more subdued colours and integrating navigational buttons to quickly transition between the main windows.
                      <br>
                      <br>
@@ -216,17 +216,17 @@
                       These efforts have fortified AnimaV3's resilience, making it a highly reliable and stable application. 
                     </p><br>
 
-                    <h3><strong>Efficency</strong></h3>
+                    <h3><strong>Efficiency</strong></h3>
                     <p>
-                        With AnimaV3 efficency of our application has been greatly improved. By removing Docker from AnimaV3, we have made the application much more efficent as Docker is a resource-heavy application that always had to be running in the background for AnimaV2.
+                        With AnimaV3 efficiency of our application has been greatly improved. By removing Docker from AnimaV3, we have made the application much more efficient as Docker is a resource-heavy application that always had to be running in the background for AnimaV2.
                         We have also made the application more efficient by adding a management system for the user's voicebank, making the voice-banking experience much easier and efficient. Lastly, we optimised the codebase by removing unnecessary checks for language and users in the Anima API.
                     </p><br>
 
-                  <h3><strong>Compatability</strong></h3>
+                  <h3><strong>Compatibility</strong></h3>
                     <p>
                         Anima V3 is a standalone application with a .NET frontend and Python backend. It uses Python 3.9.11 and .NET 4.7.2. Since Anima V3 is using .NET, it is only compatible with Windows OS, meaning that users with other operating systems such as MacOS or Linux cannot use Anima V3, while Anima CLI (without GUI) can still be used.
-                        It also means that Anima V3 is not compatible with any Windows operating system before Windows 8, as Python 3.9.11 is not supported on those operating systems. We have still conducted compatability testing to ensure that Anima V3 does not work with Windows XP and Windows 7 and works with Windows 8.1, Windows 10 and Windows 11. 
-                        The details of the compatability testing counducted can be found under the Testing page.
+                        It also means that Anima V3 is not compatible with any Windows operating system before Windows 8, as Python 3.9.11 is not supported on those operating systems. We have still conducted compatibility testing to ensure that Anima V3 does not work with Windows XP and Windows 7 and works with Windows 8.1, Windows 10 and Windows 11. 
+                        The details of the compatibility testing conducted can be found under the Testing page.
                     </p><br>
 
                     <h3><strong>Maintainability</strong></h3>
@@ -411,7 +411,7 @@
                         <td style="border: 1px solid #ddd; padding: 8px;">
                           <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic;">
                             <li>We should be able to guide users with an intuitive user interface</li><br>
-                            <li>We should conduct user, unit and integration and compatability testing</li>
+                            <li>We should conduct user, unit and integration and compatibility testing</li>
                           </ol>
                         </td>
                         <td style="border: 1px solid #ddd; padding: 8px;">
@@ -808,18 +808,38 @@
 
               <div class="content" style="margin-left: 25px; margin-right: 25px;">
                 <h2 style="text-align: center;"><strong>Future Work</strong></h2><br>
-                <p>Anima V3 has been a huge step forward. We believe the work done with Anima V3 can change the lives of many people for the better. We are also aware that voice-banking is a very serious issue
-                  and there is still improvements to be amde. Here are some of the future work that can be done to improve Anima V3:</p>
+                <p style="text-align: center;">A concrete plan for Anima V4</p>
+                <p>Anima V3 has been a huge improvement over Anima V2, it has the impact to change the lives of many people for the better. However, our solution isn’t comprehensive and 
+                  there are improvements to be made. Below is a detailed plan, ordered by priority,  for what future versions of Anima can aim to achieve. 
+                </p>
                 </p>
 
                 <ol style="margin: 0; padding-left: 20px; text-decoration: solid; font-weight: 600; font-style: italic; text-align: left;">
-                  <li>We are currently using a multi-language model from CoquiTTS engine. For a better sound quality, a different model for each language can be used/trained. Or the text-to-speech engine
-                    can be changed to another open-source engine with a better sound quality.</li><br>
-                  <li>Additional dialect and language support can be added. Currently this is problem is being tackled through diverse voice-banking texts curated for users however the banked voices are still
-                  biased towards the American accent and need a better solution.</li><br>
-                  <li>When banking a voice, highlight the text the user is reading to enhance the voice-banking experience</li><br>
-                  <li>Record each page separately and create the animaprofile from the recordings from all pages. Also let the user know when the recording starts and stops clearly.</li><br>
-                  <li>Make the separation between windows clearer. Highlight the window the user is currently on and grey out the other two to enhance user-friendliness. Perhaps also consider integrating a collapsible menu on the side too.</li>
+                  <li>Improve the text-to-speech AI engine</li><br>
+                  <ol type="a">
+                    <li>Coqui TTS is a multi-language model, to improve this consider using separate models that are trained and optimised for each language and combining them to retain the multi-language support.</li>
+                    <li>Purchase or develop a proprietary TTS model trained on a larger and more diverse dataset, in our research we found that paid models are often of a much higher quality with increased voice accuracy.</li>
+                    <li>Given the rapid advancement of AI, we can expect a significant increase in the availability of superior open-source text-to-speech (TTS) models, research and compare with Coqui TTS.</li>
+                  </ol>
+                  <br>
+                  <li>Voice Set Up User Interface</li><br>
+                  <ol type="a">
+                    <li>Adopt a modular approach to the set up page, by recording each page independently. This would minimise frustration: if the user makes an error during reading, they do not need to restart from the beginning, they can just re-record the page where the mistake occurred.</li>
+                    <li>Visually highlight the current word that is being read so users can track their position on the page, providing immediate feedback and making navigation smoother.</li>
+                  </ol>
+                  <br>
+                  <li> Text to Speech User Interface</li><br>
+                  <ol type="a">
+                    <li>When reading from a file, import and display the text of the file so that it is easier to follow.</li>
+                    <li>Design a UI with tabs or a collapsible menu for the main windows to reduce clutter on each page and improve navigation.</li>
+                    <li>When hovering over buttons, subtly dim their colour. This visual cue signifies that the button is interactive, distinguishing it from static text.</li>
+                  </ol>
+                  <br>
+                  <li> Language Support</li><br>
+                  <ol type="a">
+                    <li>Expand language support to cater to a global audience, as Motor Neuron Disease (MND) affects people worldwide.</li>
+                    <li>Enhance the system's ability to recognise and reproduce various accents and dialects accurately, which can be achieved by integrating a more advanced text-to-speech (TTS) model. </li>
+                  </ol>
                 </ol>
               </div> 
             </article><!-- End blog post -->
