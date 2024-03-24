@@ -48,7 +48,7 @@
       <a href="index.html" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="d-flex align-items-center">Anima v3</h1>
+        <h1 class="d-flex align-items-center">Anima V3</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -72,7 +72,7 @@
           <li><a href="implementation.html">Implementation</a></li>
           <li><a href="testing.html">Testing</a></li>
           <li><a href="evaluation.html">Evaluation</a></li>
-          <li class="dropdown"><a href="#"><span>Appendicies</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+          <li class="dropdown"><a href="#"><span>Appendices</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="manuals.html">User Manual and Deployment Manual</a></li>
               <li><a href="legal.html">GDPR and Privacy of Data</a></li>
@@ -147,7 +147,7 @@
                 <h1 class="title">System Architecture Diagram</h1>
                 <h3 style="text-align: center;"><strong>Overview</strong></h3>
                 <p style="text-align: center;">
-                    The design of Anima v3 consists of a frontend, backend, JSON files and a local data folder.
+                    The design of Anima V3 consists of a frontend, backend, JSON files and a local data folder.
                 </p>
 
                 <h3><strong>Frontend</strong></h3>
@@ -213,7 +213,7 @@
                   <h1 class="title">Sequence Diagram</h1>
                   <h3 style="text-align: center;"><strong>Overview</strong></h3>
                   <p style="text-align: center;">
-                      This diagram shows how the different components of Anima v3 interacts with each other, in different actions the user can take.
+                      This diagram shows how the different components of Anima V3 interacts with each other, in different actions the user can take.
                   </p>
   
                   <h3><strong>1. User opens application</strong></h3>
@@ -259,7 +259,7 @@
                   <h1 class="title">Design Principles</h1>
                   <h3 style="text-align: center;"><strong>Overview</strong></h3>
                   <p style="text-align: center;">
-                    We adopted some good software development designs and practices to develop Anima v3.
+                    We adopted some good software development designs and practices to develop Anima V3.
                   </p>
 
                   <h3><strong>1. Model-View-Controller</strong></h3>
@@ -273,7 +273,7 @@
                     <strong>View: </strong>The View is the frontend .NET framework. 
                     It provides the visual representation of the application's features and functionalities, showing users information and enabling user interactions. 
                     The View encompasses various UI elements such as buttons and text fields, allowing users to interact with the system and receive feedback on their actions. 
-                    It guides users through Anima v3's functionalities.
+                    It guides users through Anima V3's functionalities.
                   </p>
                   <p>
                     <strong>Controller: </strong>The Controller is also the frontend .NET framework. 
@@ -284,7 +284,7 @@
 
                   <h3><strong>2. Observer Design Pattern</strong></h3>
                   <p>
-                    In the main loop of the backend of Anima v3, an observer class constantly monitors changes in the frontend.json file, detecting any new instructions or data sent from the frontend. 
+                    In the main loop of the backend of Anima V3, an observer class constantly monitors changes in the frontend.json file, detecting any new instructions or data sent from the frontend. 
                     Upon detecting changes, the observer does actions depending on the type of changes detected, such as text-to-speech synthesis or profile creation using the Anima API. 
                     It writes to backend.json about the success or failure of these actions to inform the frontend. 
                   </p>
@@ -305,16 +305,16 @@
                   
                   <h3><strong>4. Open-Closed Principle</strong></h3>
                   <p>
-                    Anima v3 uses external libraries and frameworks, such as Coqui TTS and EasyOCR. 
-                    This showcases the Open-Closed Principle since pre-existing, open-source solutions can be easily integrated into Anima v3 without modifying its core codebase. 
+                    Anima V3 uses external libraries and frameworks, such as Coqui TTS and EasyOCR. 
+                    This showcases the Open-Closed Principle since pre-existing, open-source solutions can be easily integrated into Anima V3 without modifying its core codebase. 
                     Backend components responsible for text-to-speech synthesis, voice cloning, and OCR integration are encapsulated within separate modules, showcasing modularity. 
                     Additional features can be added through new modules. 
-                    This means that Anima v3 is open for extension, but closed for modification. 
+                    This means that Anima V3 is open for extension, but closed for modification. 
                   </p>  
 
                   <h3><strong>5. Separation of Concerns</strong></h3>
                   <p>
-                    The frontend and backend codebase of Anima v3 is in two directories. 
+                    The frontend and backend codebase of Anima V3 is in two directories. 
                     This showcases modularity, maintainability, and readability by isolating different parts of the system and minimizing dependencies between them.
                   </p>
 
@@ -336,7 +336,7 @@
                   <h1 class="title">Application Diagram</h1>
                   <h3 style="text-align: center;"><strong>Overview</strong></h3>
                   <p style="text-align: center;">
-                    Anima v3 is designed with simplicity and user-friendliness in mind. 
+                    Anima V3 is designed with simplicity and user-friendliness in mind. 
                     It revolves around a home page and three central pages. 
                     The three central pages are accessible from one another 
                     and have a button to return to home page.
@@ -344,7 +344,7 @@
 
                   <h3><strong>Home page (AnimaHomePage)</strong></h3>
                   <p>
-                    This is where the user starts using Anima v3.
+                    This is where the user starts using Anima V3.
                   </p>
 
                   <h3><strong>Text to speech page (TextToSpeechWindow)</strong></h3>
@@ -384,11 +384,11 @@
                   <h1 class="title">Packages</h1>
                   <h3 style="text-align: center;"><strong>Overview</strong></h3>
                   <p style="text-align: center;">
-                    A lot of Python libraries used in the backend of Anima V3, they are key in the functionalities of Anima v3. 
+                    A lot of Python libraries used in the backend of Anima V3, they are key in the functionalities of Anima V3. 
                     We selected these packages due to their open-source nature, 
-                    aligning with our commitment to provide Anima v3 free of charge to all users.
+                    aligning with our commitment to provide Anima V3 free of charge to all users.
                     <br>
-                    Here are 3 very important ones used in Anima v3.
+                    Here are 3 very important ones used in Anima V3.
                   </p>
 
                   <h3><strong>Coqui TTS</strong></h3>
@@ -412,7 +412,7 @@
                     EasyOCR is a Python library designed for optical character recognition (OCR) tasks, 
                     enabling the extraction of text from images and PDFs. 
                     We used EasyOCR for its multi-language support, 
-                    including English, French, Portuguese which suits the needs of Anima v3.
+                    including English, French, Portuguese which suits the needs of Anima V3.
                   </p>
                   
                   <h3><strong>PyOxidizer</strong></h3>
@@ -422,8 +422,8 @@
                     <a href="https://pyoxidizer.readthedocs.io/en/stable/">Documentation</a>
                     <br>
                     PyOxidizer is a Python library and packaging tool that creates standalone executables, 
-                    simplifying deployment for Anima v3. 
-                    It was the key component of the complilation of the backend of Anima v3 which was written in Python.
+                    simplifying deployment for Anima V3. 
+                    It was the key component of the complilation of the backend of Anima V3 which was written in Python.
                     <br>
                     More details on how and why we used PyOxidizer in our Research section <a href="pyoxidizer.html">here</a>.
                   </p>  
@@ -444,11 +444,11 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-info">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span>Anima v3</span>
+              <span>Anima V3</span>
             </a>
             <p>A software that preserves the person's voice so that even when their natural voice is lost, their sense of self is not.</p>
             <br>
-            <p>This is our project website for Anima v3.</p>
+            <p>This is our project website for Anima V3.</p>
             <br>
           </div>
         </div>
