@@ -191,7 +191,7 @@
                        <br>
                        <h4 style="text-align: center;"><strong>PyOxidizer</strong></h4>
                         <div class="post-img" style="display: flex; justify-content: center; align-items: center;">
-                          <img src="assets/img/pyoxidizer_logo.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
+                          <img src="assets/img/python_to_exe.png" class="img-fluid" alt="" style="max-width: 300px; max-height: 200px;">
                         </div>
                        <br>
                        <p style="text-align: left;">
@@ -230,11 +230,11 @@
                  <p style="text-align: center;">
                    To best explain how we implemented Anima, we will use the following approach for each <strong>key feature</strong>:
                        <p style="font-weight: 700; font-style: italic; text-align: center;">a) Explain the the design and implementation of the .NET frontend</p>
-                       <p style="font-weight: 700; font-style: italic; text-align: center;">b) Describe the json communication between Python backend and the .NET frontend</p>
+                       <p style="font-weight: 700; font-style: italic; text-align: center;">b) Describe the JSON communication between Python backend and the .NET frontend</p>
                        <p style="font-weight: 700; font-style: italic; text-align: center;">c) Explain the principle and implementation of the Python backend</p>
     
                   
-                   <img src="assets/img/Explain_Imp.png" alt="Description of the image">
+                   <img src="assets/img/flow_exp.png" alt="Description of the image">
 
 
                   </p>
@@ -277,7 +277,7 @@
                   </div>
                   <h4 style="text-align: center;">Text-to-Speech Window</h4>
                   <p style="text-align: left;">
-                  The Text-to-Speech Window is the main window where the user can input text and speak with their digital voice that they have created.
+                  The Text-to-Speech Window is the main window where the user can input text and speak with the digital voice that they have created.
                   Text-to-Speech window also includes the option to read from a PDF or image (jpeg/png) file.  
                   </p>
                   <div class="post-img">
@@ -316,14 +316,14 @@
                 <div class="post-img">
                   <img src="assets/img/toolbox.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 500px;">
                 </div>
-                <p style="text-align: left;">Moreover, tools come with many properties that can be edited with C#. Via the 'Name' property, each tool is identified and then anything about the tool can be changed with C# such as its visibility, content, position and more. It is also possible to define the functionality of a tool by attaching a function to the 'Click' property of a tool (for Button tools, for TextBox, it is the TextChanged property). Through the extensive use of the explained methods, the frontend of Anima V3 was designed and the functionalities implemented.</p>
+                <p style="text-align: left;">Moreover, tools come with many properties that can be edited with C#. Via the 'Name' property, each tool is identified and then anything about the tool can be changed with C# such as its visibility, content, position and more. It is also possible to define the functionality of a tool by attaching a function to the 'Click' property of a tool (for Button tools, for TextBox, it is the TextChanged property). Through the extensive use of the explained methods, the frontend of Anima V3 was designed and the functionalities were implemented.</p>
                 <div>
                   <img src="assets/img/xamlex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
                   <img src="assets/img/csharpex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
                   <img src="assets/img/csharpnameex.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 400px;">
                 </div>
                 <h3 style="text-align: left;">The Implementation of the Main Functionalities</h3>
-                <p style="text-align: left;">The main functionalities of Anima V3 include banking a your voice to register an animprofile and creating a digital voice (voice cloning), speaking with your digital voice (registered animaprofile), reading from a file using your digital voice, and importing a .wav file to register an animaprofile.</p>
+                <p style="text-align: left;">The main functionalities of Anima V3 include banking your voice to register an animprofile and creating a digital voice (voice cloning), speaking with your digital voice (registered animaprofile), reading from a file using your digital voice, and importing a .wav file to register an animaprofile.</p>
                 <h4 style="text-align: center;">Creating a Digital Voice - Voice Cloning</h4>
                 <p style="text-align: left;">The users bank their voice by reading through a 10 page voice-banking text (10 + 1 clicks as the last click is for stopping the recording). The recording is done in the frontend, with the help of a .NET library, NAudio. When the users finish reading the text, their voice is stored in a output.wav file, ready for processing by the Anima API to be converted into an .animaprofile file. The actual processing happens on the backend, the frontend simply writes to the frontend.json, which is an instruction picked up by the backend. </p>
                 <div>
@@ -331,7 +331,7 @@
                   <img src="assets/img/play_end_recording.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 600px;">
                 </div>
                 <p style="text-align: left;">Here, it's also possible to see one of the failsafe's implemented for keeping the application from crashing.
-                The voice creation button is disabled after the frontend.json is changed and the instruction has been send to the backend. In this case, since we are counting the clicks to send instructions to backend, the application wouldn't crash, but would give the user the wrong idea about the success of the voice cloning. This also increases the maintainability and improveability of the codeabase as the click counting architechture can be changed and the code would continue to work without problems.</p><br>
+                The voice creation button is disabled after the frontend.json is changed and the instruction has been sent to the backend. In this case, since we are counting the clicks to send instructions to backend, the application wouldn't crash, but would give the user the wrong idea about the success of the voice cloning. This also increases the maintainability and improvability of the codebase as the click counting architecture can be changed and the code would continue to work without problems.</p><br>
                 
                 <h4 style="text-align: center;">Speaking with your Digital Voice</h4>
                 <p style="text-align: left;">The user can speak with their digital voice by typing in the text box in the Text-to-Speech window and clicking the speak button. The content of the text box is then sent to the backend, where it is processed by the Anima API to speak with the digital voice of the user.
@@ -339,20 +339,20 @@
                 <div class="post-img">
                   <img src="assets/img/speak.png" class="img-fluid" alt="" style="max-width: 600px; max-height: 600px;">
                 </div>
-                <p style="text-align: left;">Again, there is multiple precautions here to make sure that the application is working as intended. Since the backend recognizes instructions through the changes in the frontend.json file, giving the same content multiple times is not natively recognized as there will be no change in the json file. Hence, we have introduced UUID's (unique identifiers) to recognizes that there is another speak attempt by the user even if the content is the same. We have also ensured that the backend has stopped processing the instruction through asynchronous functions that check the success messages. Lastly, this functions also includes a failsafe for the user which is the inital 'if statement' in the code. If the user has already clicked speak and the computer is speaking with the user's digital voice, the user can hit the same button again to stop the speech.</p><br>
+                <p style="text-align: left;">Again, there is multiple precautions here to make sure that the application is working as intended. Since the backend recognises instructions through the changes in the frontend.json file, giving the same content multiple times is not natively recognized as there will be no change in the JSON file. Hence, we have introduced UUID's (unique identifiers) to recognizes that there is another speak attempt by the user even if the content is the same. We have also ensured that the backend has stopped processing the instruction through asynchronous functions that check the success messages. Lastly, this function also includes a failsafe for the user which is the initial 'if statement' in the code. If the user has already clicked speak and the computer is speaking with the user's digital voice, the user can hit the same button again to stop the speech.</p><br>
 
                 <h4 style="text-align: center;">Reading from a File (PDF, PNG, JPG) Using OCR</h4>
-                <p style="text-align: left;">In the frontend, the read from image functionality works with the same principle as the other functionalities.The file path and the UUID of the file is written to frontend.json and an asynchronous functions waits the response of the backend. For this functionalitiy the Windows API is used selecting a file. Through a dialog box, which is basically the file explorer in Windows, the user is allowed to choose any file they want.</p>
+                <p style="text-align: left;">In the frontend, the read from image functionality works with the same principle as the other functionalities. The file path and the UUID of the file is written to frontend.json and an asynchronous function awaits the response of the backend. For this functionality the Windows API is used selecting a file. Through a dialog box, which is basically the file explorer in Windows, the user is allowed to choose any file they want.</p>
 
                 <div class="post-img">
                   <img src="assets/img/read_from_image.png" class="img-fluid" alt="" style="max-width: 900px; max-height: 600px;">
                 </div>
 
-                <p style="text-align: left;">If the speak functionalitiy fails, there is two possible reasons, either the file is of the right format (PNG, JPG, PDF) and the quality is not good enough for backend figure out the text on the file, or the file format is incorrect. We let the user know through a message box via the Windows API.</p>
+                <p style="text-align: left;">If the speak functionality fails, there is two possible reasons, either the file is of the right format (PNG, JPG, PDF) and the quality is not good enough for backend figure out the text on the file, or the file format is incorrect. We let the user know through a message box via the Windows API.</p>
 
                 <h4 style="text-align: center;">Importing a Voice to Create a Digital Voice</h4>
 
-                <p style="text-align: left;">The import voice functionality is in the Manage Voicebank window and is almost identical to read from image in terms of the Windows dialog and the error we get when a file of type different than .wav is selected. The only difference is when the import is successful, there needs to be the created and usable voice profile on the Manage Voicebank window.</p>
+                <p style="text-align: left;">The import voice functionality is in the Manage Voicebank window and is almost identical to read from image in terms of the Windows dialogue and the error we get when a file of type different than .wav is selected. The only difference is when the import is successful, there needs to be the created and usable voice profile on the Manage Voicebank window.</p>
 
                 <div class="post-img">
                   <img src="assets/img/import_voice.png" class="img-fluid" alt="" style="max-width: 900px; max-height: 600px;">
@@ -374,24 +374,24 @@
               <div class="content">
                <h2 style="text-align: center;"><strong>The Implementation of Communication between Frontend and Backend</strong></h2>
                <h3 sytle="text-align: left;">How does communication between frontend and backend work?</h3>
-               <p style="text-align: left;">The idea behind the json communication is incredibly simple. The frontend write to a json file, frontend.json.The backend has an observer class that observes this file and detects the changes. The json key of the value that has changed correspond to a certain action of tha backend API. When that action has been performed, the backend decides whether it has been a success or failure. It then writes it's feedback on a json file, backend.json. This file is read by the frontend to let it know what to display to the user.</p>
+               <p style="text-align: left;">The idea behind the JSON communication is incredibly simple. The frontend write to a JSON file, frontend.JSON.The backend has an observer class that observes this file and detects the changes. The JSON key of the value that has changed correspond to a certain action of tha backend API. When that action has been performed, the backend decides whether it has been a success or failure. It then writes its feedback on a JSON file, backend.JSON. This file is read by the frontend to let it know what to display to the user.</p>
                 <h3 style="text-align: left;">The Structure of the JSON Files</h3>
                <div>
-                <img src="assets/img/frontendjson.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
-                <img src="assets/img/backendjson.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+                <img src="assets/img/frontendJSON.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+                <img src="assets/img/backendJSON.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
                </div>
               
-               <p style="text-align: left;">Above are the two json files mentioned. This is the state of the json files before the application is used. The json keys change according to the actions the user takes in the frontend.</p>
+               <p style="text-align: left;">Above are the two JSON files mentioned. This is the state of the JSON files before the application is used. The JSON keys change according to the actions the user takes in the frontend.</p>
               
                <h3 style="text-align: left;">Basic Communication Example</h3>
                <div>
-                <img src="assets/img/frontendjsonafter.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
-                <img src="assets/img/backendjsonafter.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+                <img src="assets/img/frontendJSONafter.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+                <img src="assets/img/backendJSONafter.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
                </div>
 
-                <p style="text-align: left;">Above are the two json files after the application is used. The application was used to create a voice profile with the name 'Uras' and then speak the words 'Hello, how are you?'. In the frontend.json, profile creation is done through the change in the 'speakerName' key in the json file. When a new profile is created, the 'nameOfCurrentUser' key is automatically updated to be the newly created profile. Because the profile creation was successful, the 'profileCreationSuccess' key in the backend.json is set to true. This key has not reset it's value here because of before the instruction of creating a new profile is sent to the backend, this value is automatically set to false.<br>
+                <p style="text-align: left;">Above are the two JSON files after the application is used. The application was used to create a voice profile with the name 'Uras' and then speak the words 'Hello, how are you?'. In the frontend.JSON, profile creation is done through the change in the 'speakerName' key in the JSON file. When a new profile is created, the 'nameOfCurrentUser' key is automatically updated to be the newly created profile. Because the profile creation was successful, the 'profileCreationSuccess' key in the backend.JSON is set to true. This key has not reset it's value here because of before the instruction of creating a new profile is sent to the backend, this value is automatically set to false.<br>
                 
-                Computer speaking with the user's voice facilitated throught he change in the 'content' key of frontend.json. The 'speakID' is to make sure that the instruction is recognized by the backend, even if the content has stayed the same. Again, the 'speakSuccess' key in the backend.json is set to true because the instruction was successful. Just like 'profileCreationSuccess', it will be reset before the next instruction of speaking with the digital voice.</p>
+                Computer speaking with the user's voice facilitated through the change in the 'content' key of frontend.json. The 'speakID' is to make sure that the instruction is recognized by the backend, even if the content has stayed the same. Again, the 'speakSuccess' key in the backend.json is set to true because the instruction was successful. Just like 'profileCreationSuccess', it will be reset before the next instruction of speaking with the digital voice.</p>
             </article><!-- End blog post -->
           </div>
       </div>
@@ -403,7 +403,114 @@
             <article class="blog-details">
               <div class="content">
                <h2 style="text-align: center;"><strong>The Implementation of the Backend</strong></h2>
+               <p style="text-align: left;">
+                The backend of AnimaV3 has been built upon the idea of responding to the changes in frontend.json and performing the relevant action using
+                using the Anima API. The Anima API is an encapsulation of the CoquiTTS functions that are being used to produce sounds, or registering a profile.
+                </p><br>
 
+                <h3 style="text-align: left;">The Observer Class</h3>
+                <p style="text-align: left;">
+                First and most importantly, the backend detects changes through an observer class. Here is the implementation:
+               </p>
+
+              <div class="post-img">
+                <img src="assets/img/observer.png" class="img-fluid" alt="" style="max-width: 800px; max-height: 600px;">
+              </div>
+
+              <p style="text-align: left;">
+                The observer class works via the detectChanges method. In this method, it keeps reloading the frontend.json and checks whether there has been a change in the file by comparing against the not-reloaded verison of the json file. If there has been a change, then it calls the determineChanges method to figure out what has changed, and returns the changed key-value pairings.
+              </p><br>
+            
+              <h3 style="text-align: left;">Main loop</h3>
+              <p style="text-align: left;">
+              It is now obvious how the changes are detected in the frontend.json file. However, how we constantly check the frontend.json file is still not clear. This is done through within the entry point of the Python backend. The enrtry point is the main function that contains a while True loop that checks the frontend.json file every 0.5 seconds (detect period). 
+              </p>
+
+              <div>
+                <img src="assets/img/mainloop1.png" class="img-fluid" alt="main_loop_start" style="max-width: 600px; max-height: 500px;">
+                <img src="assets/img/mainloop3.png" class="img-fluid" alt="main_loop_end" style="max-width: 600px; max-height: 500px;">
+              </div>
+              <p style="text-align: left;">
+              In the while True loop, the code checks which keys have been subjected to change through the button clicks in the frontend. According to the changes, the backend performs a different action as seen in the above code. Also notice that the main loop is wrapped in a try-except block. In this case, the only errors not caught are the KeyboardInterrupt or the closing the application. This means that the application runs indefinitely until the user decides to close it. Now, we will see how the backend works with an example. Consider the case where in the frontend the user has written some text and pressed the SPEAK button to speak with their unique digital voice. The frontend.json has been changed accordingly, how does the backend work to make the computer speak?
+              </p><br>
+
+              <h3 style="text-align: left;">The SPEAK example</h3>
+              <p style="text-align: left;">The speak functionality depends on the frontend.json keys "speakID" and "content". It depends on two keys becuase of one single fact: The user might want to say the same sentence twice. In this case, the "content" of their speech wouldn't change therefore there wouldn't be anything for our observer class to pick-up. We ensure everytime the user hits the SPEAK button is picked up through the instruction of UUID's, in this case "speakerID". UUID is Universially Unique Identifier, which is an always unique 128 bit identifier that helps backend pick-up each instruction from the frontend.</p>
+              <div class="post-img">
+                <img src="assets/img/speakfunc.png" class="img-fluid" alt="speak_example" style="max-width: 800px; max-height: 600px;">
+              </div>
+
+              <p style="text-align: left;">
+              In the above code, we initially check if "speakID" is within changes, if yes, this means that the user has pressed the SPEAK button and is trying to speak with their digital voice. We then check whether the "content" key has been changed. If it has been changed, we want to make the computer speak with new content, and if not, we make the computer speak with the same content as the last time. We then call the computerSpeak function which is a function that encapsulates the Anima API for creating speech.
+              </p><br>
+              <h3 style="text-align: left;">The computerSpeak function</h3>
+              <div class=post-img>
+                <img src="assets/img/computerspeak.png" class="img-fluid" alt="computerspeak" style="max-width: 800px; max-height: 600px;">
+              </div>
+
+              <p style="text-align: left;">
+                In the computerSpeak method, we parse the content of the speech which basically getting rid of extra space characters, send the parsed content to Anima API to be processed with the digital voice created for the user and return the waveforms created of the audio. Then we play the waveforms for the user, which is the speech that the user created with their unique digital voice.
+              </p><br>
+
+              <h3 style="text-align: left;">The Anima API - Speak Functionality</h3>
+              
+              <div class=post-img>
+                <img src="assets/img/wavfromprofile.png" class="img-fluid" alt="wav_from_profile" style="max-width: 800px; max-height: 600px;">
+              </div>
+              <p style="text-align: left;">
+                Anima API includes functions that are encapsulations of the CoquiTTS functions for specific use with the voicebanking solution. The wav_from_profile method is one of these functions that takes the content of the speech and the profile of the user and returns the waveforms of the speech. The waveforms are then played to the user through the computerSpeak method. However, we have created a custom synthesizer from the synthesizer class in the CoquiTTS library to make the speech sound more natural. So, the last step of the backend is to call the ttsFromProfile method of the custom synthesizer.
+              </p><br>
+
+              <h3 style="text-align: left;">The Custom Synthesizer and ttsFromProfile</h3>
+              
+              <p style="text-align: left;">
+                The last stage of the SPEAK functionality is the ttsFromProfile method of the custom synthesizer. This method utilizes the synthesisFromProfile method, which is basically a CoquiTTS method that synthesize the speech from the profile of the user. The CoquiTTS function works by loading the pre-trained TTS model (registered profile) and converting the text into a sequence of token IDs and then into a Torch tensor. Then the text tensor is passed through the neural network model which is the .animaprofile file of the user.   
+              </p>
+
+              <div class=post-img>
+                <img src="assets/img/ttsfromprofile.png" class="img-fluid" alt="ttsFromProfile" style="max-width: 800px; max-height: 600px;">
+              </div>
+              <p style="text-align: left;">
+                The ttsFromProfile method functions by taking the content of the speech and the profile of the user and splitting the content of the speech into sentences. For each sentence in the content of the speech, we get the output waveforms returned by the synthesisFromProfile method. We process the synthesized output including denormalization, normalization and resampling based on vocoder and TTS audio configurations selected. We have also chose to enable trim silence in the TTS config and decided that the audio the computer is better with this setting on. We haven’t touched the CoquiTTS code and therefore after this step, we start returning the waveforms, until it can be played at the backend entry point by the user’s computer.
+              </p><br>
+
+              <h3 style="text-align: left;">Feedback from Backend</h3>
+              <p>
+                The backend writes to the backend.json file after each instruction has been processed. The frontend reads the backend.json file to know whether the instruction has been successful or not. The following are the images of the main loop of the backend entry point writing to the backend.json and the frontend reading from the backend.json.
+              </p>
+                <div>
+                  <img src="assets/img/writingtobackendjson.png" class="img-fluid" alt="backendJSONafter" style="max-width: 800px; max-height: 600px;">
+                  <img src="assets/img/speakfrontend.png" class="img-fluid" alt="backendJSONafter" style="max-width: 800px; max-height: 600px;">
+                </div>
+              
+                <p style="text-align: left;">
+                  In the above left image, the speak functionalitiy code of the backend is seen. After the backend performs it's operation, the "speechSuccess" message is written to the backend.json file as a success message. And in the above right image, the frontend code that processes the success message is seen. The frontend waits until the success message is written to the backend.json file using the asynchronous WaitSpeech method. Once backend writes to backend.json, speech is either a success or not. If it's a success, there is no need to notify the user since they will be hearing their digital voice through the computer. However, if the speech has failed, we let ther user know through a message box pop-up.</p>
+
+            </article><!-- End blog post -->
+          </div>
+      </div>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+      <div class="row g-5">
+        <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+            <article class="blog-details">
+              <div class="content">
+                <h2 style="text-align: center;">Generalization - Does all backend functionality work this way?</h2>
+                <p style="text-align: left;">
+                  All the main functionalities of AnimaV3 work with same/similar steps.
+                </p>
+                  <ul>
+                    <li>Frontend writes to frontend.json</li>
+                    <li>Backend detects changes in frontend.json through the observer class</li>
+                    <li>Backend performs the relevant action with the Anima API</li>
+                    <li>Backend writes to backend.json</li>
+                    <li>Frontend reads from backend.json</li>
+                  </ul> 
+                <p style="text-align: left;">
+                  Each step encapsulates the actions of CoquiTTS, the engine that does the voice-cloning and speech. With these encapsulations we were able to produce an application that adheres important software development principles such as the Single Responsibility Principle, Open/Closed Principle and the Abstraction Principle.  
+                </p>
+              </div>
             </article><!-- End blog post -->
           </div>
       </div>
