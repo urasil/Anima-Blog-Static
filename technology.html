@@ -299,24 +299,35 @@
 
                   <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
 
-                  <h3><strong>Complexity of Setting Up</strong></h3>
+                  <h3><strong>Complexity of Setting Up and Usage</strong></h3>
                   <p>
-                    Coqui TTS offers a more user-friendly experience. 
+                    This argument is made after we have confirmed our choice of not re-writing the entire backend in Java and keep using Python.
+                    <br>
                     MaryTTS requires manual compilation, server startup, and HTTP query handling for synthesis <sup>[11]</sup>. 
                     In contrast, Coqui TTS provides simpler installation options from PyPI or local cloning, with system dependencies handled via a Makefile <sup>[12]</sup>. 
                     Overall, Coqui TTS stands out for its straightforward setup process, making it the preferred choice for users seeking simplicity in text-to-speech system setup.
+                    <br>
+                    MaryTTS is written in Java <sup>[13]</sup>. The py-marytts package provides a Python interface for MaryTTS. While this is a convenient package, 
+                    it still requires the MaryTTS server to be running separately <sup>[14]</sup>. This would make maintenance and deployment harder. 
+                    Coqui TTS on the other hand is already written in Python and has a Python API where we can run a multi-language model on <sup>[15]</sup>.
                   </p>
 
-                  <h3><strong>Speed of Speech Synthesis</strong></h3>
+                  <h3><strong>Existing Codebase / Development Time Cost</strong></h3>
                   <p>
-                    
+                    Anima v2 was already using Coqui TTS for their backend, as we are working on their codebase. 
+                    Changing the TTS engine requires much less re-factoring of code than the previous consideration of changing the language altogether. 
+                    However, it's crucial to weigh any additional time required for changes against the potential benefits they bring.
+                    <br>
+                    At the end, we decided that it was not necessary to switch to Mary TTS and we would continue building upon Anima v2's implementation of Coqui TTS
                   </p>
 
                   <blockquote>
                     <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
                     <h3><strong>Our choice: Coqui TTS</strong></h3>
                     <p>
-                        
+                        We have chosen Coqui TTS since it offers a simpler setup process compared to MaryTTS, 
+                        with straightforward installation options and system dependencies handled efficiently. 
+                        Additionally, its Python-based implementation aligns well with our existing codebase, reducing the need for extensive refactoring and hosting a HTTP server. 
                     </p>
                     <img src="assets/img/coqui.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt="">
                   </blockquote>
@@ -339,22 +350,36 @@
 
                   <h1 class="title" style="text-align: left;"><strong>Points of comparison:</strong></h1>
 
-                  <h3><strong>Language Compatibility</strong></h3>
+                  <h3><strong>Character Recognition Accuracy</strong></h3>
                   <p>
-                    This is the most important factor, as we are working with Anima v2's backend codebase which was written in Python. 
-                    <br>
-                    Choosing Java will involve re-writing the entire backend, including finding alternatives to every library that is used. 
-                    We decided that the time needed for this change is too much.
+                    EasyOCR and Tesseract are comparable in character recognition accuracy. However, EasyOCR performs better on scanned files such as PDFs <sup>[16]</sup>, 
+                    which matches the functionality of Anima v3.
+                  </p>
+
+                  <h3><strong>Character Recognition Speed</strong></h3>
+                  <p>
+                    Assuming both engines are running on CPU only, as we cannot assume our users to have powergul GPUs, then EasyOCR is faster <sup>[17]</sup>.
+                </p>
+                <div class="post-img">
+                  <img src="assets/img/speedtest.webp" alt="" class="img-fluid">
+                </div>
+                <p>
+                    Speed is an important factor in Anima v3's OCR functionality as we would like to simulate real-time speech of our users.
+                </p>
+
+                  <h3><strong>Ease of Use</strong></h3>
+                  <p>
+                    Both libraries are very easy to use in Python. Only one line of pip install is needed to start using their Python APIs <sup>[18]</sup> <sup>[19]</sup>. 
+                    Both libraries are very good choices.
                   </p>
 
                   <blockquote>
                     <h1 class="title" style="text-align: left;"><strong>Summary:</strong></h1>
                     <h3><strong>Our choice: EasyOCR</strong></h3>
                     <p>
-                      Although Java is a faster language, we chose Python since there is already a solid backend codebase in Python, 
-                      and there is no need to re-write the entire backend for the higher performance.
+                      The differences between EasyOCR and Tesseract in quality is minimal, but EasyOCR performs better with PDFs and is faster in general.
                     </p>
-                    <!-- <img src="assets/img/easyocr.jpg" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt=""> -->
+                    <img src="assets/img/easyocr.png" style="max-width: 300px; max-height: 120px; border-radius: 10px;" class=img-fluid alt="">
                   </blockquote>
                 </div>
               </article><!-- End blog post -->
@@ -409,78 +434,39 @@
       </div>
 
       <div class="container" data-aos="fade-up">
-
         <div class="row g-5">
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-
-            <article class="blog-details">
-
-
-                  
-                <h3><strong>Text-to-Speech Software</strong></h3>
-                <p>
-                  In addition, we need to pick a TTS software that we could use to create the backend of our app. We looked at three types of software; COQUI TTS, Real-Time-Voice-Cloning and Mary TTS.
-                </p>
-                <p><strong><i class="bi bi-mic"></i>Coqui TTS: </strong>Coqui TTS (Text to speech) is a library for advanced Text-To-Speech generation. It is an open source project and comes with pre-trained models as well as being already used in multiple projects. Some of its features include having high-performing deep learning models; being fast and efficient; having detailed training logs and being flexible and easy to use (4). It is a neural network-based TTS system that can generate natural-sounding speech from text input in multiple languages. Coqui uses python and a key advantage to this is that it has a high accuracy rate and is highly customisable, allowing users to be able to adjust voice pitch, speaking rate and volume. Moreover, Coqui is also faster than other speech synthesis tools, generating speech in real-time, which makes it ideal for specific applications.
-                </p>
-                <p><strong><i class="bi bi-mic"></i></i>Real-Time-Voice-Cloning: </strong>Voice cloning is becoming increasingly more popular as technology advances. It is a process to create a digital copy of your voice using AI technology, and this technology then recreates your voice in order for it to speak what you need from the text that’s been written. This is an efficient way to accurately capture someones voice and it can be used for many different purposes. An example would be an app that read books in a celebrities voice (5). Pros to using this software is that production time and costs are decreased and the user has a larger amount of control over the process. However, there can be a lack of tone and emotion, causing the voice to sound slightly robotic (6). 
-                </p>
-                <p><strong><i class="bi bi-mic"></i>Mary TTS: </strong>MaryTTS is an open-source Text-to-Speech (TTS) synthesis platform that is written in Java. It is a flexible and customisable engine, which has the ability to support different languages and voice types. TTS (Text-to-Speech) synthesis is when one converts written text into spoken speech. The technology enables devices to produce speech that sounds human. The process of TTS synthesis has several steps (7). Its popularity is mainly due to the numerous amounts of languages and voices which are available as open sources and are free to use. This means that production costs are lower.
-                </p>
-
-
-                <blockquote>
-                    <p>
-                      <strong>TTS Software Comparison</strong><br>
-                      Overall, after gathering extensive amounts of information on all of three softwares, Coqui TTS seems to have the best potential for our project. Not only does it help that it is implemented in Python, which is our chosen language, it is also the most efficient and easy to use software. Its applications are aligned to our project goals and we believe this to be the most useful tool.
-                    </p>
-                    <img src="assets/img/coqui.png" style="max-width: 400px; max-height: 160px; border-radius: 20px;" class=img-fluid alt="">
-                </blockquote>
-                  
-
-
-                
-
-        <div class="container" data-aos="fade-up">
-          <div class="row g-5">
             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-              <article class="blog-details">
-                <div class="content">
-                  <h1 class="title"></h1>
-              
-                  <h3><strong>References</strong></h3>
-                  <p>
-                    [1] SteelKiwi. "Python for AI and Machine Learning." [Online]. Available: <a href="https://steelkiwi.com/blog/python-for-ai-and-machine-learning/">https://steelkiwi.com/blog/python-for-ai-and-machine-learning/</a>.
-                  </p>
-                  <p>
-                    [2] Django Stars. "Why Python is Good for Artificial Intelligence and Machine Learning." [Online]. Available: <a href="https://djangostars.com/blog/why-python-is-good-for-artificial-intelligence-and-machine-learning/">https://djangostars.com/blog/why-python-is-good-for-artificial-intelligence-and-machine-learning/</a>.
-                  </p>
-                  <p>
-                    [3] We Are Developers. "6 Reasons to Use Java for Your Next AI Project." [Online]. Available: <a href="https://www.wearedevelopers.com/magazine/6-reasons-to-use-java-for-your-next-ai-project">https://www.wearedevelopers.com/magazine/6-reasons-to-use-java-for-your-next-ai-project</a>.
-                  </p>
-                  <p>
-                    [4] StackShare. "Coqui TTS." [Online]. Available: <a href="https://stackshare.io/coqui-tts">https://stackshare.io/coqui-tts</a>.
-                  </p>
-                  <p>
-                    [5] iMyFone. "Voice Cloning Software." [Online]. Available: <a href="https://filme.imyfone.com/text-to-speech/voice-cloning-software/">https://filme.imyfone.com/text-to-speech/voice-cloning-software/</a>.
-                  </p>
-                  <p>
-                    [6] 3Play Media. "Pros & Cons of Synthesized Speech Audio Description." [Online]. Available: <a href="https://www.3playmedia.com/blog/pros-cons-synthesized-speech-audio-description/">https://www.3playmedia.com/blog/pros-cons-synthesized-speech-audio-description/</a>.
-                  </p>
-                  <p>
-                    [7] Meta-Guide. "MARYTTS." [Online]. Available: <a href="https://meta-guide.com/speech-synthesis/marytts">https://meta-guide.com/speech-synthesis/marytts</a>.
-                  </p>
-                  <p>
-                    [8] Microsoft. "MFC Desktop Applications." [Online]. Available: <a href="https://learn.microsoft.com/en-us/cpp/mfc/mfc-desktop-applications?view=msvc-170">https://learn.microsoft.com/en-us/cpp/mfc/mfc-desktop-applications?view=msvc-170</a>.
-                  </p>
-                </div>
-              </article><!-- End blog post -->
-              
-              </div>
-          </div>
+                <article class="blog-details">
+                    <div class="content">
+                        <h1 class="title"></h1>
+    
+                        <h3><strong>References</strong></h3>
+                        <p>[1] SnapLogic, "Python vs. Java Performance – Comparison & Examples", SnapLogic, [Online]. Available: <a href="https://www.snaplogic.com/glossary/python-vs-java-performance">https://www.snaplogic.com/glossary/python-vs-java-performance</a>.</p>
+                        <p>[2] D. Lemire, "Does Software Performance Still Matter?", D. Lemire's Blog, [Online]. Available: <a href="https://lemire.me/blog/2017/03/20/does-software-performance-still-matter/">https://lemire.me/blog/2017/03/20/does-software-performance-still-matter/</a>.</p>
+                        <p>[3] Radixweb, "Decoding the Java vs Python Debate: Which Programming Language is Better?", Radixweb, [Online]. Available: <a href="https://radixweb.com/blog/python-vs-java">https://radixweb.com/blog/python-vs-java</a>.</p>
+                        <p>[4] University College London, "Computer Science BSc", University College London, [Online]. Available: <a href="https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/computer-science-bsc-2024">https://www.ucl.ac.uk/prospective-students/undergraduate/degrees/computer-science-bsc-2024</a>.</p>
+                        <p>[5] Personal communication, (November, 2023).</p>
+                        <p>[6] Irrlicht3D, "Short history of all Windows UI frameworks and libraries", Irrlicht3D, [Online]. Available: <a href="https://irrlicht3d.org/index.php?t=1626">https://irrlicht3d.org/index.php?t=1626</a>.</p>
+                        <p>[7] Nish, "Is MFC Dead? Does MFC Have a Future?", Voidnish's Blog, [Online]. Available: <a href="https://voidnish.wordpress.com/2005/07/28/is-mfc-dead-does-mfc-have-a-future/">https://voidnish.wordpress.com/2005/07/28/is-mfc-dead-does-mfc-have-a-future/</a>.</p>
+                        <p>[8] FunctionX, "Payroll Calculation" FunctionX, [Online]. Available: <a href="https://www.functionx.com/visualc/applications/payroll.htm">https://www.functionx.com/visualc/applications/payroll.htm</a>.</p>
+                        <p>[9] FunctionX, "Timesheet2", FunctionX, [Online]. Available: <a href="https://www.functionx.com/visualc/applications/timesheet2.htm">https://www.functionx.com/visualc/applications/timesheet2.htm</a>.</p>
+                        <p>[10] YourStory, "4 BEST EXAMPLES HOW YOU CAN USE .NET IN 2020", YourStory, [Online]. Available: <a href="https://yourstory.com/mystory/four-best-examples-usenet-2020">https://yourstory.com/mystory/four-best-examples-usenet-2020</a>.</p>
+                        <p>[11] MaryTTS, "Using MARYTTS for other programming languages", GitHub, [Online]. Available: <a href="https://github.com/marytts/marytts?tab=readme-ov-file#using-marytts-for-other-programming-languages">https://github.com/marytts/marytts?tab=readme-ov-file#using-marytts-for-other-programming-languages</a>.</p>
+                        <p>[12] Coqui TTS, "Installation", GitHub, [Online]. Available: <a href="https://github.com/coqui-ai/TTS/tree/dev#installation">https://github.com/coqui-ai/TTS/tree/dev#installation</a>.</p>
+                        <p>[13] MaryTTS, "MARYTTS", MARYTTS, [Online]. Available: <a href="https://marytts.github.io/">https://marytts.github.io/</a>.</p>
+                        <p>[14] Py-MaryTTS, "Py-MaryTTS", PyPI, [Online]. Available: <a href="https://pypi.org/project/py-marytts/">https://pypi.org/project/py-marytts/</a>.</p>
+                        <p>[15] Coqui TTS, "Python API", GitHub, [Online]. Available: <a href="https://github.com/coqui-ai/TTS?tab=readme-ov-file#-python-api">https://github.com/coqui-ai/TTS?tab=readme-ov-file#-python-api</a>.</p>
+                        <p>[16] mftnakrsu, "Comparison-of-OCR", GitHub, [Online]. Available: <a href="https://github.com/mftnakrsu/Comparison-of-OCR">https://github.com/mftnakrsu/Comparison-of-OCR</a>.</p>
+                        <p>[17] F. Pochetti, "EasyOCR vs Tesseract vs Amazon Textract: An OCR engine comparison", Francesco Pochetti's Blog, [Online]. Available: <a href="https://francescopochetti.com/easyocr-vs-tesseract-vs-amazon-textract-an-ocr-engine-comparison/">https://francescopochetti.com/easyocr-vs-tesseract-vs-amazon-textract-an-ocr-engine-comparison/</a>.</p>
+                        <p>[18] JaidedAI, "EasyOCR", GitHub, [Online]. Available: <a href="https://github.com/JaidedAI/EasyOCR">https://github.com/JaidedAI/EasyOCR</a>.</p>
+                        <p>[19] PyTesseract, "PyTesseract", PyPI, [Online]. Available: <a href="https://pypi.org/project/pytesseract/">https://pypi.org/project/pytesseract/</a>.</p>
+                    </div>
+                </article><!-- End blog post -->
+            </div>
         </div>
-      </div>
+    </div>
+    
+    
     </section><!-- End Blog Details Section -->
 
   </main><!-- End #main -->
