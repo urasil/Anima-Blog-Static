@@ -256,30 +256,66 @@
                 </div> -->
   
                 <div class="content">
-                  <h1 class="title">Design Principles (TODO:)</h1>
+                  <h1 class="title">Design Principles</h1>
                   <h3 style="text-align: center;"><strong>Overview</strong></h3>
                   <p style="text-align: center;">
-                    We adopted some good software development practices to develop Anima v3.
+                    We adopted some good software development designs and practices to develop Anima v3.
                   </p>
 
-                  <h3><strong>Model-View-Controller</strong></h3>
+                  <h3><strong>1. Model-View-Controller</strong></h3>
                   <p>
-                    This is where the user starts using Anima v3.
+                    <strong>Model: </strong>The Model is the backend responsible for the core application logic and data management. 
+                    It encapsulates functionalities such as text-to-speech synthesis, OCR processing, and animaprofile generation. 
+                    The Model operates independently, efficiently processing user inputs and generating corresponding outputs without direct interaction with the user interface. 
+                    It stores and manages data, including user profiles, audio files, and processing statuses, keeping track of the application's internal state.
+                  </p>
+                  <p>
+                    <strong>View: </strong>The View is the frontend .NET framework. 
+                    It provides the visual representation of the application's features and functionalities, showing users information and enabling user interactions. 
+                    The View encompasses various UI elements such as buttons and text fields, allowing users to interact with the system and receive feedback on their actions. 
+                    It guides users through Anima v3's functionalities.
+                  </p>
+                  <p>
+                    <strong>Controller: </strong>The Controller is also the frontend .NET framework. 
+                    The frontend handles user inputs, interprets them to determine the intended actions, and sends instructions to the backend. 
+                    It manages the application flow, showing new things on the frontend based on user interactions and backend responses messages. 
+                    The Controller handles communication between the user interface and the backend logic.
                   </p>
 
-                  <h3><strong>Text to speech page (TextToSpeechWindow)</strong></h3>
+                  <h3><strong>2. Observer Design Pattern</strong></h3>
                   <p>
-                    This is the main page where user spends most time on, where the user types or imports images or PDFs to speak with their voice.
+                    In the main loop of the backend of Anima v3, an observer class constantly monitors changes in the frontend.json file, detecting any new instructions or data sent from the frontend. 
+                    Upon detecting changes, the observer does actions depending on the type of changes detected, such as text-to-speech synthesis or profile creation using the Anima API. 
+                    It writes to backend.json about the success or failure of these actions to inform the frontend. 
                   </p>
                   
-                  <h3><strong>Voice banking page (BankVoiceWindow)</strong></h3>
+                  <h3><strong>3. Single Responsibility Principle</strong></h3>
                   <p>
-                    This is where the user records their own voice and creates a new animaprofile. The user can listen to their own recording and choose to restart at any time.
+                    <strong>Frontend: </strong>Each .NET page, such as the AnimaHomePage, TextToSpeechWindow, BankVoiceWindow, and ManageVoicesWindow, 
+                    maintains a clear responsibility corresponding to specific user interactions and functionalities. More details below.
+                  </p>
+                  <p>
+                    <strong>Backend: </strong>A class is assigned to one functionality, such as Observer, AudioManager, ImgToStrings, PDFToStrings. 
+                    The Anima API is also its own ANIMA class. One class focuses on one specific task. 
+                  </p>
+                  <p>
+                    <strong>JSON files: </strong>Each JSON file has a specific responsibility, 
+                    such as storing user preferences (frontend JSON) or recording backend operation outcomes (backend JSON).
+                  </p>
+                  
+                  <h3><strong>4. Open-Closed Principle</strong></h3>
+                  <p>
+                    Anima v3 uses external libraries and frameworks, such as Coqui TTS and EasyOCR. 
+                    This showcases the Open-Closed Principle since pre-existing, open-source solutions can be easily integrated into Anima v3 without modifying its core codebase. 
+                    Backend components responsible for text-to-speech synthesis, voice cloning, and OCR integration are encapsulated within separate modules, showcasing modularity. 
+                    Additional features can be added through new modules. 
+                    This means that Anima v3 is open for extension, but closed for modification. 
                   </p>  
-                  
-                  <h3><strong>Manage voices page (ManageVoicesWindow)</strong></h3>
+
+                  <h3><strong>5. Separation of Concerns</strong></h3>
                   <p>
-                    This is where the user can change and delete profiles. They can also import a .wav file to create a profile with.
+                    The frontend and backend codebase of Anima v3 is in two directories. 
+                    This showcases modularity, maintainability, and readability by isolating different parts of the system and minimizing dependencies between them.
                   </p>
 
               </article><!-- End blog post -->
@@ -324,6 +360,10 @@
                   <h3><strong>Manage voices page (ManageVoicesWindow)</strong></h3>
                   <p>
                     This is where the user can change and delete profiles. They can also import a .wav file to create a profile with.
+                  </p>
+
+                  <p>
+                    Details on our implementation of the frontend can be found <a href="implementation.html">here</a>.
                   </p>
 
               </article><!-- End blog post -->
