@@ -2260,6 +2260,6 @@ section {
 
 /* Add !important to override existing styles */
 .larger-image {
-  width: 150px !important; /* Adjust the width as needed */
-  height: auto !important; /* Maintain aspect ratio */
+  max-width: 150px !important; /* Adjust the width as needed */
+  max-height: 150px !important; /* Maintain aspect ratio */
 }
